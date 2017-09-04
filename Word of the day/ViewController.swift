@@ -8,18 +8,34 @@
 
 import UIKit
 
+typealias XMLDictionary = Dictionary<String,Any>
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let url : URL! = URL(string: "https://www.merriam-webster.com/wotd/feed/rss2")
+        let contents = try! String(contentsOf: url, encoding: String.Encoding.utf8)
+        
+        let XML : XMLDictionary! = getdictionaryFromXmlString(xmldata: contents)![0] as? XMLDictionary
+        let data = (((XML["rss"]! as! XMLDictionary)["channel"]! as! XMLDictionary)["item"]! as! Array<XMLDictionary>) [0]
+        let word : Word? = Word(data)
+        
+        print(word!.definition)
+        
+        webView.loadHTMLString(word!.definition, baseURL: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    // MARK : XMLParserDelegate
+    
+    var parser : XMLParser!
+    var stack = Array<NSMutableDictionary>()
+    var textInProgress : String = ""
 }
-
