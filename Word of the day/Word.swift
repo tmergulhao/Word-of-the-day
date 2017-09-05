@@ -9,6 +9,7 @@
 import Foundation
 
 struct Word {
+    
     var link : String
     var audioPath : String
     var title : String
