@@ -9,8 +9,6 @@
 import UIKit
 import AVFoundation
 
-typealias XMLDictionary = Dictionary<String,Any>
-
 class ViewController: UIViewController {
 
     // @IBOutlet weak var webView: UIWebView!
@@ -20,11 +18,13 @@ class ViewController: UIViewController {
     @IBOutlet var keyboard : Array<UIButton>!
     @IBOutlet var activity : UIActivityIndicatorView!
 
-    var word : Word!
+    var word : Word?
     var charactersUsed : Set<Character> = []
     var localAudioURL : URL?
     
     func setWordDisplay () {
+        
+        guard let word = self.word else { return }
         
         let maskedText = String(word.title.characters.map({
             switch $0 {
@@ -53,12 +53,7 @@ class ViewController: UIViewController {
         setWordDisplay()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        for button in keyboard {
-            button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
-        }
+    func loadWord () {
         
         let url : URL! = URL(string: "https://www.merriam-webster.com/wotd/feed/rss2")
         let contents = try! String(contentsOf: url, encoding: String.Encoding.utf8)
@@ -66,23 +61,38 @@ class ViewController: UIViewController {
         let XML : XMLDictionary! = getdictionaryFromXmlString(xmldata: contents)![0] as? XMLDictionary
         let data = (((XML["rss"]! as! XMLDictionary)["channel"]! as! XMLDictionary)["item"]! as! Array<XMLDictionary>) [0]
         
-        word = Word(data)
+        guard let word = Word(data) else { print("Unable to parse word from XML"); return }
+        
+        self.word = word
+    }
+    
+    func loadAudio () {
+        
+        guard let word = self.word else { return }
         
         let downloadTask : URLSessionDownloadTask = URLSession.shared.downloadTask(with: word.audioURL, completionHandler: { [weak self](url, response, error) -> Void in
-
+            
             self?.activity.stopAnimating()
             
-            do {
-                self?.player = try AVAudioPlayer(contentsOf: url!)
-                self?.player.prepareToPlay()
-            } catch let error as Error {
-                print(error.localizedDescription)
-            }
+            self?.player = try? AVAudioPlayer(contentsOf: url!)
+            self?.player.prepareToPlay()
         })
         
         downloadTask.resume()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for button in keyboard {
+            button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
+        }
+        
+        loadWord()
         
         setWordDisplay()
+        
+        loadAudio()
         
         // webView.loadHTMLString(word!.definition, baseURL: nil)
     }

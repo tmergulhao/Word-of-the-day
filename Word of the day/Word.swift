@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias XMLDictionary = Dictionary<String,Any>
+
 struct Word {
     
     var link : String
@@ -16,16 +18,15 @@ struct Word {
     var shortDefinition : String
     var definition : String
     
-    init?(_ dictionary : Dictionary<String, Any>) {
+    init?(_ dictionary : XMLDictionary) {
         
-        guard let dict = dictionary as? Dictionary<String, Dictionary<String, String>> else { return nil }
-        
-        guard let link = dict["link"]?["text"] else { return nil }
-        guard let audioPath = dict["enclosure"]?["url"] else { return nil }
-        guard let audioURL = URL(string: audioPath) else { return nil }
-        guard let shortDefinition = dict["merriam:shortdef"]?["text"] else { return nil }
-        guard let title = dict["title"]?["text"] else { return nil }
-        guard let definition = dict["description"]?["text"] else { return nil }
+        guard   let dict = dictionary as? Dictionary<String, Dictionary<String, String>>,
+                let link = dict["link"]?["text"],
+                let audioPath = dict["enclosure"]?["url"],
+                let audioURL = URL(string: audioPath),
+                let shortDefinition = dict["merriam:shortdef"]?["text"],
+                let title = dict["title"]?["text"],
+                let definition = dict["description"]?["text"] else { return nil }
         
         self.link = link
         self.audioURL = audioURL
@@ -37,6 +38,6 @@ struct Word {
 
 extension Word : CustomStringConvertible {
     var description : String {
-        return title
+        return title + "\n" + link + "\n" + shortDefinition + "\n" + definition
     }
 }
