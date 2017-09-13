@@ -88,6 +88,8 @@ class ViewController: UIViewController {
             button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
         }
         
+        wordLabel.font = UIFont(name: "Playfair Display", size: wordLabel.font.pointSize)!
+        
         loadWord()
         
         setWordDisplay()

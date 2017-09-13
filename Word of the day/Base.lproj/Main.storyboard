@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-lJ-UKL">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="PlayfairDisplay-Regular.ttf">
+            <string>PlayfairDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -158,20 +166,20 @@
                                     <constraint firstAttribute="height" constant="160" id="KWk-QJ-mby"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
-                                <rect key="frame" x="174" y="351.33333333333326" width="66.333333333333343" height="33.666666666666686"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
+                                <rect key="frame" x="163.66666666666666" y="344.33333333333331" width="88" height="48"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess what the word is…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqt-X9-dn3">
-                                <rect key="frame" x="111.33333333333331" y="311.66666666666674" width="191.33333333333337" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="137.66666666666669" y="308.33333333333326" width="139.66666666666669" height="16.666666666666686"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1AO-fg-e09">
-                                <rect key="frame" x="197" y="267.66666666666669" width="20" height="20"/>
+                                <rect key="frame" x="197" y="264.33333333333331" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -221,7 +229,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="37.5"/>
+            <point key="canvasLocation" x="220" y="38"/>
+        </scene>
+        <!--Introduction View Controller-->
+        <scene sceneID="y7H-XQ-zC6">
+            <objects>
+                <viewController id="LO9-lJ-UKL" customClass="IntroductionViewController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UHD-eC-Smz"/>
+                        <viewControllerLayoutGuide type="bottom" id="AgW-at-nkQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S6o-d7-bYX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-nN-dve" customClass="LoadingButton" customModule="Word_of_the_day" customModuleProvider="target">
+                                <rect key="frame" x="123" y="284" width="168" height="168"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="04V-b1-DyY"/>
+                                    <constraint firstAttribute="height" constant="168" id="Qh1-Nd-NBa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="84"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="FeJ-Ck-sBg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-zf-d0i">
+                                <rect key="frame" x="57.666666666666657" y="344.66666666666669" width="300" height="48"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub">
+                                <rect key="frame" x="57" y="412" width="300" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2gt-dP-b5X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cRO-nN-dve" firstAttribute="centerY" secondItem="S6o-d7-bYX" secondAttribute="centerY" id="4Fo-19-g9z"/>
+                            <constraint firstItem="cRO-nN-dve" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="CIv-tU-Wu3"/>
+                            <constraint firstItem="Hgs-8b-4ub" firstAttribute="leading" secondItem="Mmg-zf-d0i" secondAttribute="leading" id="H9y-Tl-oEb"/>
+                            <constraint firstItem="Mmg-zf-d0i" firstAttribute="centerY" secondItem="S6o-d7-bYX" secondAttribute="centerY" id="RYK-bo-Fzb"/>
+                            <constraint firstItem="Mmg-zf-d0i" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="Rcl-UD-oY7"/>
+                            <constraint firstItem="Hgs-8b-4ub" firstAttribute="top" secondItem="Mmg-zf-d0i" secondAttribute="bottom" constant="20" id="d5E-xZ-YTz"/>
+                            <constraint firstItem="Hgs-8b-4ub" firstAttribute="trailing" secondItem="Mmg-zf-d0i" secondAttribute="trailing" id="tcH-ma-FDa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="subtitleLabel" destination="Hgs-8b-4ub" id="9WO-Wc-EdK"/>
+                        <outlet property="titleLabel" destination="Mmg-zf-d0i" id="LdF-Yo-4Qn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e09-5g-1I7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-549.27536231884062" y="37.5"/>
         </scene>
     </scenes>
 </document>
