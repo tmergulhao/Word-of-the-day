@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     // @IBOutlet weak var webView: UIWebView!
     
-    @IBOutlet var keyboardLabel : UILabel!
+    @IBOutlet var hintLabel : UILabel!
     @IBOutlet var wordLabel : UILabel!
     @IBOutlet var keyboard : Array<UIButton>!
     @IBOutlet var activity : UIActivityIndicatorView!
@@ -38,13 +38,15 @@ class ViewController: UIViewController {
         wordLabel.setCharactersSpacing(5)
         
         if maskedText == word.title {
-            player.volume = 1.0
-            player.play()
+            player?.volume = 1.0
+            player?.play()
         }
     }
     
     @IBAction func keyboardPressed(_ sender : UIButton) {
+        
         sender.isEnabled = false
+        sender.layer.opacity = 0.4
         
         let character : Character! = sender.titleLabel?.text?.lowercased().characters.first
         
@@ -63,6 +65,8 @@ class ViewController: UIViewController {
         
         guard let word = Word(data) else { print("Unable to parse word from XML"); return }
         
+        self.hintLabel.text = word.shortDefinition
+        
         self.word = word
     }
     
@@ -75,7 +79,7 @@ class ViewController: UIViewController {
             self?.activity.stopAnimating()
             
             self?.player = try? AVAudioPlayer(contentsOf: url!)
-            self?.player.prepareToPlay()
+            self?.player?.prepareToPlay()
         })
         
         downloadTask.resume()
@@ -88,8 +92,6 @@ class ViewController: UIViewController {
             button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
         }
         
-        wordLabel.font = UIFont(name: "Playfair Display", size: wordLabel.font.pointSize)!
-        
         loadWord()
         
         setWordDisplay()
@@ -99,7 +101,7 @@ class ViewController: UIViewController {
         // webView.loadHTMLString(word!.definition, baseURL: nil)
     }
     
-    var player : AVAudioPlayer!
+    var player : AVAudioPlayer?
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

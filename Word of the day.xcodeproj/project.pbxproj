@@ -18,6 +18,7 @@
 		79705E041F5E0F450021606E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705E031F5E0F450021606E /* Word.swift */; };
 		79705E061F5E16760021606E /* ViewController+XMLParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705E051F5E16760021606E /* ViewController+XMLParserDelegate.swift */; };
 		797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */; };
+		79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		79705E031F5E0F450021606E /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		79705E051F5E16760021606E /* ViewController+XMLParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+XMLParserDelegate.swift"; sourceTree = "<group>"; };
 		797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+CharacterSpacing.swift"; sourceTree = "<group>"; };
+		79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array<NSLayoutContraints>.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				79705E031F5E0F450021606E /* Word.swift */,
 				7919B7751F69E46A00B44A19 /* LoadingButton.swift */,
 				797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */,
+				79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */,
 				79705DF51F5DF4C40021606E /* Main.storyboard */,
 				79705DF81F5DF4C40021606E /* Assets.xcassets */,
 				79705DFA1F5DF4C40021606E /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 				79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */,
 				79705E041F5E0F450021606E /* Word.swift in Sources */,
 				7919B77C1F69EA0400B44A19 /* IntroductionViewController.swift in Sources */,
+				79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

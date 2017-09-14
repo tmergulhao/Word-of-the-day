@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class LoadingButton : UIButton {
+@IBDesignable class CornerRadiusButton : UIButton {
     
     @IBInspectable var cornerRadius : CGFloat = 0 {
         didSet {
