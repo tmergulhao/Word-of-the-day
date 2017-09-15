@@ -1,5 +1,5 @@
 //
-//  ViewController+XMLParserDelegate.swift
+//  IntroductionViewController+XMLParserDelegate.swift
 //  Word of the day
 //
 //  Created by Tiago Mergulhão on 04/09/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension ViewController : XMLParserDelegate {
+extension IntroductionViewController : XMLParserDelegate {
     
     func getdictionaryFromXmlData(xmldata : Data) -> Array<NSMutableDictionary>? {
         
