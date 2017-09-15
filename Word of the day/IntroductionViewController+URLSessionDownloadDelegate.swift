@@ -13,26 +13,25 @@ extension IntroductionViewController : URLSessionTaskDelegate, URLSessionDownloa
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         
         if totalBytesExpectedToWrite > 0 {
+            
             let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
             
-            loadingButton.progress = progress
-            
-            debugPrint("Progress \(downloadTask) \(progress)")
+            DispatchQueue.main.sync {
+                loadingButton.progress = progress
+            }
         }
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         
-        debugPrint("Download finished: \(location)")
         //try? FileManager.default.removeItem(at: location)
         
-        audioURL = location
-        
-        loadingButton.isEnabled = true
+        DispatchQueue.main.sync {
+            audioURL = location
+            
+            loadingButton.isEnabled = true
+        }
     }
     
-    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        
-        debugPrint("Task completed: \(task), error: \(String(describing: error))")
-    }
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {}
 }

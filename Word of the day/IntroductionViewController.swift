@@ -96,11 +96,14 @@ class IntroductionViewController : UIViewController {
         loadingButton.setNeedsDisplay()
         
         let config = URLSessionConfiguration.background(withIdentifier: "com.tmergulhao.WordOfTheDay.download")
-        let session = URLSession(configuration: config, delegate: self, delegateQueue: OperationQueue())
+        let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
         
         let downloadTask : URLSessionDownloadTask = session.downloadTask(with: word.audioURL)
         
-        downloadTask.resume()
+        DispatchQueue.global(qos: .background).async {
+            
+            downloadTask.resume()
+        }
     }
     
     override func viewDidLoad() {
