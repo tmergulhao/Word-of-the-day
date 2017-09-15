@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7919B7741F69E26C00B44A19 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7919B7731F69E26C00B44A19 /* PlayfairDisplay-Regular.ttf */; };
 		7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */; };
 		7919B77C1F69EA0400B44A19 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919B77B1F69EA0400B44A19 /* IntroductionViewController.swift */; };
+		7951CD081F6C8781009DF4CE /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD041F6C8781009DF4CE /* OpenSans-Bold.ttf */; };
+		7951CD091F6C8781009DF4CE /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */; };
+		7951CD0A1F6C8781009DF4CE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */; };
+		7951CD0B1F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */; };
 		79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF11F5DF4C40021606E /* AppDelegate.swift */; };
 		79705DF41F5DF4C40021606E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF31F5DF4C40021606E /* ViewController.swift */; };
 		79705DF71F5DF4C40021606E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79705DF51F5DF4C40021606E /* Main.storyboard */; };
@@ -24,12 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7919B7731F69E26C00B44A19 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusButton.swift; sourceTree = "<group>"; };
-		7919B7771F69E91100B44A19 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		7919B7781F69E91100B44A19 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
-		7919B7791F69E91100B44A19 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		7919B77B1F69EA0400B44A19 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		7951CD041F6C8781009DF4CE /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "Fonts/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		79705DEE1F5DF4C40021606E /* Word of the day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word of the day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79705DF11F5DF4C40021606E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79705DF31F5DF4C40021606E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,10 +62,10 @@
 		7919B77A1F69E91700B44A19 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				7919B7771F69E91100B44A19 /* OpenSans-Bold.ttf */,
-				7919B7781F69E91100B44A19 /* OpenSans-Italic.ttf */,
-				7919B7791F69E91100B44A19 /* OpenSans-Regular.ttf */,
-				7919B7731F69E26C00B44A19 /* PlayfairDisplay-Regular.ttf */,
+				7951CD041F6C8781009DF4CE /* OpenSans-Bold.ttf */,
+				7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */,
+				7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */,
+				7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */,
 			);
 			name = Fonts;
 			path = "Word of the day";
@@ -165,9 +168,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7919B7741F69E26C00B44A19 /* PlayfairDisplay-Regular.ttf in Resources */,
 				79705DFC1F5DF4C40021606E /* LaunchScreen.storyboard in Resources */,
+				7951CD0B1F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf in Resources */,
 				79705DF91F5DF4C40021606E /* Assets.xcassets in Resources */,
+				7951CD081F6C8781009DF4CE /* OpenSans-Bold.ttf in Resources */,
+				7951CD091F6C8781009DF4CE /* OpenSans-Italic.ttf in Resources */,
+				7951CD0A1F6C8781009DF4CE /* OpenSans-Regular.ttf in Resources */,
 				79705DF71F5DF4C40021606E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

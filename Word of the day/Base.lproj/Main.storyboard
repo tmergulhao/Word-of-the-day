@@ -479,14 +479,14 @@
                                     <constraint firstAttribute="width" secondItem="PPI-n0-DoH" secondAttribute="height" multiplier="40:15" id="70O-39-HSH"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
-                                <rect key="frame" x="144" y="309.5" width="88" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
+                                <rect key="frame" x="116.5" y="309.5" width="142.5" height="48"/>
                                 <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju">
-                                <rect key="frame" x="37.5" y="377.5" width="300" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju">
+                                <rect key="frame" x="37.5" y="377.5" width="300" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="kpF-s3-eG2"/>
                                 </constraints>
@@ -536,7 +536,7 @@
                         <outletCollection property="keyboard" destination="fli-4B-koc" collectionClass="NSMutableArray" id="C4a-Vq-gTQ"/>
                         <outletCollection property="keyboard" destination="XPd-sD-2Ag" collectionClass="NSMutableArray" id="dF9-7h-80S"/>
                         <outletCollection property="keyboard" destination="TVs-yi-Wl4" collectionClass="NSMutableArray" id="3Xx-lQ-Pf2"/>
-                        <segue destination="thN-4X-X7q" kind="show" animates="NO" id="03w-44-hM3"/>
+                        <segue destination="thN-4X-X7q" kind="show" identifier="definition" animates="NO" id="03w-44-hM3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -547,20 +547,347 @@
         <scene sceneID="EvD-XG-zI4">
             <objects>
                 <tableViewController id="thN-4X-X7q" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="y0H-G0-gu6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" id="y0H-G0-gu6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nDb-Lr-ZFQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDb-Lr-ZFQ" id="y8z-av-qAJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <sections>
+                            <tableViewSection id="VW1-BR-1MO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" rowHeight="152" id="nDb-Lr-ZFQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDb-Lr-ZFQ" id="y8z-av-qAJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-ZS-UYL">
+                                                    <rect key="frame" x="142.5" y="30" width="90" height="48"/>
+                                                    <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-aX-33o">
+                                                    <rect key="frame" x="37.5" y="98" width="300" height="16.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="cTL-UK-nYT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JHu-ZS-UYL" firstAttribute="top" secondItem="y8z-av-qAJ" secondAttribute="topMargin" constant="22" id="7Xn-AM-cFh"/>
+                                                <constraint firstItem="k5u-aX-33o" firstAttribute="top" secondItem="JHu-ZS-UYL" secondAttribute="bottom" constant="20" id="QLY-Kw-lRV"/>
+                                                <constraint firstItem="k5u-aX-33o" firstAttribute="centerX" secondItem="y8z-av-qAJ" secondAttribute="centerX" id="VUy-Qt-DhB"/>
+                                                <constraint firstItem="JHu-ZS-UYL" firstAttribute="centerX" secondItem="y8z-av-qAJ" secondAttribute="centerX" id="at7-YW-cQs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="podcast" rowHeight="66" id="w1J-Ui-dNi">
+                                        <rect key="frame" x="0.0" y="152" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1J-Ui-dNi" id="Lfi-xj-q4H">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-tu-Zfn">
+                                                    <rect key="frame" x="72" y="12" width="139.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More on Podcasts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-X8-Xrw">
+                                                    <rect key="frame" x="72" y="34" width="84" height="14"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
+                                                    <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-XU-ZtB">
+                                                    <rect key="frame" x="38" y="13" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="PaN-XU-ZtB" secondAttribute="height" multiplier="1:1" id="5TB-Th-lUk"/>
+                                                        <constraint firstAttribute="width" constant="16" id="cda-q0-KGu"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UnC-X8-Xrw" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="1uL-8w-imL"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="CTG-tu-Zfn" secondAttribute="trailing" constant="24" id="462-Hl-puC"/>
+                                                <constraint firstItem="PaN-XU-ZtB" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="5" id="P3Y-oV-Vhn"/>
+                                                <constraint firstItem="CTG-tu-Zfn" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="4" id="SSy-P0-adO"/>
+                                                <constraint firstItem="UnC-X8-Xrw" firstAttribute="top" secondItem="CTG-tu-Zfn" secondAttribute="bottom" constant="6" id="SiR-bq-KeP"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="UnC-X8-Xrw" secondAttribute="trailing" constant="24" id="YLF-KL-HzN"/>
+                                                <constraint firstItem="PaN-XU-ZtB" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="30" id="qeG-mc-oZt"/>
+                                                <constraint firstItem="CTG-tu-Zfn" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="yhh-3q-Eg4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="full definition" rowHeight="452" id="1du-IQ-Z0v">
+                                        <rect key="frame" x="0.0" y="218" width="375" height="452"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1du-IQ-Z0v" id="9S4-pR-Kov">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="451.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jU-xJ-FdH">
+                                                    <rect key="frame" x="72" y="12" width="85" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-Y1-gbm">
+                                                    <rect key="frame" x="72" y="34.5" width="231" height="379.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="1:">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Bold"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content"> to move about quickly especially in search
+</string>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="2:">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Bold"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <mutableString key="content"> to go through or range over in or as if in a search
+Examples:
+The dog scoured the terrain in search of the tennis ball I had thrown.
+"The rescue team scoured the ground and a New Hampshire National Guard Black Hawk helicopter also searched the area." — Emily Sweeney, The Boston Globe, 18 July 2017
+Did you know?
+There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that </mutableString>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="scour">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=", which goes back to at least the early 14th century, probably derives—via Middle Dutch and Old French—from a Late Latin verb, ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="excurare">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=", meaning &quot;to clean off.&quot; Today's word, however, which appears in the 13th century, is believed to derive from the Old Norse ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="skūr">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=", meaning &quot;shower.&quot; (">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Skūr">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" is also distantly related to the Old English ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="scūr">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=", the ancestor of our English word ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="shower">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">.) Many disparate things can be scoured. For example, one can scour an area (as in "scoured the woods in search of the lost dog") or publications (as in "scouring magazine and newspaper articles").</string>
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <real key="NSKern" value="0.0"/>
+                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
+                                                                    <tabStops/>
+                                                                </paragraphStyle>
+                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More on Merion Webster" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dj0-AW-U4d">
+                                                    <rect key="frame" x="72" y="420" width="117" height="14"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
+                                                    <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3jU-xJ-FdH" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="6gB-sz-0RS"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="dj0-AW-U4d" secondAttribute="trailing" constant="64" id="8fZ-WH-AN2"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3jU-xJ-FdH" secondAttribute="trailing" constant="24" id="Aao-LE-Or0"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKu-Y1-gbm" secondAttribute="trailing" constant="64" id="DfS-9D-KeD"/>
+                                                <constraint firstItem="EKu-Y1-gbm" firstAttribute="top" secondItem="3jU-xJ-FdH" secondAttribute="bottom" constant="6" id="Dzc-IT-YUN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dj0-AW-U4d" secondAttribute="bottom" constant="9" id="TVC-0I-kdi"/>
+                                                <constraint firstItem="dj0-AW-U4d" firstAttribute="top" secondItem="EKu-Y1-gbm" secondAttribute="bottom" constant="6" id="YNS-jA-x1y"/>
+                                                <constraint firstItem="3jU-xJ-FdH" firstAttribute="top" secondItem="9S4-pR-Kov" secondAttribute="topMargin" constant="4" id="fgs-Oh-UHO"/>
+                                                <constraint firstItem="dj0-AW-U4d" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="gvO-2T-gRD"/>
+                                                <constraint firstItem="EKu-Y1-gbm" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="wky-bd-QJT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
                         <connections>
                             <outlet property="dataSource" destination="thN-4X-X7q" id="PmN-3K-TU4"/>
                             <outlet property="delegate" destination="thN-4X-X7q" id="E0j-Tf-UAs"/>
@@ -569,7 +896,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noG-sy-Rbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975" y="37"/>
+            <point key="canvasLocation" x="973.60000000000002" y="36.431784107946029"/>
         </scene>
         <!--Introduction View Controller-->
         <scene sceneID="y7H-XQ-zC6">
