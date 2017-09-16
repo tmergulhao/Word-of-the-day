@@ -30,6 +30,7 @@
 		79B8DDC01F6D704E00210128 /* ProgressDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */; };
 		79C819981F6C2C37005110CE /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819971F6C2C37005110CE /* LoadingButton.swift */; };
 		79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */; };
+		79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE67381F6DD9C700D17BD9 /* GameToDefinitionSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDisplay.swift; sourceTree = "<group>"; };
 		79C819971F6C2C37005110CE /* LoadingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordModel+URLSessionDownloadDelegate.swift"; sourceTree = "<group>"; };
+		79CE67381F6DD9C700D17BD9 /* GameToDefinitionSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameToDefinitionSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				79705DF01F5DF4C40021606E /* Word of the day */,
+				79CE673A1F6DD9DB00D17BD9 /* Segues */,
 				79CE67371F6DD76C00D17BD9 /* Views */,
 				79CE67361F6DD73F00D17BD9 /* Controllers */,
 				79CE67341F6DD6DE00D17BD9 /* Model */,
@@ -109,7 +112,6 @@
 			children = (
 				79705DF11F5DF4C40021606E /* AppDelegate.swift */,
 				792C77FE1F6D8BAB00E88F7E /* AudioPlayer.swift */,
-				792C78021F6DA50200E88F7E /* CrossfadeSegue.swift */,
 				79705DF81F5DF4C40021606E /* Assets.xcassets */,
 				79705DF51F5DF4C40021606E /* Main.storyboard */,
 				79705DFA1F5DF4C40021606E /* LaunchScreen.storyboard */,
@@ -158,6 +160,15 @@
 			);
 			name = Views;
 			path = "Word of the day";
+			sourceTree = "<group>";
+		};
+		79CE673A1F6DD9DB00D17BD9 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				792C78021F6DA50200E88F7E /* CrossfadeSegue.swift */,
+				79CE67381F6DD9C700D17BD9 /* GameToDefinitionSegue.swift */,
+			);
+			path = Segues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +253,7 @@
 				792148581F6C8BE6001D5C1F /* LoadingButtonLayer.swift in Sources */,
 				792C78031F6DA50200E88F7E /* CrossfadeSegue.swift in Sources */,
 				7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */,
+				79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */,
 				797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */,
 				79705E061F5E16760021606E /* WordModel+XMLParserDelegate.swift in Sources */,
 				79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */,
