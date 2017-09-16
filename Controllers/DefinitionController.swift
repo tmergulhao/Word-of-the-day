@@ -7,16 +7,25 @@
 //
 
 import UIKit
+import SafariServices
 
 class DefinitionController : UITableViewController {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var shortDefinitionLabel: UILabel!
     @IBOutlet weak var fullDefinitionLabel: UILabel!
+    
     @IBAction func viewPodcast(_ sender: UIButton) {
-        print("Unable to launch Podcast url yet")
+        
+        let url : URL! = URL(string: "https://itunes.apple.com/us/podcast/merriam-websters-word-of-the-day/id164829166")
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     @IBAction func viewOnWebsite(_ sender: UIButton) {
-        print("Unable to launch M.W. url yet")
+        
+        let url : URL! = URL(string: WordModel.word!.link)
+        let safari = SFSafariViewController(url: url)
+        let tint = UIColor(named: "Tint red")
+        safari.preferredControlTintColor = tint
+        present(safari, animated: true, completion: nil)
     }
     @IBAction func playPause(_ sender: UIButton) {
         AudioPlayer.shared.play()
