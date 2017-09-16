@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -32,6 +31,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
+                                <rect key="frame" x="89" y="216" width="142.5" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="eGA-QF-kmi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
+                                <color key="textColor" name="Ink gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju">
+                                <rect key="frame" x="10" y="284" width="300" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="kpF-s3-eG2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <color key="textColor" name="Ink gray"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="PPI-n0-DoH">
                                 <rect key="frame" x="6" y="356.5" width="308" height="115.5"/>
                                 <subviews>
@@ -480,28 +497,15 @@
                                     <constraint firstAttribute="width" secondItem="PPI-n0-DoH" secondAttribute="height" multiplier="40:15" id="70O-39-HSH"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
-                                <rect key="frame" x="95" y="219" width="130.5" height="42"/>
-                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
-                                <color key="textColor" name="Ink gray"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju">
-                                <rect key="frame" x="10" y="281" width="300" height="14"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="kpF-s3-eG2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
-                                <color key="textColor" name="Ink gray"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Nil"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PPI-n0-DoH" secondAttribute="bottom" constant="8" id="BYZ-S2-AYo"/>
+                            <constraint firstItem="vl2-eg-nXU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="999" constant="30" id="AG7-xl-B84"/>
+                            <constraint firstItem="PPI-n0-DoH" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" priority="999" constant="8" id="CZV-Q3-qK2"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTn-G4-rbs"/>
                             <constraint firstItem="lt3-2j-4Ju" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JRl-97-Gl1"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mex-W2-Z43"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PPI-n0-DoH" secondAttribute="bottom" constant="8" id="NeB-nZ-meQ"/>
                             <constraint firstItem="lt3-2j-4Ju" firstAttribute="top" secondItem="vl2-eg-nXU" secondAttribute="bottom" constant="20" id="OXa-xG-w68"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="alQ-Aq-06N"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="bo1-wf-Deh"/>
@@ -510,6 +514,11 @@
                     </view>
                     <connections>
                         <outlet property="hintLabel" destination="lt3-2j-4Ju" id="6is-Fp-Tu8"/>
+                        <outlet property="keyboardHideGuide" destination="CZV-Q3-qK2" id="uvQ-VG-xJS"/>
+                        <outlet property="keyboardShowGuide" destination="NeB-nZ-meQ" id="1kV-Iz-tdO"/>
+                        <outlet property="keyboardStack" destination="PPI-n0-DoH" id="epD-kS-1M0"/>
+                        <outlet property="titleCenterY" destination="alQ-Aq-06N" id="14S-aa-Twu"/>
+                        <outlet property="titleSpacingTop" destination="AG7-xl-B84" id="qnh-4q-oTd"/>
                         <outlet property="wordLabel" destination="vl2-eg-nXU" id="RDa-ci-7al"/>
                         <outletCollection property="keyboard" destination="4rb-zb-qfq" collectionClass="NSMutableArray" id="pWb-fE-w7N"/>
                         <outletCollection property="keyboard" destination="Tno-at-Pwl" collectionClass="NSMutableArray" id="BP6-QC-wqI"/>
@@ -537,17 +546,17 @@
                         <outletCollection property="keyboard" destination="fli-4B-koc" collectionClass="NSMutableArray" id="C4a-Vq-gTQ"/>
                         <outletCollection property="keyboard" destination="XPd-sD-2Ag" collectionClass="NSMutableArray" id="dF9-7h-80S"/>
                         <outletCollection property="keyboard" destination="TVs-yi-Wl4" collectionClass="NSMutableArray" id="3Xx-lQ-Pf2"/>
-                        <segue destination="thN-4X-X7q" kind="show" identifier="definition" animates="NO" id="03w-44-hM3"/>
+                        <segue destination="thN-4X-X7q" kind="custom" identifier="definition" customClass="CrossfadeSegue" customModule="Word_of_the_day" customModuleProvider="target" id="03w-44-hM3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="220" y="37.331334332833585"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Definition Controller-->
         <scene sceneID="EvD-XG-zI4">
             <objects>
-                <tableViewController id="thN-4X-X7q" sceneMemberID="viewController">
+                <tableViewController id="thN-4X-X7q" customClass="DefinitionController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" id="y0H-G0-gu6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -564,7 +573,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-ZS-UYL">
-                                                    <rect key="frame" x="115" y="30" width="90.5" height="48"/>
+                                                    <rect key="frame" x="115.5" y="30" width="90" height="48"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                                     <color key="textColor" name="Ink gray"/>
                                                     <nil key="highlightedColor"/>
@@ -589,7 +598,7 @@
                                         <color key="backgroundColor" name="Nil"/>
                                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="podcast" rowHeight="66" id="w1J-Ui-dNi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="audio player" rowHeight="66" id="w1J-Ui-dNi">
                                         <rect key="frame" x="0.0" y="152" width="320" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1J-Ui-dNi" id="Lfi-xj-q4H">
@@ -602,27 +611,36 @@
                                                     <color key="textColor" name="Ink gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More on Podcasts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnC-X8-Xrw">
-                                                    <rect key="frame" x="72" y="34" width="84" height="14"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
-                                                    <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-XU-ZtB">
                                                     <rect key="frame" x="38" y="13" width="16" height="16"/>
+                                                    <color key="backgroundColor" name="Tint red"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="PaN-XU-ZtB" secondAttribute="height" multiplier="1:1" id="5TB-Th-lUk"/>
                                                         <constraint firstAttribute="width" constant="16" id="cda-q0-KGu"/>
                                                     </constraints>
+                                                    <connections>
+                                                        <action selector="playPause:" destination="thN-4X-X7q" eventType="touchUpInside" id="Lwy-o8-iXM"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-co-H9z">
+                                                    <rect key="frame" x="72" y="28" width="101" height="26"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                    <state key="normal" title="More on Podcasts">
+                                                        <color key="titleColor" name="Tint red"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="viewPodcast:" destination="thN-4X-X7q" eventType="touchUpInside" id="Xd4-dJ-xv7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="UnC-X8-Xrw" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="1uL-8w-imL"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="CTG-tu-Zfn" secondAttribute="trailing" constant="24" id="462-Hl-puC"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CG3-co-H9z" secondAttribute="trailing" constant="60" id="FNi-bs-csS"/>
                                                 <constraint firstItem="PaN-XU-ZtB" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="5" id="P3Y-oV-Vhn"/>
                                                 <constraint firstItem="CTG-tu-Zfn" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="4" id="SSy-P0-adO"/>
-                                                <constraint firstItem="UnC-X8-Xrw" firstAttribute="top" secondItem="CTG-tu-Zfn" secondAttribute="bottom" constant="6" id="SiR-bq-KeP"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="UnC-X8-Xrw" secondAttribute="trailing" constant="24" id="YLF-KL-HzN"/>
+                                                <constraint firstItem="CG3-co-H9z" firstAttribute="top" secondItem="CTG-tu-Zfn" secondAttribute="bottom" constant="-0.5" id="dlb-yZ-Fb6"/>
+                                                <constraint firstItem="CG3-co-H9z" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="gj1-xN-AyI"/>
+                                                <constraint firstAttribute="bottom" secondItem="CG3-co-H9z" secondAttribute="bottom" constant="11.5" id="k97-NE-SuE"/>
                                                 <constraint firstItem="PaN-XU-ZtB" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="30" id="qeG-mc-oZt"/>
                                                 <constraint firstItem="CTG-tu-Zfn" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="yhh-3q-Eg4"/>
                                             </constraints>
@@ -644,12 +662,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-Y1-gbm">
-                                                    <rect key="frame" x="72" y="34.5" width="176" height="379.5"/>
+                                                    <rect key="frame" x="72" y="34.5" width="176" height="376.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="1:">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Bold"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Bold"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -664,7 +682,7 @@
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -677,7 +695,7 @@
                                                         <fragment content="2:">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Bold"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Bold"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -696,7 +714,7 @@ Did you know?
 There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that </mutableString>
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -709,7 +727,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content="scour">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -722,7 +740,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content=", which goes back to at least the early 14th century, probably derives—via Middle Dutch and Old French—from a Late Latin verb, ">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -735,7 +753,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content="excurare">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -748,7 +766,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content=", meaning &quot;to clean off.&quot; Today's word, however, which appears in the 13th century, is believed to derive from the Old Norse ">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -761,7 +779,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content="skūr">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -774,7 +792,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content=", meaning &quot;shower.&quot; (">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -787,7 +805,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content="Skūr">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -800,7 +818,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content=" is also distantly related to the Old English ">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -813,7 +831,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content="scūr">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Italic"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -826,7 +844,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content=", the ancestor of our English word ">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -839,7 +857,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content="shower">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -853,7 +871,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                             <string key="content">.) Many disparate things can be scoured. For example, one can scour an area (as in "scoured the woods in search of the lost dog") or publications (as in "scouring magazine and newspaper articles").</string>
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
                                                                 <real key="NSKern" value="0.0"/>
                                                                 <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
@@ -866,23 +884,28 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="More on Merion Webster" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dj0-AW-U4d">
-                                                    <rect key="frame" x="72" y="420" width="117" height="14"/>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
-                                                    <color key="textColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-M6-PI7">
+                                                    <rect key="frame" x="72" y="411" width="141" height="29"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                    <state key="normal" title="More on Merion Webster">
+                                                        <color key="titleColor" name="Tint red"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="viewOnWebsite:" destination="thN-4X-X7q" eventType="touchUpInside" id="zjd-T2-iQw"/>
+                                                        <action selector="viewPodcast:" destination="thN-4X-X7q" eventType="touchUpInside" id="D0S-7i-1fp"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="3jU-xJ-FdH" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="6gB-sz-0RS"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="dj0-AW-U4d" secondAttribute="trailing" constant="64" id="8fZ-WH-AN2"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3jU-xJ-FdH" secondAttribute="trailing" constant="24" id="Aao-LE-Or0"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKu-Y1-gbm" secondAttribute="trailing" constant="64" id="DfS-9D-KeD"/>
                                                 <constraint firstItem="EKu-Y1-gbm" firstAttribute="top" secondItem="3jU-xJ-FdH" secondAttribute="bottom" constant="6" id="Dzc-IT-YUN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="dj0-AW-U4d" secondAttribute="bottom" constant="9" id="TVC-0I-kdi"/>
-                                                <constraint firstItem="dj0-AW-U4d" firstAttribute="top" secondItem="EKu-Y1-gbm" secondAttribute="bottom" constant="6" id="YNS-jA-x1y"/>
+                                                <constraint firstAttribute="bottom" secondItem="3yn-M6-PI7" secondAttribute="bottom" constant="11.5" id="F9y-OP-ML8"/>
+                                                <constraint firstItem="3yn-M6-PI7" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="Pll-57-UF2"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3yn-M6-PI7" secondAttribute="trailing" constant="60" id="eh9-f0-d8c"/>
                                                 <constraint firstItem="3jU-xJ-FdH" firstAttribute="top" secondItem="9S4-pR-Kov" secondAttribute="topMargin" constant="4" id="fgs-Oh-UHO"/>
-                                                <constraint firstItem="dj0-AW-U4d" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="gvO-2T-gRD"/>
+                                                <constraint firstItem="3yn-M6-PI7" firstAttribute="top" secondItem="EKu-Y1-gbm" secondAttribute="bottom" id="o9z-wu-KRw"/>
                                                 <constraint firstItem="EKu-Y1-gbm" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="wky-bd-QJT"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -897,6 +920,11 @@ There are two distinct homographs of the verb scour in English. One means to cle
                             <outlet property="delegate" destination="thN-4X-X7q" id="E0j-Tf-UAs"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="fullDefinitionLabel" destination="EKu-Y1-gbm" id="gJr-tM-q2X"/>
+                        <outlet property="shortDefinitionLabel" destination="k5u-aX-33o" id="zjJ-cs-UVw"/>
+                        <outlet property="wordLabel" destination="JHu-ZS-UYL" id="R7c-lE-Rt3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noG-sy-Rbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -926,13 +954,13 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-zf-d0i">
-                                <rect key="frame" x="32.5" y="219" width="255.5" height="42"/>
+                                <rect key="frame" x="33.5" y="216" width="253.5" height="48"/>
                                 <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                 <color key="textColor" name="Ink gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub">
-                                <rect key="frame" x="25.5" y="280.5" width="269" height="28"/>
+                                <rect key="frame" x="21" y="283.5" width="278.5" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="2gt-dP-b5X"/>
                                 </constraints>
@@ -972,7 +1000,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
             <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Nil">
-            <color red="0.9869999885559082" green="0.98199999332427979" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99800002574920654" green="0.99299997091293335" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Tint red">
             <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

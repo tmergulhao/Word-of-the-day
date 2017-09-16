@@ -8,46 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */; };
-		7919B77C1F69EA0400B44A19 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919B77B1F69EA0400B44A19 /* IntroductionViewController.swift */; };
+		7919B77C1F69EA0400B44A19 /* IntroductionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919B77B1F69EA0400B44A19 /* IntroductionController.swift */; };
 		792148581F6C8BE6001D5C1F /* LoadingButtonLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792148571F6C8BE6001D5C1F /* LoadingButtonLayer.swift */; };
+		792C77FF1F6D8BAB00E88F7E /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C77FE1F6D8BAB00E88F7E /* AudioPlayer.swift */; };
+		792C78011F6D9B9500E88F7E /* DefinitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C78001F6D9B9500E88F7E /* DefinitionController.swift */; };
+		792C78031F6DA50200E88F7E /* CrossfadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C78021F6DA50200E88F7E /* CrossfadeSegue.swift */; };
 		7951CD081F6C8781009DF4CE /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD041F6C8781009DF4CE /* OpenSans-Bold.ttf */; };
 		7951CD091F6C8781009DF4CE /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */; };
 		7951CD0A1F6C8781009DF4CE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */; };
 		7951CD0B1F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */; };
 		79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF11F5DF4C40021606E /* AppDelegate.swift */; };
-		79705DF41F5DF4C40021606E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF31F5DF4C40021606E /* ViewController.swift */; };
+		79705DF41F5DF4C40021606E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF31F5DF4C40021606E /* GameController.swift */; };
 		79705DF71F5DF4C40021606E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79705DF51F5DF4C40021606E /* Main.storyboard */; };
 		79705DF91F5DF4C40021606E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79705DF81F5DF4C40021606E /* Assets.xcassets */; };
 		79705DFC1F5DF4C40021606E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79705DFA1F5DF4C40021606E /* LaunchScreen.storyboard */; };
 		79705E041F5E0F450021606E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705E031F5E0F450021606E /* Word.swift */; };
-		79705E061F5E16760021606E /* IntroductionViewController+XMLParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705E051F5E16760021606E /* IntroductionViewController+XMLParserDelegate.swift */; };
+		79705E061F5E16760021606E /* WordModel+XMLParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705E051F5E16760021606E /* WordModel+XMLParserDelegate.swift */; };
 		797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */; };
 		79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */; };
+		79B8DDBE1F6D6D6300210128 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBD1F6D6D6300210128 /* WordModel.swift */; };
+		79B8DDC01F6D704E00210128 /* ProgressDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */; };
 		79C819981F6C2C37005110CE /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819971F6C2C37005110CE /* LoadingButton.swift */; };
-		79C8199A1F6C3C91005110CE /* IntroductionViewController+URLSessionDownloadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819991F6C3C91005110CE /* IntroductionViewController+URLSessionDownloadDelegate.swift */; };
+		79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusButton.swift; sourceTree = "<group>"; };
-		7919B77B1F69EA0400B44A19 /* IntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		7919B77B1F69EA0400B44A19 /* IntroductionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionController.swift; sourceTree = "<group>"; };
 		792148571F6C8BE6001D5C1F /* LoadingButtonLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButtonLayer.swift; sourceTree = "<group>"; };
+		792C77FE1F6D8BAB00E88F7E /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		792C78001F6D9B9500E88F7E /* DefinitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionController.swift; sourceTree = "<group>"; };
+		792C78021F6DA50200E88F7E /* CrossfadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossfadeSegue.swift; sourceTree = "<group>"; };
 		7951CD041F6C8781009DF4CE /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "Fonts/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		79705DEE1F5DF4C40021606E /* Word of the day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word of the day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79705DF11F5DF4C40021606E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79705DF31F5DF4C40021606E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79705DF31F5DF4C40021606E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		79705DF61F5DF4C40021606E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79705DF81F5DF4C40021606E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79705DFB1F5DF4C40021606E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79705DFD1F5DF4C40021606E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79705E031F5E0F450021606E /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		79705E051F5E16760021606E /* IntroductionViewController+XMLParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IntroductionViewController+XMLParserDelegate.swift"; sourceTree = "<group>"; };
+		79705E051F5E16760021606E /* WordModel+XMLParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordModel+XMLParserDelegate.swift"; sourceTree = "<group>"; };
 		797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+CharacterSpacing.swift"; sourceTree = "<group>"; };
 		79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array<NSLayoutContraints>.swift"; sourceTree = "<group>"; };
+		79B8DDBD1F6D6D6300210128 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDisplay.swift; sourceTree = "<group>"; };
 		79C819971F6C2C37005110CE /* LoadingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
-		79C819991F6C3C91005110CE /* IntroductionViewController+URLSessionDownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IntroductionViewController+URLSessionDownloadDelegate.swift"; sourceTree = "<group>"; };
+		79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordModel+URLSessionDownloadDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,16 +104,21 @@
 			isa = PBXGroup;
 			children = (
 				79705DF11F5DF4C40021606E /* AppDelegate.swift */,
-				7919B77B1F69EA0400B44A19 /* IntroductionViewController.swift */,
-				79705E051F5E16760021606E /* IntroductionViewController+XMLParserDelegate.swift */,
-				79C819991F6C3C91005110CE /* IntroductionViewController+URLSessionDownloadDelegate.swift */,
-				79705DF31F5DF4C40021606E /* ViewController.swift */,
+				7919B77B1F69EA0400B44A19 /* IntroductionController.swift */,
+				79705DF31F5DF4C40021606E /* GameController.swift */,
+				792C78001F6D9B9500E88F7E /* DefinitionController.swift */,
 				79705E031F5E0F450021606E /* Word.swift */,
+				79B8DDBD1F6D6D6300210128 /* WordModel.swift */,
+				79705E051F5E16760021606E /* WordModel+XMLParserDelegate.swift */,
+				79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */,
+				792C77FE1F6D8BAB00E88F7E /* AudioPlayer.swift */,
+				79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */,
 				7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */,
 				79C819971F6C2C37005110CE /* LoadingButton.swift */,
 				792148571F6C8BE6001D5C1F /* LoadingButtonLayer.swift */,
 				797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */,
 				79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */,
+				792C78021F6DA50200E88F7E /* CrossfadeSegue.swift */,
 				79705DF51F5DF4C40021606E /* Main.storyboard */,
 				79705DF81F5DF4C40021606E /* Assets.xcassets */,
 				79705DFA1F5DF4C40021606E /* LaunchScreen.storyboard */,
@@ -139,11 +154,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Tiago Mergulhão";
 				TargetAttributes = {
 					79705DED1F5DF4C40021606E = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 6CSUU74W7V;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -190,15 +207,20 @@
 			files = (
 				79C819981F6C2C37005110CE /* LoadingButton.swift in Sources */,
 				792148581F6C8BE6001D5C1F /* LoadingButtonLayer.swift in Sources */,
+				792C78031F6DA50200E88F7E /* CrossfadeSegue.swift in Sources */,
 				7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */,
 				797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */,
-				79705E061F5E16760021606E /* IntroductionViewController+XMLParserDelegate.swift in Sources */,
-				79C8199A1F6C3C91005110CE /* IntroductionViewController+URLSessionDownloadDelegate.swift in Sources */,
-				79705DF41F5DF4C40021606E /* ViewController.swift in Sources */,
+				79705E061F5E16760021606E /* WordModel+XMLParserDelegate.swift in Sources */,
+				79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */,
+				79705DF41F5DF4C40021606E /* GameController.swift in Sources */,
+				79B8DDBE1F6D6D6300210128 /* WordModel.swift in Sources */,
 				79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */,
 				79705E041F5E0F450021606E /* Word.swift in Sources */,
-				7919B77C1F69EA0400B44A19 /* IntroductionViewController.swift in Sources */,
+				7919B77C1F69EA0400B44A19 /* IntroductionController.swift in Sources */,
 				79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */,
+				792C78011F6D9B9500E88F7E /* DefinitionController.swift in Sources */,
+				79B8DDC01F6D704E00210128 /* ProgressDisplay.swift in Sources */,
+				792C77FF1F6D8BAB00E88F7E /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +256,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -242,7 +266,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -284,7 +312,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -292,7 +322,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -321,11 +355,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6CSUU74W7V;
 				INFOPLIST_FILE = "Word of the day/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tmergulhao.Word-of-the-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -333,11 +370,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6CSUU74W7V;
 				INFOPLIST_FILE = "Word of the day/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tmergulhao.Word-of-the-day";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

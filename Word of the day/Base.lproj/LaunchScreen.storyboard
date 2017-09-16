@@ -21,8 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Red circle" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-fw-Pcu">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Circle" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-fw-Pcu">
                                 <rect key="frame" x="103" y="249" width="168" height="168"/>
+                                <color key="tintColor" name="Tint red"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="Nil"/>
@@ -38,9 +39,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Red circle" width="168" height="168"/>
+        <image name="Circle" width="168" height="168"/>
         <namedColor name="Nil">
-            <color red="0.9869999885559082" green="0.98199999332427979" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99800002574920654" green="0.99299997091293335" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Tint red">
+            <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

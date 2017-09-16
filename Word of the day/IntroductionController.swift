@@ -25,18 +25,11 @@ class IntroductionController : UIViewController {
     
     func performButtonMove () {
         
-        UIView.animate(withDuration: 2, delay: 2, options: .curveEaseIn, animations: {
+        [buttonCenterY, buttonHeight].deactivate()
+        [buttonBottonToView, buttonSmallerHeight].activate()
+        
+        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseIn, animations: {
             [weak self]() -> Void in
-            
-            guard   let buttonHeight = self?.buttonHeight,
-                let buttonCenterY = self?.buttonCenterY,
-                let buttonBottonToView = self?.buttonBottonToView,
-                let buttonSmallerHeight = self?.buttonSmallerHeight else {
-                    return
-            }
-            
-            [buttonCenterY, buttonHeight].deactivate()
-            [buttonBottonToView, buttonSmallerHeight].activate()
             
             self?.view.layoutIfNeeded()
         })
@@ -50,7 +43,7 @@ class IntroductionController : UIViewController {
         [buttonBottonToView, buttonSmallerHeight].deactivate()
         view.layoutIfNeeded()
         
-        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
             [weak self]() -> Void in
             self?.titleLabel.layer.opacity = 1
             self?.subtitleLabel.layer.opacity = 1

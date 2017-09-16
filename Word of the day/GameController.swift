@@ -13,6 +13,13 @@ class GameController: UIViewController {
     @IBOutlet var hintLabel : UILabel!
     @IBOutlet var wordLabel : UILabel!
     @IBOutlet var keyboard : Array<UIButton>!
+    @IBOutlet var keyboardStack : UIStackView!
+    
+    @IBOutlet var titleCenterY: NSLayoutConstraint!
+    @IBOutlet var titleSpacingTop: NSLayoutConstraint!
+    @IBOutlet var keyboardHideGuide: NSLayoutConstraint!
+    @IBOutlet weak var keyboardShowGuide: NSLayoutConstraint!
+    
     var charactersUsed : Set<Character> = []
     
     func setWordDisplay () {
@@ -31,14 +38,14 @@ class GameController: UIViewController {
         wordLabel.setCharactersSpacing(5)
         
         if maskedText == word.title {
-            AudioPlayer.shared.play()
+            performSegue(withIdentifier: "definition", sender: nil)
         }
     }
     
     @IBAction func keyboardPressed(_ sender : UIButton) {
         
         sender.isEnabled = false
-        sender.layer.opacity = 0.4
+        sender.alpha = 0.4
         
         let character : Character! = sender.titleLabel?.text?.lowercased().characters.first
         
@@ -50,6 +57,9 @@ class GameController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        [titleSpacingTop].deactivate()
+        view.layoutIfNeeded()
+        
         for button in keyboard {
             button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
         }
@@ -57,9 +67,5 @@ class GameController: UIViewController {
         self.hintLabel.text = WordModel.word!.shortDefinition
         
         setWordDisplay()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 }
