@@ -37,16 +37,16 @@ class IntroductionController : UIViewController {
 
     func performTitleShow () {
         
-        titleLabel.layer.opacity = 0
-        subtitleLabel.layer.opacity = 0
+        titleLabel.alpha = 0
+        subtitleLabel.alpha = 0
         
         [buttonBottonToView, buttonSmallerHeight].deactivate()
         view.layoutIfNeeded()
         
         UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
             [weak self]() -> Void in
-            self?.titleLabel.layer.opacity = 1
-            self?.subtitleLabel.layer.opacity = 1
+            self?.titleLabel.alpha = 1
+            self?.subtitleLabel.alpha = 1
         })
     }
     

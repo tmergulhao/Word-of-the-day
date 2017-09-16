@@ -23,8 +23,9 @@ class GameToDefinitionSegue : CrossfadeSegue {
             [weak self]() -> Void in
             
             self!.source.view.layoutIfNeeded()
-        })
-        
-        super.perform()
+        }) {
+            (completion) in
+            super.perform()
+        }
     }
 }

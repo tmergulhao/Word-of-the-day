@@ -18,7 +18,7 @@ class CrossfadeSegue : UIStoryboardSegue {
         destination.view.alpha = 0.0
         window.insertSubview(destination.view, aboveSubview: source.view)
         
-        UIView.animate(withDuration: 0.5, delay: 0.5, options: .curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
             destination.view.alpha = 1.0
         }) {
             (completion) in
