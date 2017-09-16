@@ -63,8 +63,10 @@ class LoadingButtonLayer : CALayer {
         
         let progressBar = progressPath.cgPath
         
+        let color : CGColor! = UIColor(named: "Nil")?.cgColor
+        
         ctx.setLineWidth(3)
-        ctx.setStrokeColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1).cgColor)
+        ctx.setStrokeColor(color)
         ctx.addPath(progressBar)
         ctx.strokePath()
     }
@@ -73,10 +75,12 @@ class LoadingButtonLayer : CALayer {
         
         let circle = CGPath(ellipseIn: bounds, transform: nil)
         
-        ctx.setFillColor(#colorLiteral(red: 0.9459537864, green: 0.4344328642, blue: 0.4142383933, alpha: 1).cgColor)
+        let color : CGColor! = UIColor(named: "Tint red")?.cgColor
+        
+        ctx.setFillColor(color)
         ctx.addPath(circle)
         ctx.fillPath()
         
-        drawProgess(in: ctx)
+        if progress < 1 { drawProgess(in: ctx) }
     }
 }

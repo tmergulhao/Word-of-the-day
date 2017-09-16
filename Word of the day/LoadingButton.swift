@@ -8,12 +8,16 @@
 
 import UIKit
 
-@IBDesignable class LoadingButton : UIButton {
+@IBDesignable class LoadingButton : UIButton, ProgressDisplay {
     
-    var progress : Float = 100 {
+    var progress : Float = 0 {
         didSet {
+            
+            isEnabled = progress == 1
+            
             let customLayer = layer as! LoadingButtonLayer
             customLayer.progress = CGFloat(progress)
+            setNeedsDisplay()
         }
     }
     

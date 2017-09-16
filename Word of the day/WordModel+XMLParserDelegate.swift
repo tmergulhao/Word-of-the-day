@@ -1,5 +1,5 @@
 //
-//  IntroductionViewController+XMLParserDelegate.swift
+//  WordModel+XMLParserDelegate.swift
 //  Word of the day
 //
 //  Created by Tiago Mergulhão on 04/09/17.
@@ -8,7 +8,28 @@
 
 import Foundation
 
-extension IntroductionViewController : XMLParserDelegate {
+extension WordModel : XMLParserDelegate {
+    
+    func loadWord() {
+        
+        DispatchQueue.global(qos: .background).async {
+            [weak self]() -> Void in
+
+            let url : URL! = URL(string: "https://www.merriam-webster.com/wotd/feed/rss2")
+            let contents = try! String(contentsOf: url, encoding: String.Encoding.utf8)
+            
+            let XML : XMLDictionary! = self?.getdictionaryFromXmlString(xmldata: contents)![0] as? XMLDictionary
+            let data = (((XML["rss"]! as! XMLDictionary)["channel"]! as! XMLDictionary)["item"]! as! Array<XMLDictionary>) [0]
+            
+            guard let word = Word(data) else { print("Unable to parse word from XML"); return }
+            
+            self?.word = word
+            
+            DispatchQueue.main.sync {
+                self?.loadAudio()
+            }
+        }
+    }
     
     func getdictionaryFromXmlData(xmldata : Data) -> Array<NSMutableDictionary>? {
         
@@ -68,4 +89,3 @@ extension IntroductionViewController : XMLParserDelegate {
     
     func parserDidEndDocument(_ parser: XMLParser) {}
 }
-

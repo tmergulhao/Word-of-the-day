@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameController.swift
 //  Word of the day
 //
 //  Created by Tiago Mergulhão on 04/09/17.
@@ -7,24 +7,17 @@
 //
 
 import UIKit
-import AVFoundation
 
-class ViewController: UIViewController {
-
-    // @IBOutlet weak var webView: UIWebView!
+class GameController: UIViewController {
     
     @IBOutlet var hintLabel : UILabel!
     @IBOutlet var wordLabel : UILabel!
     @IBOutlet var keyboard : Array<UIButton>!
     var charactersUsed : Set<Character> = []
-    var localAudioURL : URL?
-    
-    var word : Word? = nil
-    var audioURL : URL? = nil
     
     func setWordDisplay () {
         
-        guard let word = self.word else { return }
+        guard let word = WordModel.word else { return }
         
         let maskedText = String(word.title.characters.map({
             switch $0 {
@@ -38,8 +31,7 @@ class ViewController: UIViewController {
         wordLabel.setCharactersSpacing(5)
         
         if maskedText == word.title {
-            player?.volume = 1.0
-            player?.play()
+            AudioPlayer.shared.play()
         }
     }
     
@@ -62,17 +54,10 @@ class ViewController: UIViewController {
             button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
         }
         
-        self.hintLabel.text = word!.shortDefinition
+        self.hintLabel.text = WordModel.word!.shortDefinition
         
         setWordDisplay()
-        
-        player = try? AVAudioPlayer(contentsOf: audioURL!)
-        player?.prepareToPlay()
-        
-        // webView.loadHTMLString(word!.definition, baseURL: nil)
     }
-    
-    var player : AVAudioPlayer?
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -1,5 +1,5 @@
 //
-//  IntroductionViewController+URLSessionDownloadDelegate.swift
+//  WordModel+URLSessionDownloadDelegate.swift
 //  Word of the day
 //
 //  Created by Tiago Mergulhão on 15/09/17.
@@ -8,7 +8,23 @@
 
 import Foundation
 
-extension IntroductionViewController : URLSessionTaskDelegate, URLSessionDownloadDelegate {
+extension WordModel : URLSessionTaskDelegate, URLSessionDownloadDelegate {
+    
+    func loadAudio () {
+        
+        guard let word = self.word else { return }
+        
+        progressDisplay?.progress = 0
+        
+        let config = URLSessionConfiguration.background(withIdentifier: "com.tmergulhao.WordOfTheDay.download")
+        let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
+        
+        let downloadTask : URLSessionDownloadTask = session.downloadTask(with: word.audioURL)
+        
+        DispatchQueue.global(qos: .background).async {
+            downloadTask.resume()
+        }
+    }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
         
@@ -17,19 +33,16 @@ extension IntroductionViewController : URLSessionTaskDelegate, URLSessionDownloa
             let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
             
             DispatchQueue.main.sync {
-                loadingButton.progress = progress
+                progressDisplay?.progress = progress
             }
         }
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        
         //try? FileManager.default.removeItem(at: location)
-        
+
         DispatchQueue.main.sync {
-            audioURL = location
-            
-            loadingButton.isEnabled = true
+            AudioPlayer.shared.audioURL = location
         }
     }
     
