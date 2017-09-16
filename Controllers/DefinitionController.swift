@@ -24,12 +24,7 @@ class DefinitionController : UITableViewController {
     
     override func viewDidLoad() {
         
-        guard let word = WordModel.word else {
-            print("DefinitionController failed to get Word from WordModel")
-            return
-        }
-        
-        print("DefinitionController did load")
+        guard let word = WordModel.word else { return }
         
         wordLabel.text = word.title
         wordLabel.setCharactersSpacing(5)

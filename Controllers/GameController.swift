@@ -38,7 +38,7 @@ class GameController: UIViewController {
         wordLabel.setCharactersSpacing(5)
         
         if maskedText == word.title {
-            performSegue(withIdentifier: "definition", sender: nil)
+            performSegue(withIdentifier: "display definition", sender: nil)
         }
     }
     
