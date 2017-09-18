@@ -22,6 +22,9 @@ extension WordModel : URLSessionTaskDelegate, URLSessionDownloadDelegate {
         let downloadTask : URLSessionDownloadTask = session.downloadTask(with: word.audioURL)
         
         DispatchQueue.global(qos: .background).async {
+            
+            print("Did start downloading audio file")
+            
             downloadTask.resume()
         }
     }
@@ -42,6 +45,9 @@ extension WordModel : URLSessionTaskDelegate, URLSessionDownloadDelegate {
         //try? FileManager.default.removeItem(at: location)
 
         DispatchQueue.main.sync {
+            
+            print("Did finish downloading audio file")
+            
             AudioPlayer.shared.audioURL = location
         }
     }

@@ -30,6 +30,13 @@ class DefinitionController : UITableViewController {
     @IBAction func playPause(_ sender: UIButton) {
         AudioPlayer.shared.play()
     }
+    @IBAction func lookUp(_ sender: UIButton) {
+        
+        guard let word = WordModel.word else { return }
+        
+        present( UIReferenceLibraryViewController(term: word.title), animated: true, completion: nil)
+    }
+    @IBOutlet var cell : UITableViewCell!
     
     override func viewDidLoad() {
         
@@ -39,5 +46,13 @@ class DefinitionController : UITableViewController {
         wordLabel.setCharactersSpacing(5)
         shortDefinitionLabel.text = word.shortDefinition
         fullDefinitionLabel.text = word.definition
+        
+        if !UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: word.title) {
+            cell.removeFromSuperview()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }

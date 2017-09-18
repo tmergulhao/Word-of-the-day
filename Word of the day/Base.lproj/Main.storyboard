@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-lJ-UKL">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -558,7 +558,7 @@
             <objects>
                 <tableViewController id="thN-4X-X7q" customClass="DefinitionController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" id="y0H-G0-gu6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" name="Nil"/>
@@ -566,20 +566,20 @@
                             <tableViewSection id="VW1-BR-1MO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" rowHeight="152" id="nDb-Lr-ZFQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDb-Lr-ZFQ" id="y8z-av-qAJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="151.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-ZS-UYL">
-                                                    <rect key="frame" x="115" y="30" width="90" height="48"/>
+                                                    <rect key="frame" x="142" y="30" width="91" height="48"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                                     <color key="textColor" name="Ink gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-aX-33o">
-                                                    <rect key="frame" x="10" y="98" width="300" height="16.5"/>
+                                                    <rect key="frame" x="37.5" y="98" width="300" height="16.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="cTL-UK-nYT"/>
                                                     </constraints>
@@ -590,6 +590,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="JHu-ZS-UYL" firstAttribute="top" secondItem="y8z-av-qAJ" secondAttribute="topMargin" constant="22" id="7Xn-AM-cFh"/>
+                                                <constraint firstAttribute="bottom" secondItem="k5u-aX-33o" secondAttribute="bottom" constant="37" id="Kld-oj-VT2"/>
                                                 <constraint firstItem="k5u-aX-33o" firstAttribute="top" secondItem="JHu-ZS-UYL" secondAttribute="bottom" constant="20" id="QLY-Kw-lRV"/>
                                                 <constraint firstItem="k5u-aX-33o" firstAttribute="centerX" secondItem="y8z-av-qAJ" secondAttribute="centerX" id="VUy-Qt-DhB"/>
                                                 <constraint firstItem="JHu-ZS-UYL" firstAttribute="centerX" secondItem="y8z-av-qAJ" secondAttribute="centerX" id="at7-YW-cQs"/>
@@ -599,10 +600,10 @@
                                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="audio player" rowHeight="66" id="w1J-Ui-dNi">
-                                        <rect key="frame" x="0.0" y="152" width="320" height="66"/>
+                                        <rect key="frame" x="0.0" y="152" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1J-Ui-dNi" id="Lfi-xj-q4H">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-tu-Zfn">
@@ -623,7 +624,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-co-H9z">
-                                                    <rect key="frame" x="72" y="28" width="101" height="26"/>
+                                                    <rect key="frame" x="72" y="40.5" width="101" height="13.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Podcasts">
                                                         <color key="titleColor" name="Tint red"/>
@@ -638,7 +639,7 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CG3-co-H9z" secondAttribute="trailing" constant="60" id="FNi-bs-csS"/>
                                                 <constraint firstItem="PaN-XU-ZtB" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="5" id="P3Y-oV-Vhn"/>
                                                 <constraint firstItem="CTG-tu-Zfn" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="4" id="SSy-P0-adO"/>
-                                                <constraint firstItem="CG3-co-H9z" firstAttribute="top" secondItem="CTG-tu-Zfn" secondAttribute="bottom" constant="-0.5" id="dlb-yZ-Fb6"/>
+                                                <constraint firstItem="CG3-co-H9z" firstAttribute="top" secondItem="CTG-tu-Zfn" secondAttribute="bottom" constant="12" id="dlb-yZ-Fb6"/>
                                                 <constraint firstItem="CG3-co-H9z" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="gj1-xN-AyI"/>
                                                 <constraint firstAttribute="bottom" secondItem="CG3-co-H9z" secondAttribute="bottom" constant="11.5" id="k97-NE-SuE"/>
                                                 <constraint firstItem="PaN-XU-ZtB" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="30" id="qeG-mc-oZt"/>
@@ -648,11 +649,11 @@
                                         <color key="backgroundColor" name="Nil"/>
                                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="full definition" rowHeight="452" id="1du-IQ-Z0v">
-                                        <rect key="frame" x="0.0" y="218" width="320" height="452"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="full definition" id="1du-IQ-Z0v">
+                                        <rect key="frame" x="0.0" y="218" width="375" height="124"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1du-IQ-Z0v" id="9S4-pR-Kov">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="451.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="123.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jU-xJ-FdH">
@@ -661,8 +662,8 @@
                                                     <color key="textColor" name="Ink gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-Y1-gbm">
-                                                    <rect key="frame" x="72" y="34.5" width="176" height="376.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-Y1-gbm">
+                                                    <rect key="frame" x="72" y="34.5" width="231" height="65"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="1:">
                                                             <attributes>
@@ -706,12 +707,12 @@
                                                             </attributes>
                                                         </fragment>
                                                         <fragment>
-                                                            <mutableString key="content"> to go through or range over in or as if in a search
+                                                            <string key="content"> to go through or range over in or as if in a search
 Examples:
 The dog scoured the terrain in search of the tennis ball I had thrown.
 "The rescue team scoured the ground and a New Hampshire National Guard Black Hawk helicopter also searched the area." — Emily Sweeney, The Boston Globe, 18 July 2017
 Did you know?
-There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that </mutableString>
+There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that </string>
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
                                                                 <font key="NSFont" size="12" name="OpenSans-Regular"/>
@@ -884,8 +885,8 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-M6-PI7">
-                                                    <rect key="frame" x="72" y="411" width="141" height="29"/>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-M6-PI7">
+                                                    <rect key="frame" x="72" y="111.5" width="141" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Merion Webster">
                                                         <color key="titleColor" name="Tint red"/>
@@ -900,12 +901,40 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3jU-xJ-FdH" secondAttribute="trailing" constant="24" id="Aao-LE-Or0"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKu-Y1-gbm" secondAttribute="trailing" constant="64" id="DfS-9D-KeD"/>
                                                 <constraint firstItem="EKu-Y1-gbm" firstAttribute="top" secondItem="3jU-xJ-FdH" secondAttribute="bottom" constant="6" id="Dzc-IT-YUN"/>
-                                                <constraint firstAttribute="bottom" secondItem="3yn-M6-PI7" secondAttribute="bottom" constant="11.5" id="F9y-OP-ML8"/>
+                                                <constraint firstAttribute="bottom" secondItem="3yn-M6-PI7" secondAttribute="bottom" constant="12" id="F9y-OP-ML8"/>
                                                 <constraint firstItem="3yn-M6-PI7" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="Pll-57-UF2"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3yn-M6-PI7" secondAttribute="trailing" constant="60" id="eh9-f0-d8c"/>
                                                 <constraint firstItem="3jU-xJ-FdH" firstAttribute="top" secondItem="9S4-pR-Kov" secondAttribute="topMargin" constant="4" id="fgs-Oh-UHO"/>
-                                                <constraint firstItem="3yn-M6-PI7" firstAttribute="top" secondItem="EKu-Y1-gbm" secondAttribute="bottom" id="o9z-wu-KRw"/>
+                                                <constraint firstItem="3yn-M6-PI7" firstAttribute="top" secondItem="EKu-Y1-gbm" secondAttribute="bottom" constant="12" id="o9z-wu-KRw"/>
                                                 <constraint firstItem="EKu-Y1-gbm" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="wky-bd-QJT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="Nil"/>
+                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="look up" rowHeight="42" id="VG9-wW-tFx">
+                                        <rect key="frame" x="0.0" y="342" width="375" height="42"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VG9-wW-tFx" id="cVg-RM-S97">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="41.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39T-kg-bRC">
+                                                    <rect key="frame" x="72" y="12" width="119" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                    <state key="normal" title="Lookup on dictionary">
+                                                        <color key="titleColor" name="Tint red"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="lookUp:" destination="thN-4X-X7q" eventType="touchUpInside" id="Imb-xB-MeZ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="39T-kg-bRC" secondAttribute="bottom" constant="12" id="2eg-HK-Lwh"/>
+                                                <constraint firstItem="39T-kg-bRC" firstAttribute="leading" secondItem="cVg-RM-S97" secondAttribute="leadingMargin" constant="64" id="HPY-ws-f1s"/>
+                                                <constraint firstItem="39T-kg-bRC" firstAttribute="top" secondItem="cVg-RM-S97" secondAttribute="top" constant="12" id="cGk-3A-1mL"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="39T-kg-bRC" secondAttribute="trailing" constant="60" id="mfS-4H-Zvf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Nil"/>
@@ -920,6 +949,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="cell" destination="VG9-wW-tFx" id="rQt-VS-Bdw"/>
                         <outlet property="fullDefinitionLabel" destination="EKu-Y1-gbm" id="gJr-tM-q2X"/>
                         <outlet property="shortDefinitionLabel" destination="k5u-aX-33o" id="zjJ-cs-UVw"/>
                         <outlet property="wordLabel" destination="JHu-ZS-UYL" id="R7c-lE-Rt3"/>
@@ -927,7 +957,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="noG-sy-Rbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.125" y="36.25"/>
+            <point key="canvasLocation" x="972" y="35.532233883058474"/>
         </scene>
         <!--Introduction Controller-->
         <scene sceneID="y7H-XQ-zC6">
@@ -959,7 +989,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub">
-                                <rect key="frame" x="26" y="280.5" width="269" height="28"/>
+                                <rect key="frame" x="25.5" y="280.5" width="269" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="2gt-dP-b5X"/>
                                 </constraints>
@@ -1000,6 +1030,12 @@ There are two distinct homographs of the verb scour in English. One means to cle
         </namedColor>
         <namedColor name="Nil">
             <color red="0.99800002574920654" green="0.99299997091293335" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Nil">
+            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Tint red">
+            <color red="0.92199999089999995" green="0.34099999069999998" blue="0.34099999069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Tint red">
             <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

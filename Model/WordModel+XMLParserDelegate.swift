@@ -14,14 +14,24 @@ extension WordModel : XMLParserDelegate {
         
         DispatchQueue.global(qos: .background).async {
             [weak self]() -> Void in
-
-            let url : URL! = URL(string: "https://www.merriam-webster.com/wotd/feed/rss2")
-            let contents = try! String(contentsOf: url, encoding: String.Encoding.utf8)
             
-            let XML : XMLDictionary! = self?.getdictionaryFromXmlString(xmldata: contents)![0] as? XMLDictionary
-            let data = (((XML["rss"]! as! XMLDictionary)["channel"]! as! XMLDictionary)["item"]! as! Array<XMLDictionary>) [0]
+            guard let url : URL = URL(string: "http://webster.com/word/index.xml") else {
+                print("Unable to instanciate URL")
+                return
+            }
+            guard let xml = self?.getDictionaryFromXML(url: url)?[0] else {
+                print("Unable to parse XML")
+                return
+            }
+            guard let data = (xml.value(forKeyPath: "rss.channel.item") as? Array<XMLDictionary>)?.first else {
+                print("Unable to traverse through data")
+                return
+            }
             
-            guard let word = Word(data) else { print("Unable to parse word from XML"); return }
+            guard let word = Word(data) else {
+                print("Unable to parse word from XML")
+                return
+            }
             
             self?.word = word
             
@@ -31,20 +41,19 @@ extension WordModel : XMLParserDelegate {
         }
     }
     
-    func getdictionaryFromXmlData(xmldata : Data) -> Array<NSMutableDictionary>? {
+    func getDictionaryFromXML(url : URL) -> Array<NSMutableDictionary>? {
         
         stack.append(NSMutableDictionary())
         
-        parser = XMLParser(data: xmldata)
+        guard let parser = XMLParser(contentsOf: url) else {
+            print("Unable to instanciate parser using URL")
+            return nil
+        }
+        
         parser.delegate = self
         parser.parse()
         
         return stack
-    }
-    
-    func getdictionaryFromXmlString(xmldata : String) -> Array<NSMutableDictionary>? {
-        
-        return getdictionaryFromXmlData(xmldata: xmldata.data(using: .utf8)!)
     }
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
@@ -86,6 +95,4 @@ extension WordModel : XMLParserDelegate {
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         textInProgress += string
     }
-    
-    func parserDidEndDocument(_ parser: XMLParser) {}
 }
