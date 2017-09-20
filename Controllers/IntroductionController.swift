@@ -14,6 +14,7 @@ class IntroductionController : UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var loadingLabel: UILabel!
     
     @IBOutlet weak var buttonCenterY: NSLayoutConstraint!
     @IBOutlet weak var buttonHeight: NSLayoutConstraint!

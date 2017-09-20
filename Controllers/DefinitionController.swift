@@ -17,6 +17,7 @@ class DefinitionController : UITableViewController {
     @IBAction func viewPodcast(_ sender: UIButton) {
         
         let url : URL! = URL(string: "https://itunes.apple.com/us/podcast/merriam-websters-word-of-the-day/id164829166")
+        
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     @IBAction func viewOnWebsite(_ sender: UIButton) {
@@ -24,17 +25,19 @@ class DefinitionController : UITableViewController {
         let url : URL! = URL(string: WordModel.word!.link)
         let safari = SFSafariViewController(url: url)
         let tint = UIColor(named: "Tint red")
+        
         safari.preferredControlTintColor = tint
         present(safari, animated: true, completion: nil)
     }
     @IBAction func playPause(_ sender: UIButton) {
+        
         AudioPlayer.shared.play()
     }
     @IBAction func lookUp(_ sender: UIButton) {
         
         guard let word = WordModel.word else { return }
         
-        present( UIReferenceLibraryViewController(term: word.title), animated: true, completion: nil)
+        present(UIReferenceLibraryViewController(term: word.title), animated: true, completion: nil)
     }
     @IBOutlet var cell : UITableViewCell!
     
@@ -45,11 +48,7 @@ class DefinitionController : UITableViewController {
         wordLabel.text = word.title
         wordLabel.setCharactersSpacing(5)
         shortDefinitionLabel.text = word.shortDefinition
-        fullDefinitionLabel.text = word.definition
-        
-        if !UIReferenceLibraryViewController.dictionaryHasDefinition(forTerm: word.title) {
-            cell.removeFromSuperview()
-        }
+        fullDefinitionLabel.attributedText = NSAttributedString(htmlString: word.definition)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

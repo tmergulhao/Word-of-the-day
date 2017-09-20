@@ -28,7 +28,7 @@ class GameController: UIViewController {
         
         let maskedText = String(word.title.characters.map({
             switch $0 {
-            case " ": return " "
+            case let x where x == " " || x == "-": return x
             case let x where charactersUsed.contains(x) : return x
             default: return "_"
             }

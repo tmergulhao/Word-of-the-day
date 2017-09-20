@@ -27,7 +27,7 @@ struct Word {
                 let shortDefinition = dict["merriam:shortdef"]?["text"],
                 let title = dict["title"]?["text"],
                 let definition = dict["description"]?["text"] else { return nil }
-        
+
         self.link = link
         self.audioURL = audioURL
         self.shortDefinition = shortDefinition
