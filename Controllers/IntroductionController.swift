@@ -54,11 +54,71 @@ class IntroductionController : UIViewController {
     override func viewDidLoad() {
         
         loadingButton.isEnabled = false
+        loadingButton.titleLabel?.text = nil
         
-        WordModel.progressDisplay = loadingButton
-        WordModel.loadWord()
+        WordModel.progressDelegate = self
+        
+        DispatchQueue.global(qos: .background).async {
+            [weak self] in
+            
+            do {
+                let model = WordModel.shared
+                
+                try model.loadWord()
+                
+                DispatchQueue.main.sync {
+                    self?.didProgress(0)
+                }
+                
+                model.loadAudio()
+            } catch {
+                
+                DispatchQueue.main.sync {
+                
+                    let alert = UIAlertController(
+                        title:"Shoot!",
+                        message:"We could not find your word for today, what a bummer…",
+                        preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    
+                    self?.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
         
         performTitleShow()
         performButtonMove()
+    }
+}
+
+extension IntroductionController : ProgressDelegate {
+    
+    func didComplete() {
+        
+        loadingLabel.removeFromSuperview()
+        loadingButton.titleLabel?.text = "Play".capitalized
+        
+        loadingButton.didComplete()
+    }
+    
+    func didProgress(_ progress: Float) {
+        
+        loadingButton.didProgress(progress)
+    }
+    
+    func reachedError() {
+        
+        let alert = UIAlertController(
+            title:"Shoot!",
+            message:"There was something wrong with the audio episode… Would you like to play the game anyway?",
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        present(alert, animated: true, completion: nil)
+        
+        loadingButton.alpha = 0.4
+        loadingButton.reachedError()
     }
 }

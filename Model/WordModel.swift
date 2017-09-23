@@ -29,20 +29,18 @@ final class WordModel : NSObject {
     // MARK : URLSessionDownloadDelegate
     
     var audioURL : URL?
-    var progressDisplay : ProgressDisplay?
+    var progressDelegate : ProgressDelegate?
     
     // MARK: Singleton binding
     
-    class var progressDisplay : ProgressDisplay? {
+    class var progressDelegate : ProgressDelegate? {
         get {
-            return shared.progressDisplay
+            return shared.progressDelegate
         }
         set(newValue) {
-            shared.progressDisplay = newValue
+            shared.progressDelegate = newValue
         }
     }
     class var word : Word? { return shared.word }
     class var audioURL : URL? { return shared.audioURL }
-    class func loadWord () { shared.loadWord() }
-    class func loadAudio () { shared.loadAudio() }
 }

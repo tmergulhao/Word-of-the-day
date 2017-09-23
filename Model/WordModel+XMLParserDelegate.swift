@@ -10,35 +10,30 @@ import Foundation
 
 extension WordModel : XMLParserDelegate {
     
-    func loadWord() {
+    enum XMLError : Error, CustomStringConvertible {
+        case URL
+        case XMLSyntax
+        case XMLStructure
+        case XMLParsing
         
-        DispatchQueue.global(qos: .background).async {
-            [weak self]() -> Void in
-            
-            guard let url : URL = URL(string: "http://webster.com/word/index.xml") else {
-                print("Unable to instanciate URL")
-                return
-            }
-            guard let xml = self?.getDictionaryFromXML(url: url)?[0] else {
-                print("Unable to parse XML")
-                return
-            }
-            guard let data = (xml.value(forKeyPath: "rss.channel.item") as? Array<XMLDictionary>)?.first else {
-                print("Unable to traverse through data")
-                return
-            }
-            
-            guard let word = Word(data) else {
-                print("Unable to parse word from XML")
-                return
-            }
-            
-            self?.word = word
-            
-            DispatchQueue.main.sync {
-                self?.loadAudio()
+        var description: String {
+            switch self {
+            case .URL: return "Unable to instanciate URL"
+            case .XMLSyntax: return "Unable to parse XML"
+            case .XMLStructure: return "Unable to traverse through data"
+            case .XMLParsing: return "Unable to parse word from XML"
             }
         }
+    }
+    
+    func loadWord() throws {
+            
+        guard let url : URL = URL(string: "http://webster.com/word/index.xml") else { throw XMLError.URL }
+        guard let xml = self.getDictionaryFromXML(url: url)?[0] else { throw XMLError.XMLParsing }
+        guard let data = (xml.value(forKeyPath: "rss.channel.item") as? Array<XMLDictionary>)?.first else { throw XMLError.XMLStructure }
+        guard let word = Word(data) else { throw XMLError.XMLSyntax }
+        
+        self.word = word
     }
     
     func getDictionaryFromXML(url : URL) -> Array<NSMutableDictionary>? {

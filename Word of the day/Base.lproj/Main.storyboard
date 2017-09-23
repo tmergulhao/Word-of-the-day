@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
-                                <rect key="frame" x="116.5" y="309.5" width="142.5" height="48"/>
+                                <rect key="frame" x="122.5" y="309.5" width="130.5" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="eGA-QF-kmi"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju">
-                                <rect key="frame" x="37.5" y="377.5" width="300" height="16.5"/>
+                                <rect key="frame" x="37.5" y="377.5" width="300" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="kpF-s3-eG2"/>
                                 </constraints>
@@ -227,7 +227,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7Q8-YW-xNC">
-                                        <rect key="frame" x="21" y="47.5" width="321" height="41"/>
+                                        <rect key="frame" x="22.5" y="47.5" width="318" height="41"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-lf-QsN" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="41"/>
@@ -246,7 +246,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE1-YK-p4s" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="36.5" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="36" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="rE1-YK-p4s" secondAttribute="height" multiplier="30:41" id="O0k-IS-pN6"/>
@@ -262,7 +262,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78N-WX-k13" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="73" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="72" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="78N-WX-k13" secondAttribute="height" multiplier="30:41" id="fap-R9-7LH"/>
@@ -278,7 +278,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xh-6M-VtC" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="109" y="0.0" width="30.5" height="41"/>
+                                                <rect key="frame" x="108" y="0.5" width="30" height="40"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1xh-6M-VtC" secondAttribute="height" multiplier="30:41" id="IR1-ZM-CTI"/>
@@ -294,7 +294,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCZ-2Y-Yuu" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="145.5" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="144" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SCZ-2Y-Yuu" secondAttribute="height" multiplier="30:41" id="UQd-sz-tIq"/>
@@ -310,7 +310,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F61-vp-FQ2" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="181.5" y="0.0" width="30.5" height="41"/>
+                                                <rect key="frame" x="180" y="0.5" width="30" height="40"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="F61-vp-FQ2" secondAttribute="height" multiplier="30:41" id="NRM-jt-FE1"/>
@@ -326,7 +326,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-Tq-y00" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="218" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="216" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fSF-Tq-y00" secondAttribute="height" multiplier="30:41" id="ZUF-PY-ssp"/>
@@ -342,7 +342,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y18-at-fYE" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="254.5" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="252" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Y18-at-fYE" secondAttribute="height" multiplier="30:41" id="UCf-O3-zYg"/>
@@ -358,7 +358,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1m-X6-RFt" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="291" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="288" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint red"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="j1m-X6-RFt" secondAttribute="height" multiplier="30:41" id="Gmu-2D-icj"/>
@@ -572,13 +572,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-ZS-UYL">
-                                                    <rect key="frame" x="142" y="30" width="91" height="48"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-ZS-UYL">
+                                                    <rect key="frame" x="142.5" y="30" width="90" height="48"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                                     <color key="textColor" name="Ink gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-aX-33o">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-aX-33o">
                                                     <rect key="frame" x="37.5" y="98" width="300" height="16.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="cTL-UK-nYT"/>
@@ -607,24 +607,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-tu-Zfn">
-                                                    <rect key="frame" x="72" y="12" width="139.5" height="16.5"/>
+                                                    <rect key="frame" x="72" y="12" width="136.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <color key="textColor" name="Ink gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-XU-ZtB">
-                                                    <rect key="frame" x="38" y="13" width="16" height="16"/>
-                                                    <color key="backgroundColor" name="Tint red"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-XU-ZtB" customClass="PlayButton" customModule="Word_of_the_day" customModuleProvider="target">
+                                                    <rect key="frame" x="18" y="13" width="36" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="PaN-XU-ZtB" secondAttribute="height" multiplier="1:1" id="5TB-Th-lUk"/>
-                                                        <constraint firstAttribute="width" constant="16" id="cda-q0-KGu"/>
+                                                        <constraint firstAttribute="width" constant="36" id="cda-q0-KGu"/>
                                                     </constraints>
                                                     <connections>
                                                         <action selector="playPause:" destination="thN-4X-X7q" eventType="touchUpInside" id="Lwy-o8-iXM"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-co-H9z">
-                                                    <rect key="frame" x="72" y="40.5" width="101" height="13.5"/>
+                                                    <rect key="frame" x="72" y="38" width="99" height="16"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Podcasts">
                                                         <color key="titleColor" name="Tint red"/>
@@ -642,7 +641,7 @@
                                                 <constraint firstItem="CG3-co-H9z" firstAttribute="top" secondItem="CTG-tu-Zfn" secondAttribute="bottom" constant="12" id="dlb-yZ-Fb6"/>
                                                 <constraint firstItem="CG3-co-H9z" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="gj1-xN-AyI"/>
                                                 <constraint firstAttribute="bottom" secondItem="CG3-co-H9z" secondAttribute="bottom" constant="11.5" id="k97-NE-SuE"/>
-                                                <constraint firstItem="PaN-XU-ZtB" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="30" id="qeG-mc-oZt"/>
+                                                <constraint firstItem="PaN-XU-ZtB" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="10" id="qeG-mc-oZt"/>
                                                 <constraint firstItem="CTG-tu-Zfn" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="yhh-3q-Eg4"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -657,13 +656,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jU-xJ-FdH">
-                                                    <rect key="frame" x="72" y="12" width="85" height="16.5"/>
+                                                    <rect key="frame" x="72" y="12" width="81.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <color key="textColor" name="Ink gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-Y1-gbm">
-                                                    <rect key="frame" x="72" y="34.5" width="231" height="65"/>
+                                                    <rect key="frame" x="72" y="32" width="231" height="67.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="1:">
                                                             <attributes>
@@ -886,7 +885,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-M6-PI7">
-                                                    <rect key="frame" x="72" y="111.5" width="141" height="0.0"/>
+                                                    <rect key="frame" x="72" y="111.5" width="133" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Merion Webster">
                                                         <color key="titleColor" name="Tint red"/>
@@ -920,7 +919,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39T-kg-bRC">
-                                                    <rect key="frame" x="72" y="12" width="122" height="17.5"/>
+                                                    <rect key="frame" x="72" y="12" width="117" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="Look up on dictionary">
                                                         <color key="titleColor" name="Tint red"/>
@@ -978,6 +977,10 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                     <constraint firstAttribute="height" constant="168" id="Qh1-Nd-NBa"/>
                                     <constraint firstAttribute="height" priority="999" constant="64" id="rrK-qK-asu"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <state key="normal" title=" ">
+                                    <color key="titleColor" name="Nil"/>
+                                </state>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="custom" identifier="show game" customClass="CrossfadeSegue" customModule="Word_of_the_day" customModuleProvider="target" id="FeJ-Ck-sBg"/>
                                 </connections>
@@ -989,7 +992,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub">
-                                <rect key="frame" x="53.5" y="374" width="269" height="28"/>
+                                <rect key="frame" x="53" y="374" width="269" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="2gt-dP-b5X"/>
                                 </constraints>
@@ -1034,9 +1037,6 @@ There are two distinct homographs of the verb scour in English. One means to cle
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Ink gray">
-            <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Ink gray">
             <color red="0.13300000131130219" green="0.13300000131130219" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

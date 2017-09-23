@@ -8,6 +8,8 @@
 
 import Foundation
 
-protocol ProgressDisplay {
-    var progress : Float { set get }
+protocol ProgressDelegate {
+    func didProgress(_ progress : Float)
+    func reachedError()
+    func didComplete()
 }

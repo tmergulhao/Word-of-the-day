@@ -14,19 +14,12 @@ extension WordModel : URLSessionTaskDelegate, URLSessionDownloadDelegate {
         
         guard let word = self.word else { return }
         
-        progressDisplay?.progress = 0
-        
         let config = URLSessionConfiguration.background(withIdentifier: "com.tmergulhao.WordOfTheDay.download")
         let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
         
-        let downloadTask : URLSessionDownloadTask = session.downloadTask(with: word.audioURL)
+        let downloadTask : URLSessionDownloadTask = session.downloadTask(with: word.externalAudioURL)
         
-        DispatchQueue.global(qos: .background).async {
-            
-            print("Did start downloading audio file")
-            
-            downloadTask.resume()
-        }
+        downloadTask.resume()
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
@@ -36,21 +29,29 @@ extension WordModel : URLSessionTaskDelegate, URLSessionDownloadDelegate {
             let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
             
             DispatchQueue.main.sync {
-                progressDisplay?.progress = progress
+                progressDelegate?.didProgress(progress)
             }
         }
     }
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        //try? FileManager.default.removeItem(at: location)
 
         DispatchQueue.main.sync {
             
-            print("Did finish downloading audio file")
+            word?.audioURL = location
             
-            AudioPlayer.shared.audioURL = location
+            progressDelegate?.didComplete()
+            
+            AudioPlayer.shared.prepareToPlay()
         }
     }
     
-    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {}
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        
+        if error != nil {
+            DispatchQueue.main.sync {
+                progressDelegate?.reachedError()
+            }
+        }
+    }
 }

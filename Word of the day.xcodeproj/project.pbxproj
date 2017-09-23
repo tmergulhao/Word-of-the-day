@@ -18,6 +18,8 @@
 		7951CD091F6C8781009DF4CE /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */; };
 		7951CD0A1F6C8781009DF4CE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */; };
 		7951CD0B1F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */; };
+		7962D8F61F7690D200A7FF8D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7962D8F51F7690D200A7FF8D /* MediaPlayer.framework */; };
+		7962D8F81F7690E000A7FF8D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7962D8F71F7690E000A7FF8D /* AVFoundation.framework */; };
 		79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF11F5DF4C40021606E /* AppDelegate.swift */; };
 		79705DF41F5DF4C40021606E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF31F5DF4C40021606E /* GameController.swift */; };
 		79705DF71F5DF4C40021606E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79705DF51F5DF4C40021606E /* Main.storyboard */; };
@@ -28,10 +30,14 @@
 		797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */; };
 		79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */; };
 		79B8DDBE1F6D6D6300210128 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBD1F6D6D6300210128 /* WordModel.swift */; };
-		79B8DDC01F6D704E00210128 /* ProgressDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */; };
+		79B8DDC01F6D704E00210128 /* ProgressDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBF1F6D704E00210128 /* ProgressDelegate.swift */; };
 		79C819981F6C2C37005110CE /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819971F6C2C37005110CE /* LoadingButton.swift */; };
 		79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */; };
 		79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE67381F6DD9C700D17BD9 /* GameToDefinitionSegue.swift */; };
+		79EB5EAB1F76ADF600327130 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAA1F76ADF600327130 /* PlayButton.swift */; };
+		79EB5EAD1F76AE0200327130 /* PlayButtonLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */; };
+		79EB5EAF1F76AF6900327130 /* ResizingBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAE1F76AF6900327130 /* ResizingBehavior.swift */; };
+		79EB5EB11F76AFAC00327130 /* CGPoint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EB01F76AFAC00327130 /* CGPoint+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,8 @@
 		7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "Fonts/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		7962D8F51F7690D200A7FF8D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		7962D8F71F7690E000A7FF8D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		79705DEE1F5DF4C40021606E /* Word of the day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word of the day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79705DF11F5DF4C40021606E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79705DF31F5DF4C40021606E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -58,10 +66,14 @@
 		797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+CharacterSpacing.swift"; sourceTree = "<group>"; };
 		79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array<NSLayoutContraints>.swift"; sourceTree = "<group>"; };
 		79B8DDBD1F6D6D6300210128 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
-		79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDisplay.swift; sourceTree = "<group>"; };
+		79B8DDBF1F6D704E00210128 /* ProgressDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDelegate.swift; sourceTree = "<group>"; };
 		79C819971F6C2C37005110CE /* LoadingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordModel+URLSessionDownloadDelegate.swift"; sourceTree = "<group>"; };
 		79CE67381F6DD9C700D17BD9 /* GameToDefinitionSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameToDefinitionSegue.swift; sourceTree = "<group>"; };
+		79EB5EAA1F76ADF600327130 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonLayer.swift; sourceTree = "<group>"; };
+		79EB5EAE1F76AF6900327130 /* ResizingBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizingBehavior.swift; sourceTree = "<group>"; };
+		79EB5EB01F76AFAC00327130 /* CGPoint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7962D8F81F7690E000A7FF8D /* AVFoundation.framework in Frameworks */,
+				7962D8F61F7690D200A7FF8D /* MediaPlayer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +101,15 @@
 			path = "Word of the day";
 			sourceTree = "<group>";
 		};
+		7962D8F41F7690D100A7FF8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7962D8F71F7690E000A7FF8D /* AVFoundation.framework */,
+				7962D8F51F7690D200A7FF8D /* MediaPlayer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79705DE51F5DF4C40021606E = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +121,7 @@
 				79CE67351F6DD70E00D17BD9 /* Extensions */,
 				7919B77A1F69E91700B44A19 /* Fonts */,
 				79705DEF1F5DF4C40021606E /* Products */,
+				7962D8F41F7690D100A7FF8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +160,8 @@
 		79CE67351F6DD70E00D17BD9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				79EB5EB01F76AFAC00327130 /* CGPoint+Utilities.swift */,
+				79EB5EAE1F76AF6900327130 /* ResizingBehavior.swift */,
 				793153921F73243500207B7A /* NSAttributedString+HTML.swift */,
 				797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */,
 				79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */,
@@ -156,10 +182,12 @@
 		79CE67371F6DD76C00D17BD9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				79B8DDBF1F6D704E00210128 /* ProgressDisplay.swift */,
+				79B8DDBF1F6D704E00210128 /* ProgressDelegate.swift */,
 				7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */,
 				79C819971F6C2C37005110CE /* LoadingButton.swift */,
 				792148571F6C8BE6001D5C1F /* LoadingButtonLayer.swift */,
+				79EB5EAA1F76ADF600327130 /* PlayButton.swift */,
+				79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */,
 			);
 			name = Views;
 			path = "Word of the day";
@@ -209,6 +237,11 @@
 						DevelopmentTeam = 6CSUU74W7V;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -255,20 +288,24 @@
 				79C819981F6C2C37005110CE /* LoadingButton.swift in Sources */,
 				792148581F6C8BE6001D5C1F /* LoadingButtonLayer.swift in Sources */,
 				792C78031F6DA50200E88F7E /* CrossfadeSegue.swift in Sources */,
+				79EB5EB11F76AFAC00327130 /* CGPoint+Utilities.swift in Sources */,
 				7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */,
 				79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */,
 				797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */,
 				79705E061F5E16760021606E /* WordModel+XMLParserDelegate.swift in Sources */,
 				79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */,
+				79EB5EAB1F76ADF600327130 /* PlayButton.swift in Sources */,
 				79705DF41F5DF4C40021606E /* GameController.swift in Sources */,
+				79EB5EAF1F76AF6900327130 /* ResizingBehavior.swift in Sources */,
 				79B8DDBE1F6D6D6300210128 /* WordModel.swift in Sources */,
+				79EB5EAD1F76AE0200327130 /* PlayButtonLayer.swift in Sources */,
 				79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */,
 				79705E041F5E0F450021606E /* Word.swift in Sources */,
 				7919B77C1F69EA0400B44A19 /* IntroductionController.swift in Sources */,
 				79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */,
 				792C78011F6D9B9500E88F7E /* DefinitionController.swift in Sources */,
 				793153931F73243500207B7A /* NSAttributedString+HTML.swift in Sources */,
-				79B8DDC01F6D704E00210128 /* ProgressDisplay.swift in Sources */,
+				79B8DDC01F6D704E00210128 /* ProgressDelegate.swift in Sources */,
 				792C77FF1F6D8BAB00E88F7E /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

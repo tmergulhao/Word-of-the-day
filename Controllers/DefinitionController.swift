@@ -29,9 +29,19 @@ class DefinitionController : UITableViewController {
         safari.preferredControlTintColor = tint
         present(safari, animated: true, completion: nil)
     }
+    
+    var playing : Bool = false
+    
     @IBAction func playPause(_ sender: UIButton) {
         
-        AudioPlayer.shared.play()
+        if playing {
+            AudioPlayer.shared.pause()
+        } else {
+            AudioPlayer.shared.play()
+        }
+        
+        playing = !playing
+        (sender as? PlayButton)?.switchOnOffState()
     }
     @IBAction func lookUp(_ sender: UIButton) {
         
@@ -49,6 +59,46 @@ class DefinitionController : UITableViewController {
         wordLabel.setCharactersSpacing(5)
         shortDefinitionLabel.text = word.shortDefinition
         fullDefinitionLabel.attributedText = NSAttributedString(htmlString: word.definition)
+        
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didInterrupt(_ :)), name: Notification.Name.AVAudioSessionInterruption, object: self)
+    }
+    
+    @objc func didInterrupt (_ notification : Notification) {
+        print("interruption received: \(notification)")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        UIApplication.shared.endReceivingRemoteControlEvents()
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func remoteControlReceived(with event: UIEvent?) {
+        
+        let audio = AudioPlayer.shared
+        
+        guard let e = event, let player = audio.player else { return }
+        
+        if e.type == .remoteControl {
+            switch e.subtype {
+            case .remoteControlTogglePlayPause:
+                if player.rate > 0.0 {
+                    audio.pause()
+                } else {
+                    audio.play()
+                }
+            case .remoteControlPlay:
+                audio.play()
+            case .remoteControlPause:
+                audio.pause()
+            default:
+                print("received sub type \(e.subtype) Ignoring")
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

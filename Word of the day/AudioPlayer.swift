@@ -7,6 +7,7 @@
 //
 
 import AVFoundation
+import MediaPlayer
 
 final class AudioPlayer : NSObject {
     
@@ -14,23 +15,49 @@ final class AudioPlayer : NSObject {
     
     static let shared = AudioPlayer()
     
-    private override init() {}
+    private override init() {
+
+        super.init()
+        
+        let session = AVAudioSession.sharedInstance()
+        
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+            try session.setMode(AVAudioSessionModeDefault)
+            try session.setActive(true)
+        } catch let error as NSError {
+            print("An error occurred setting the audio session \(error)")
+        }
+    }
     
     // MARK : Properties
     
     var player : AVAudioPlayer?
     
-    var audioURL : URL? {
-        didSet {
-            guard let url = audioURL else { return }
-            
-            player = try? AVAudioPlayer(contentsOf: url)
-            player?.prepareToPlay()
-        }
+    // MARK : Methods
+    
+    func prepareToPlay () {
+        
+        guard let word = WordModel.word, let url = word.audioURL else { return }
+        
+        player = try? AVAudioPlayer(contentsOf: url)
+        player?.prepareToPlay()
     }
     
+    func pause () { player?.pause() }
+    
     func play () {
+        
         player?.volume = 1.0
         player?.play()
+        
+        guard let word = WordModel.word else {
+            return
+        }
+        
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+            MPMediaItemPropertyTitle: "\(word.title): \(word.shortDefinition)",
+            MPMediaItemPropertyArtist: "Word of the day"
+        ]
     }
 }

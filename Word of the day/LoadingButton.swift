@@ -8,9 +8,9 @@
 
 import UIKit
 
-@IBDesignable class LoadingButton : UIButton, ProgressDisplay {
+@IBDesignable class LoadingButton : UIButton {
     
-    var progress : Float = 0 {
+    var progress : Float = 0.0 {
         didSet {
             
             isEnabled = progress == 1
@@ -24,4 +24,16 @@ import UIKit
     override class var layerClass : Swift.AnyClass { return LoadingButtonLayer.self }
     
     override func draw(_ rect: CGRect) {}
+}
+
+extension LoadingButton : ProgressDelegate {
+    func didComplete() {
+        progress = 1.0
+    }
+    func didProgress(_ progress: Float) {
+        self.progress = progress
+    }
+    func reachedError() {
+        progress = 0.0
+    }
 }
