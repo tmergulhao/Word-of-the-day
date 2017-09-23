@@ -37,7 +37,6 @@
 		79EB5EAB1F76ADF600327130 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAA1F76ADF600327130 /* PlayButton.swift */; };
 		79EB5EAD1F76AE0200327130 /* PlayButtonLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */; };
 		79EB5EAF1F76AF6900327130 /* ResizingBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAE1F76AF6900327130 /* ResizingBehavior.swift */; };
-		79EB5EB11F76AFAC00327130 /* CGPoint+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EB01F76AFAC00327130 /* CGPoint+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +72,6 @@
 		79EB5EAA1F76ADF600327130 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonLayer.swift; sourceTree = "<group>"; };
 		79EB5EAE1F76AF6900327130 /* ResizingBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizingBehavior.swift; sourceTree = "<group>"; };
-		79EB5EB01F76AFAC00327130 /* CGPoint+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +158,6 @@
 		79CE67351F6DD70E00D17BD9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				79EB5EB01F76AFAC00327130 /* CGPoint+Utilities.swift */,
 				79EB5EAE1F76AF6900327130 /* ResizingBehavior.swift */,
 				793153921F73243500207B7A /* NSAttributedString+HTML.swift */,
 				797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */,
@@ -288,7 +285,6 @@
 				79C819981F6C2C37005110CE /* LoadingButton.swift in Sources */,
 				792148581F6C8BE6001D5C1F /* LoadingButtonLayer.swift in Sources */,
 				792C78031F6DA50200E88F7E /* CrossfadeSegue.swift in Sources */,
-				79EB5EB11F76AFAC00327130 /* CGPoint+Utilities.swift in Sources */,
 				7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */,
 				79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */,
 				797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */,
