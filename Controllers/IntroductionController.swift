@@ -53,6 +53,8 @@ class IntroductionController : UIViewController {
     
     override func viewDidLoad() {
         
+        setupAmbience()
+        
         loadingButton.isEnabled = false
         loadingButton.titleLabel?.text = nil
         
@@ -89,6 +91,11 @@ class IntroductionController : UIViewController {
         
         performTitleShow()
         performButtonMove()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        removeAmbience()
     }
 }
 
