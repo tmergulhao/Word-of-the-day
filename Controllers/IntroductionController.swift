@@ -53,8 +53,6 @@ class IntroductionController : UIViewController {
     
     override func viewDidLoad() {
         
-        setupAmbience()
-        
         loadingButton.isEnabled = false
         loadingButton.titleLabel?.text = nil
         
@@ -93,9 +91,12 @@ class IntroductionController : UIViewController {
         performButtonMove()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
-        removeAmbience()
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
     }
 }
 
@@ -104,8 +105,6 @@ extension IntroductionController : ProgressDelegate {
     func didComplete() {
         
         loadingLabel.removeFromSuperview()
-        loadingButton.titleLabel?.text = "Play".capitalized
-        
         loadingButton.didComplete()
     }
     

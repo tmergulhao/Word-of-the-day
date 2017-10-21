@@ -5,6 +5,6 @@
       location = "container:Word of the day.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../Ambience/STAmbience.xcodeproj">
+      location = "group:../Ambience/Ambience.xcodeproj">
    </FileRef>
 </Workspace>

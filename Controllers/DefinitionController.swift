@@ -55,6 +55,9 @@ class DefinitionController : UITableViewController {
         
         guard let word = WordModel.word else { return }
         
+        edgesForExtendedLayout = []
+        extendedLayoutIncludesOpaqueBars = false
+        
         wordLabel.text = word.title
         wordLabel.setCharactersSpacing(5)
         shortDefinitionLabel.text = word.shortDefinition

@@ -7,15 +7,29 @@
 //
 
 import UIKit
+import Ambience
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
+    
+    var customWindow : AmbienceWindow?
+    var window : UIWindow? {
+        get {
+            customWindow = customWindow ?? AmbienceWindow(frame: UIScreen.main.bounds)
+            
+            customWindow?.contrastColor = UIColor.white
+            customWindow?.regularColor = StyleKit.color.null
+            customWindow?.invertColor = UIColor.black
+            
+            return customWindow
+        }
+        set { }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        _ = Ambience.shared
+        
         return true
     }
 
@@ -40,7 +54,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-
