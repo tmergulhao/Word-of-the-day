@@ -85,7 +85,7 @@ class PlayButtonLayer : CALayer {
         
         let clipping = path.copy(using: &scale)!.copy(using: &translate)!
         
-        let color : CGColor! = UIColor(named: "Tint red")?.cgColor
+        let color : CGColor! = StyleKit.color.tint.cgColor
         
         ctx.saveGState()
         ctx.addPath(clipping)

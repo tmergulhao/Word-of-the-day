@@ -14,7 +14,7 @@ extension UILabel {
         guard let text = self.text else { return }
         
         let attributedString = NSMutableAttributedString(string: text)
-        attributedString.addAttribute(NSAttributedStringKey.kern, value: spacing, range: NSMakeRange(0, text.characters.count))
+        attributedString.addAttribute(NSAttributedStringKey.kern, value: spacing, range: NSMakeRange(0, text.count))
         attributedText = attributedString
     }
 }

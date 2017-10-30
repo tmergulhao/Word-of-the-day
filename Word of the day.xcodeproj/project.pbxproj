@@ -21,6 +21,8 @@
 		7951CD0B1F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */; };
 		7962D8F61F7690D200A7FF8D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7962D8F51F7690D200A7FF8D /* MediaPlayer.framework */; };
 		7962D8F81F7690E000A7FF8D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7962D8F71F7690E000A7FF8D /* AVFoundation.framework */; };
+		7968661A1FA7CB580023C0C3 /* Ambience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7968661B1FA7CB580023C0C3 /* Ambience.framework */; };
+		7968661D1FA7CB840023C0C3 /* Ambience.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7968661B1FA7CB580023C0C3 /* Ambience.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF11F5DF4C40021606E /* AppDelegate.swift */; };
 		79705DF41F5DF4C40021606E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705DF31F5DF4C40021606E /* GameController.swift */; };
 		79705DF71F5DF4C40021606E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79705DF51F5DF4C40021606E /* Main.storyboard */; };
@@ -29,8 +31,6 @@
 		79705E041F5E0F450021606E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705E031F5E0F450021606E /* Word.swift */; };
 		79705E061F5E16760021606E /* WordModel+XMLParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79705E051F5E16760021606E /* WordModel+XMLParserDelegate.swift */; };
 		797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */; };
-		7997B97C1F9B956D00216C8F /* Ambience.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7997B97B1F9B956D00216C8F /* Ambience.framework */; };
-		7997B97D1F9B956D00216C8F /* Ambience.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7997B97B1F9B956D00216C8F /* Ambience.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */; };
 		79B8DDBE1F6D6D6300210128 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBD1F6D6D6300210128 /* WordModel.swift */; };
 		79B8DDC01F6D704E00210128 /* ProgressDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBF1F6D704E00210128 /* ProgressDelegate.swift */; };
@@ -49,7 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				7997B97D1F9B956D00216C8F /* Ambience.framework in Embed Frameworks */,
+				7968661D1FA7CB840023C0C3 /* Ambience.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +71,7 @@
 		7951CD071F6C8781009DF4CE /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "Fonts/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		7962D8F51F7690D200A7FF8D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7962D8F71F7690E000A7FF8D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7968661B1FA7CB580023C0C3 /* Ambience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Ambience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79705DEE1F5DF4C40021606E /* Word of the day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word of the day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79705DF11F5DF4C40021606E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79705DF31F5DF4C40021606E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
@@ -81,8 +82,6 @@
 		79705E031F5E0F450021606E /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		79705E051F5E16760021606E /* WordModel+XMLParserDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordModel+XMLParserDelegate.swift"; sourceTree = "<group>"; };
 		797B14EB1F673CFF00720E29 /* UILabel+CharacterSpacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+CharacterSpacing.swift"; sourceTree = "<group>"; };
-		7997B97B1F9B956D00216C8F /* Ambience.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Ambience.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7997B97E1F9B957400216C8F /* Ambience.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Ambience.framework; sourceTree = "<group>"; };
 		79B72C601F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array<NSLayoutContraints>.swift"; sourceTree = "<group>"; };
 		79B8DDBD1F6D6D6300210128 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		79B8DDBF1F6D704E00210128 /* ProgressDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7997B97C1F9B956D00216C8F /* Ambience.framework in Frameworks */,
+				7968661A1FA7CB580023C0C3 /* Ambience.framework in Frameworks */,
 				7962D8F81F7690E000A7FF8D /* AVFoundation.framework in Frameworks */,
 				7962D8F61F7690D200A7FF8D /* MediaPlayer.framework in Frameworks */,
 			);
@@ -123,7 +122,7 @@
 		7962D8F41F7690D100A7FF8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7997B97E1F9B957400216C8F /* Ambience.framework */,
+				7968661B1FA7CB580023C0C3 /* Ambience.framework */,
 				7962D8F71F7690E000A7FF8D /* AVFoundation.framework */,
 				7962D8F51F7690D200A7FF8D /* MediaPlayer.framework */,
 			);
@@ -133,7 +132,6 @@
 		79705DE51F5DF4C40021606E = {
 			isa = PBXGroup;
 			children = (
-				7997B97B1F9B956D00216C8F /* Ambience.framework */,
 				79705DF01F5DF4C40021606E /* Word of the day */,
 				79CE673A1F6DD9DB00D17BD9 /* Segues */,
 				79CE67371F6DD76C00D17BD9 /* Views */,
@@ -464,6 +462,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6CSUU74W7V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Word of the day/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -479,6 +481,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6CSUU74W7V;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Word of the day/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

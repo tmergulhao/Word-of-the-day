@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Ambience
 
 class GameController: UIViewController {
     
@@ -26,7 +27,7 @@ class GameController: UIViewController {
         
         guard let word = WordModel.word else { return }
         
-        let maskedText = String(word.title.characters.map({
+        let maskedText = String(word.title.map({
             switch $0 {
             case let x where x == " " || x == "-": return x
             case let x where charactersUsed.contains(x) : return x
@@ -47,7 +48,7 @@ class GameController: UIViewController {
         sender.isEnabled = false
         sender.alpha = 0.4
         
-        let character : Character! = sender.titleLabel?.text?.lowercased().characters.first
+        let character : Character! = sender.titleLabel?.text?.lowercased().first
         
         charactersUsed.insert(character)
         
@@ -67,5 +68,39 @@ class GameController: UIViewController {
         self.hintLabel.text = WordModel.word!.shortDefinition
         
         setWordDisplay()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        Ambience.add(listener: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        Ambience.remove(listener: self)
+    }
+    
+    var ambienceState : AmbienceState = .Regular
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return ambienceState == .Invert ? .lightContent : .default
+    }
+}
+
+// MARK: - Ambience Listener
+
+extension GameController : AmbienceListener {
+    
+    @objc public func ambience(_ notification : Notification) {
+        
+        guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
+        
+        ambienceState = currentState
+        
+        setNeedsStatusBarAppearanceUpdate()
     }
 }

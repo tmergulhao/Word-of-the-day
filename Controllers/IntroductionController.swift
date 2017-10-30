@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Ambience
 
 class IntroductionController : UIViewController {
     
@@ -94,17 +95,31 @@ class IntroductionController : UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
+        
+        Ambience.add(listener: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        Ambience.remove(listener: self)
+    }
+    
+    var ambienceState : AmbienceState = .Regular
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return ambienceState == .Invert ? .lightContent : .default
     }
 }
+
+// MARK: - Progress Delegate
 
 extension IntroductionController : ProgressDelegate {
     
     func didComplete() {
         
-        loadingLabel.removeFromSuperview()
+        loadingLabel?.removeFromSuperview()
         loadingButton.didComplete()
     }
     
@@ -126,5 +141,19 @@ extension IntroductionController : ProgressDelegate {
         
         loadingButton.alpha = 0.4
         loadingButton.reachedError()
+    }
+}
+
+// MARK: - Ambience Listener
+
+extension IntroductionController : AmbienceListener {
+    
+    @objc public func ambience(_ notification : Notification) {
+        
+        guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
+        
+        ambienceState = currentState
+        
+        setNeedsStatusBarAppearanceUpdate()
     }
 }

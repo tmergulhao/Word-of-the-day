@@ -63,7 +63,7 @@ class LoadingButtonLayer : CALayer {
         
         let progressBar = progressPath.cgPath
         
-        let color : CGColor! = UIColor(named: "Nil")?.cgColor
+        let color : CGColor = StyleKit.color.null.cgColor
         
         ctx.setLineWidth(3)
         ctx.setStrokeColor(color)
@@ -75,7 +75,7 @@ class LoadingButtonLayer : CALayer {
         
         let circle = CGPath(ellipseIn: bounds, transform: nil)
         
-        let color : CGColor! = UIColor(named: "Tint red")?.cgColor
+        let color : CGColor = StyleKit.color.tint.cgColor
         
         ctx.setFillColor(color)
         ctx.addPath(circle)

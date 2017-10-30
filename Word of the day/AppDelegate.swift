@@ -15,11 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var customWindow : AmbienceWindow?
     var window : UIWindow? {
         get {
-            customWindow = customWindow ?? AmbienceWindow(frame: UIScreen.main.bounds)
-            
-            customWindow?.contrastColor = UIColor.white
-            customWindow?.regularColor = StyleKit.color.null
-            customWindow?.invertColor = UIColor.black
+            customWindow = customWindow ?? AmbienceWindow(
+                contrast : StyleKit.color.white,
+                invert : StyleKit.color.ink,
+                regular : StyleKit.color.null,
+                frame : UIScreen.main.bounds
+            )
             
             return customWindow
         }

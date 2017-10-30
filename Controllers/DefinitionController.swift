@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import Ambience
 
 class DefinitionController : UITableViewController {
     @IBOutlet weak var wordLabel: UILabel!
@@ -24,9 +25,8 @@ class DefinitionController : UITableViewController {
         
         let url : URL! = URL(string: WordModel.word!.link)
         let safari = SFSafariViewController(url: url)
-        let tint = UIColor(named: "Tint red")
         
-        safari.preferredControlTintColor = tint
+        safari.preferredControlTintColor = StyleKit.color.tint
         present(safari, animated: true, completion: nil)
     }
     
@@ -68,6 +68,26 @@ class DefinitionController : UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(didInterrupt(_ :)), name: Notification.Name.AVAudioSessionInterruption, object: self)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        Ambience.add(listener: self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        Ambience.remove(listener: self)
+    }
+    
+    var ambienceState : AmbienceState = .Regular
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return ambienceState == .Invert ? .lightContent : .default
+    }
+    
     @objc func didInterrupt (_ notification : Notification) {
         print("interruption received: \(notification)")
     }
@@ -106,5 +126,19 @@ class DefinitionController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+}
+
+// MARK: - Ambience Listener
+
+extension DefinitionController : AmbienceListener {
+    
+    @objc public func ambience(_ notification : Notification) {
+        
+        guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
+        
+        ambienceState = currentState
+        
+        setNeedsStatusBarAppearanceUpdate()
     }
 }
