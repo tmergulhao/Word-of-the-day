@@ -31,6 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         _ = Ambience.shared
         
+        var numberOfTimes = Default<Int>(key: "SomeKey")
+        
+        numberOfTimes « nil
+        
+        if let numberOfTimesValue = numberOfTimes.value {
+            numberOfTimes « numberOfTimesValue + 1
+        } else {
+            numberOfTimes « 1
+        }
+        
+        print(numberOfTimes)
+        
         return true
     }
 

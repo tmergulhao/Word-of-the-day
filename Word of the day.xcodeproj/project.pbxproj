@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		791529471F9A94A1000E973C /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791529461F9A94A1000E973C /* StyleKit.swift */; };
+		7918C9FE1FAB63800046008F /* Defaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7918C9FD1FAB63800046008F /* Defaultable.swift */; };
 		7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */; };
 		7919B77C1F69EA0400B44A19 /* IntroductionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7919B77B1F69EA0400B44A19 /* IntroductionController.swift */; };
 		792148581F6C8BE6001D5C1F /* LoadingButtonLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792148571F6C8BE6001D5C1F /* LoadingButtonLayer.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		791529461F9A94A1000E973C /* StyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleKit.swift; sourceTree = "<group>"; };
+		7918C9FD1FAB63800046008F /* Defaultable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaultable.swift; sourceTree = "<group>"; };
 		7919B7751F69E46A00B44A19 /* CornerRadiusButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusButton.swift; sourceTree = "<group>"; };
 		7919B77B1F69EA0400B44A19 /* IntroductionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionController.swift; sourceTree = "<group>"; };
 		792148571F6C8BE6001D5C1F /* LoadingButtonLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButtonLayer.swift; sourceTree = "<group>"; };
@@ -155,8 +157,9 @@
 		79705DF01F5DF4C40021606E /* Word of the day */ = {
 			isa = PBXGroup;
 			children = (
-				791529461F9A94A1000E973C /* StyleKit.swift */,
 				79705DF11F5DF4C40021606E /* AppDelegate.swift */,
+				791529461F9A94A1000E973C /* StyleKit.swift */,
+				7918C9FD1FAB63800046008F /* Defaultable.swift */,
 				792C77FE1F6D8BAB00E88F7E /* AudioPlayer.swift */,
 				79705DF81F5DF4C40021606E /* Assets.xcassets */,
 				79705DF51F5DF4C40021606E /* Main.storyboard */,
@@ -310,6 +313,7 @@
 				792C78031F6DA50200E88F7E /* CrossfadeSegue.swift in Sources */,
 				7919B7761F69E46A00B44A19 /* CornerRadiusButton.swift in Sources */,
 				791529471F9A94A1000E973C /* StyleKit.swift in Sources */,
+				7918C9FE1FAB63800046008F /* Defaultable.swift in Sources */,
 				79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */,
 				797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */,
 				79705E061F5E16760021606E /* WordModel+XMLParserDelegate.swift in Sources */,
