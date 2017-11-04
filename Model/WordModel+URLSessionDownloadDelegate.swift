@@ -12,7 +12,7 @@ extension WordModel : URLSessionTaskDelegate, URLSessionDownloadDelegate {
     
     func loadAudio () {
         
-        guard let word = self.word else { return }
+        guard let word = self.words.first else { return }
         
         let config = URLSessionConfiguration.background(withIdentifier: "com.tmergulhao.WordOfTheDay.download")
         let session = URLSession(configuration: config, delegate: self, delegateQueue: nil)
@@ -38,7 +38,12 @@ extension WordModel : URLSessionTaskDelegate, URLSessionDownloadDelegate {
 
         DispatchQueue.main.sync {
             
-            word?.audioURL = location
+            var word = words.first
+            
+            if word != nil {
+                word!.audioURL = location
+                words[0] = word!
+            }
             
             progressDelegate?.didComplete()
             

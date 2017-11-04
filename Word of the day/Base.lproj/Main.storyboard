@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-lJ-UKL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-lJ-UKL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -27,7 +27,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="AmbienceView" customModule="Ambience">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -44,7 +44,7 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                         <color key="value" name="Ink"/>
@@ -64,7 +64,7 @@
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                         <color key="value" name="Ink"/>
@@ -85,16 +85,13 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="Q">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="keyboardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GhC-Km-KOl"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tno-at-Pwl" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
                                                 <rect key="frame" x="36" y="0.0" width="30" height="41"/>
@@ -104,16 +101,13 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="W">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="keyboardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0c-Rd-MFw"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bre-nr-vUd" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
                                                 <rect key="frame" x="72" y="0.0" width="30" height="41"/>
@@ -123,16 +117,13 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="E">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="keyboardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d4C-ll-7Dw"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-St-JBt" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
                                                 <rect key="frame" x="108" y="0.0" width="30" height="41"/>
@@ -142,7 +133,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="R">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -158,7 +149,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="T">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -174,7 +165,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="Y">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -190,7 +181,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="U">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -206,7 +197,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="I">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -222,7 +213,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="O">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -238,7 +229,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="P">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -259,7 +250,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="A">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -275,7 +266,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="S">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -291,7 +282,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="D">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -307,7 +298,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="F">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -323,7 +314,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="G">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -339,7 +330,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="H">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -355,7 +346,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="J">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -371,7 +362,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="K">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -387,7 +378,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="L">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -408,7 +399,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="Z">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -424,7 +415,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="X">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -440,7 +431,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="C">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -456,7 +447,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="V">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -472,7 +463,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="B">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -488,7 +479,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="N">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -504,7 +495,7 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="21"/>
                                                 <state key="normal" title="M">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" name="Nil"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -519,9 +510,17 @@
                                     <constraint firstAttribute="width" secondItem="PPI-n0-DoH" secondAttribute="height" multiplier="40:15" id="70O-39-HSH"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-rC-icc" userLabel="Back">
+                                <rect key="frame" x="9" y="31" width="12" height="22"/>
+                                <state key="normal" image="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29i-wa-6rB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="tintColor" name="Tint"/>
                         <constraints>
+                            <constraint firstItem="4dR-rC-icc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="9" id="4Xy-ou-Yjn"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="999" constant="30" id="AG7-xl-B84"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" priority="999" constant="8" id="CZV-Q3-qK2"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTn-G4-rbs"/>
@@ -531,8 +530,20 @@
                             <constraint firstItem="lt3-2j-4Ju" firstAttribute="top" secondItem="vl2-eg-nXU" secondAttribute="bottom" constant="20" id="OXa-xG-w68"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="alQ-Aq-06N"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="bo1-wf-Deh"/>
+                            <constraint firstItem="4dR-rC-icc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="eYh-kX-bgq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PPI-n0-DoH" secondAttribute="trailing" constant="-10" id="u3f-I0-S0f"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
+                                <color key="value" name="Nil"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                <color key="value" name="Ink"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="hintLabel" destination="lt3-2j-4Ju" id="6is-Fp-Tu8"/>
@@ -568,33 +579,39 @@
                         <outletCollection property="keyboard" destination="fli-4B-koc" collectionClass="NSMutableArray" id="C4a-Vq-gTQ"/>
                         <outletCollection property="keyboard" destination="XPd-sD-2Ag" collectionClass="NSMutableArray" id="dF9-7h-80S"/>
                         <outletCollection property="keyboard" destination="TVs-yi-Wl4" collectionClass="NSMutableArray" id="3Xx-lQ-Pf2"/>
-                        <segue destination="thN-4X-X7q" kind="custom" identifier="display definition" customClass="GameToDefinitionSegue" customModule="Word_of_the_day" customModuleProvider="target" id="03w-44-hM3"/>
+                        <segue destination="kKu-Oe-QHh" kind="custom" identifier="Definition" customClass="GameToDefinitionSegue" customModule="Word_of_the_day" customModuleProvider="target" id="vt1-MR-N9D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1047" y="37"/>
         </scene>
         <!--Definition Controller-->
-        <scene sceneID="EvD-XG-zI4">
+        <scene sceneID="2XG-mI-heM">
             <objects>
-                <tableViewController id="thN-4X-X7q" customClass="DefinitionController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="124" estimatedRowHeight="180" sectionHeaderHeight="28" sectionFooterHeight="28" id="y0H-G0-gu6">
+                <tableViewController id="kKu-Oe-QHh" customClass="DefinitionController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KSw-nv-24P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" name="Tint"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection id="VW1-BR-1MO">
+                            <tableViewSection id="4aT-Zo-xe2">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" rowHeight="152" id="nDb-Lr-ZFQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Title" rowHeight="152" id="ArB-M6-Prj">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDb-Lr-ZFQ" id="y8z-av-qAJ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ArB-M6-Prj" id="EH5-UO-JEV">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHu-ZS-UYL" customClass="AmbienceLabel" customModule="Ambience">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfZ-6B-6YZ" userLabel="Back">
+                                                    <rect key="frame" x="9" y="11" width="12" height="22"/>
+                                                    <state key="normal" image="Back"/>
+                                                    <connections>
+                                                        <action selector="backButtonPressed:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="ij8-7Y-Ijv"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-6H-xm4" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="142.5" y="33" width="90" height="48"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                                     <nil key="textColor"/>
@@ -604,17 +621,17 @@
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="value" name="Nil"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                                             <color key="value" name="Ink"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-aX-33o" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-Aj-dwX" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="37.5" y="101" width="300" height="13.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="300" id="cTL-UK-nYT"/>
+                                                        <constraint firstAttribute="width" constant="300" id="zZX-8v-aBr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -633,24 +650,28 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="JHu-ZS-UYL" firstAttribute="top" secondItem="y8z-av-qAJ" secondAttribute="topMargin" constant="22" id="7Xn-AM-cFh"/>
-                                                <constraint firstAttribute="bottom" secondItem="k5u-aX-33o" secondAttribute="bottom" constant="37" id="Kld-oj-VT2"/>
-                                                <constraint firstItem="k5u-aX-33o" firstAttribute="top" secondItem="JHu-ZS-UYL" secondAttribute="bottom" constant="20" id="QLY-Kw-lRV"/>
-                                                <constraint firstItem="k5u-aX-33o" firstAttribute="centerX" secondItem="y8z-av-qAJ" secondAttribute="centerX" id="VUy-Qt-DhB"/>
-                                                <constraint firstItem="JHu-ZS-UYL" firstAttribute="centerX" secondItem="y8z-av-qAJ" secondAttribute="centerX" id="at7-YW-cQs"/>
+                                                <constraint firstItem="DJv-6H-xm4" firstAttribute="top" secondItem="EH5-UO-JEV" secondAttribute="topMargin" constant="22" id="1CJ-5G-uln"/>
+                                                <constraint firstAttribute="bottom" secondItem="ekP-Aj-dwX" secondAttribute="bottom" constant="37" id="KcW-tR-8dl"/>
+                                                <constraint firstItem="ekP-Aj-dwX" firstAttribute="top" secondItem="DJv-6H-xm4" secondAttribute="bottom" constant="20" id="Ocu-lO-jno"/>
+                                                <constraint firstItem="ekP-Aj-dwX" firstAttribute="centerX" secondItem="EH5-UO-JEV" secondAttribute="centerX" id="XKX-dq-lq1"/>
+                                                <constraint firstItem="DJv-6H-xm4" firstAttribute="centerX" secondItem="EH5-UO-JEV" secondAttribute="centerX" id="nW3-sc-3D1"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="SfZ-6B-6YZ" firstAttribute="leading" secondItem="ArB-M6-Prj" secondAttribute="leading" constant="9" id="FEz-d4-6xT"/>
+                                            <constraint firstItem="SfZ-6B-6YZ" firstAttribute="top" secondItem="ArB-M6-Prj" secondAttribute="top" constant="11" id="efR-A6-EBe"/>
+                                        </constraints>
                                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="audio player" rowHeight="66" id="w1J-Ui-dNi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Audio player" rowHeight="66" id="flh-DP-hCE">
                                         <rect key="frame" x="0.0" y="152" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w1J-Ui-dNi" id="Lfi-xj-q4H">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flh-DP-hCE" id="TDc-z6-tGA">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-tu-Zfn" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bn-yA-6bf" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="80" y="15" width="136.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -660,57 +681,57 @@
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="value" name="Nil"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                                             <color key="value" name="Ink"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PaN-XU-ZtB" customClass="PlayButton" customModule="Word_of_the_day" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-JR-n5K" customClass="PlayButton" customModule="Word_of_the_day" customModuleProvider="target">
                                                     <rect key="frame" x="26" y="16" width="36" height="36"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="PaN-XU-ZtB" secondAttribute="height" multiplier="1:1" id="5TB-Th-lUk"/>
-                                                        <constraint firstAttribute="width" constant="36" id="cda-q0-KGu"/>
+                                                        <constraint firstAttribute="width" secondItem="H3u-JR-n5K" secondAttribute="height" multiplier="1:1" id="KXQ-ug-dP4"/>
+                                                        <constraint firstAttribute="width" constant="36" id="wss-fT-V5c"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="playPause:" destination="thN-4X-X7q" eventType="touchUpInside" id="Lwy-o8-iXM"/>
+                                                        <action selector="playPause:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="ebS-Pq-wjT"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-co-H9z">
+                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZc-e4-81L">
                                                     <rect key="frame" x="80" y="41" width="99" height="13"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Podcasts">
-                                                        <color key="titleColor" name="Tint red"/>
+                                                        <color key="titleColor" name="Tint"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="viewPodcast:" destination="thN-4X-X7q" eventType="touchUpInside" id="Xd4-dJ-xv7"/>
+                                                        <action selector="viewPodcast:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="bL4-5S-S2X"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="CTG-tu-Zfn" secondAttribute="trailing" constant="24" id="462-Hl-puC"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CG3-co-H9z" secondAttribute="trailing" id="FNi-bs-csS"/>
-                                                <constraint firstItem="PaN-XU-ZtB" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="5" id="P3Y-oV-Vhn"/>
-                                                <constraint firstItem="CTG-tu-Zfn" firstAttribute="top" secondItem="Lfi-xj-q4H" secondAttribute="topMargin" constant="4" id="SSy-P0-adO"/>
-                                                <constraint firstItem="CG3-co-H9z" firstAttribute="top" secondItem="CTG-tu-Zfn" secondAttribute="bottom" constant="12" id="dlb-yZ-Fb6"/>
-                                                <constraint firstItem="CG3-co-H9z" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="gj1-xN-AyI"/>
-                                                <constraint firstAttribute="bottom" secondItem="CG3-co-H9z" secondAttribute="bottom" constant="11.5" id="k97-NE-SuE"/>
-                                                <constraint firstItem="PaN-XU-ZtB" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="10" id="qeG-mc-oZt"/>
-                                                <constraint firstItem="CTG-tu-Zfn" firstAttribute="leading" secondItem="Lfi-xj-q4H" secondAttribute="leadingMargin" constant="64" id="yhh-3q-Eg4"/>
+                                                <constraint firstItem="4bn-yA-6bf" firstAttribute="leading" secondItem="TDc-z6-tGA" secondAttribute="leadingMargin" constant="64" id="2yC-dT-lLX"/>
+                                                <constraint firstItem="H3u-JR-n5K" firstAttribute="leading" secondItem="TDc-z6-tGA" secondAttribute="leadingMargin" constant="10" id="4Qf-MT-Sra"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mZc-e4-81L" secondAttribute="trailing" id="A0l-kG-05M"/>
+                                                <constraint firstItem="4bn-yA-6bf" firstAttribute="top" secondItem="TDc-z6-tGA" secondAttribute="topMargin" constant="4" id="MYr-rA-XeR"/>
+                                                <constraint firstItem="H3u-JR-n5K" firstAttribute="top" secondItem="TDc-z6-tGA" secondAttribute="topMargin" constant="5" id="Nzv-X7-EnU"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="4bn-yA-6bf" secondAttribute="trailing" constant="24" id="V2A-r7-3GW"/>
+                                                <constraint firstItem="mZc-e4-81L" firstAttribute="top" secondItem="4bn-yA-6bf" secondAttribute="bottom" constant="12" id="XRs-pH-MAW"/>
+                                                <constraint firstAttribute="bottom" secondItem="mZc-e4-81L" secondAttribute="bottom" constant="11.5" id="dud-E9-CyP"/>
+                                                <constraint firstItem="mZc-e4-81L" firstAttribute="leading" secondItem="TDc-z6-tGA" secondAttribute="leadingMargin" constant="64" id="jE9-Wf-VZ4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="full definition" id="1du-IQ-Z0v">
-                                        <rect key="frame" x="0.0" y="218" width="375" height="124"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Definition" rowHeight="347" id="0pj-Qb-O4T">
+                                        <rect key="frame" x="0.0" y="218" width="375" height="347"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1du-IQ-Z0v" id="9S4-pR-Kov">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="123.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pj-Qb-O4T" id="4v2-iU-9m4">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="346.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jU-xJ-FdH" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-Hd-UDX" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="80" y="15" width="81.5" height="14"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -727,8 +748,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKu-Y1-gbm" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="80" y="35" width="279" height="64.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOu-O3-ztx" customClass="AmbienceLabel" customModule="Ambience">
+                                                    <rect key="frame" x="80" y="35" width="279" height="287.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="1:">
                                                             <attributes>
@@ -954,63 +975,63 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="value" name="Nil"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                                             <color key="value" name="Ink"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yn-M6-PI7">
-                                                    <rect key="frame" x="80" y="111.5" width="133" height="0.0"/>
+                                                <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZt-WL-8ez">
+                                                    <rect key="frame" x="80" y="334.5" width="133" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Merion Webster">
-                                                        <color key="titleColor" name="Tint red"/>
+                                                        <color key="titleColor" name="Tint"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="viewOnWebsite:" destination="thN-4X-X7q" eventType="touchUpInside" id="zjd-T2-iQw"/>
+                                                        <action selector="viewOnWebsite:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="VDm-Cj-6Mp"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="3jU-xJ-FdH" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="6gB-sz-0RS"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3jU-xJ-FdH" secondAttribute="trailing" id="Aao-LE-Or0"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="EKu-Y1-gbm" secondAttribute="trailing" id="DfS-9D-KeD"/>
-                                                <constraint firstItem="EKu-Y1-gbm" firstAttribute="top" secondItem="3jU-xJ-FdH" secondAttribute="bottom" constant="6" id="Dzc-IT-YUN"/>
-                                                <constraint firstAttribute="bottom" secondItem="3yn-M6-PI7" secondAttribute="bottom" constant="12" id="F9y-OP-ML8"/>
-                                                <constraint firstItem="3yn-M6-PI7" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="Pll-57-UF2"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3yn-M6-PI7" secondAttribute="trailing" id="eh9-f0-d8c"/>
-                                                <constraint firstItem="3jU-xJ-FdH" firstAttribute="top" secondItem="9S4-pR-Kov" secondAttribute="topMargin" constant="4" id="fgs-Oh-UHO"/>
-                                                <constraint firstItem="3yn-M6-PI7" firstAttribute="top" secondItem="EKu-Y1-gbm" secondAttribute="bottom" constant="12" id="o9z-wu-KRw"/>
-                                                <constraint firstItem="EKu-Y1-gbm" firstAttribute="leading" secondItem="9S4-pR-Kov" secondAttribute="leadingMargin" constant="64" id="wky-bd-QJT"/>
+                                                <constraint firstItem="LZt-WL-8ez" firstAttribute="leading" secondItem="4v2-iU-9m4" secondAttribute="leadingMargin" constant="64" id="KWc-lm-JoV"/>
+                                                <constraint firstItem="rOu-O3-ztx" firstAttribute="top" secondItem="T1m-Hd-UDX" secondAttribute="bottom" constant="6" id="Qib-VF-ME2"/>
+                                                <constraint firstItem="T1m-Hd-UDX" firstAttribute="leading" secondItem="4v2-iU-9m4" secondAttribute="leadingMargin" constant="64" id="Zpg-6K-KAj"/>
+                                                <constraint firstItem="LZt-WL-8ez" firstAttribute="top" secondItem="rOu-O3-ztx" secondAttribute="bottom" constant="12" id="bHf-JR-ahk"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="rOu-O3-ztx" secondAttribute="trailing" id="dq4-tn-VQ1"/>
+                                                <constraint firstItem="T1m-Hd-UDX" firstAttribute="top" secondItem="4v2-iU-9m4" secondAttribute="topMargin" constant="4" id="eLD-qi-d4p"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="T1m-Hd-UDX" secondAttribute="trailing" id="go3-1b-4nh"/>
+                                                <constraint firstItem="rOu-O3-ztx" firstAttribute="leading" secondItem="4v2-iU-9m4" secondAttribute="leadingMargin" constant="64" id="hME-Oo-nVA"/>
+                                                <constraint firstAttribute="bottom" secondItem="LZt-WL-8ez" secondAttribute="bottom" constant="12" id="lYe-zI-DAh"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LZt-WL-8ez" secondAttribute="trailing" id="rWF-Gb-LLP"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="look up" rowHeight="42" id="VG9-wW-tFx" userLabel="look up">
-                                        <rect key="frame" x="0.0" y="342" width="375" height="42"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Look up" rowHeight="42" id="lye-k0-bEf">
+                                        <rect key="frame" x="0.0" y="565" width="375" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VG9-wW-tFx" id="cVg-RM-S97">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lye-k0-bEf" id="TXP-Qh-k8p">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="41.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39T-kg-bRC">
+                                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dme-Bd-Hyy">
                                                     <rect key="frame" x="80" y="12" width="117" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="Look up on dictionary">
-                                                        <color key="titleColor" name="Tint red"/>
+                                                        <color key="titleColor" name="Tint"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="lookUp:" destination="thN-4X-X7q" eventType="touchUpInside" id="Imb-xB-MeZ"/>
+                                                        <action selector="lookUp:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="Cfo-5u-dbw"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="39T-kg-bRC" secondAttribute="bottom" constant="12" id="2eg-HK-Lwh"/>
-                                                <constraint firstItem="39T-kg-bRC" firstAttribute="leading" secondItem="cVg-RM-S97" secondAttribute="leadingMargin" constant="64" id="HPY-ws-f1s"/>
-                                                <constraint firstItem="39T-kg-bRC" firstAttribute="top" secondItem="cVg-RM-S97" secondAttribute="top" constant="12" id="cGk-3A-1mL"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="39T-kg-bRC" secondAttribute="trailing" id="mfS-4H-Zvf"/>
+                                                <constraint firstItem="dme-Bd-Hyy" firstAttribute="top" secondItem="TXP-Qh-k8p" secondAttribute="top" constant="12" id="D5R-Xg-dfl"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dme-Bd-Hyy" secondAttribute="trailing" id="JrY-Yh-EOm"/>
+                                                <constraint firstItem="dme-Bd-Hyy" firstAttribute="leading" secondItem="TXP-Qh-k8p" secondAttribute="leadingMargin" constant="64" id="epU-eh-amo"/>
+                                                <constraint firstAttribute="bottom" secondItem="dme-Bd-Hyy" secondAttribute="bottom" constant="12" id="yMW-SX-HLH"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1020,20 +1041,19 @@ There are two distinct homographs of the verb scour in English. One means to cle
                             </tableViewSection>
                         </sections>
                         <connections>
-                            <outlet property="dataSource" destination="thN-4X-X7q" id="PmN-3K-TU4"/>
-                            <outlet property="delegate" destination="thN-4X-X7q" id="E0j-Tf-UAs"/>
+                            <outlet property="dataSource" destination="kKu-Oe-QHh" id="rby-gL-Kiq"/>
+                            <outlet property="delegate" destination="kKu-Oe-QHh" id="rFQ-wx-2Aj"/>
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="cell" destination="VG9-wW-tFx" id="rQt-VS-Bdw"/>
-                        <outlet property="fullDefinitionLabel" destination="EKu-Y1-gbm" id="gJr-tM-q2X"/>
-                        <outlet property="shortDefinitionLabel" destination="k5u-aX-33o" id="zjJ-cs-UVw"/>
-                        <outlet property="wordLabel" destination="JHu-ZS-UYL" id="R7c-lE-Rt3"/>
+                        <outlet property="fullDefinitionLabel" destination="rOu-O3-ztx" id="DDp-p4-GVX"/>
+                        <outlet property="shortDefinitionLabel" destination="ekP-Aj-dwX" id="cYa-hl-wWi"/>
+                        <outlet property="wordLabel" destination="DJv-6H-xm4" id="Ciu-WD-H9j"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="noG-sy-Rbp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GdV-0u-jM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1046" y="820"/>
         </scene>
         <!--Introduction Controller-->
         <scene sceneID="y7H-XQ-zC6">
@@ -1059,7 +1079,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                     <color key="titleColor" name="Nil"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" identifier="show game" customClass="CrossfadeSegue" customModule="Word_of_the_day" customModuleProvider="target" id="FeJ-Ck-sBg"/>
+                                    <segue destination="BYZ-38-t0r" kind="custom" identifier="Show game" customClass="CrossfadeSegue" customModule="Word_of_the_day" customModuleProvider="target" id="FeJ-Ck-sBg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-zf-d0i" customClass="AmbienceLabel" customModule="Ambience">
@@ -1072,7 +1092,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                         <color key="value" name="Ink"/>
@@ -1080,7 +1100,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="53.5" y="374" width="269" height="28"/>
+                                <rect key="frame" x="53" y="374" width="269" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="2gt-dP-b5X"/>
                                 </constraints>
@@ -1092,7 +1112,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                         <color key="value" name="Ink"/>
@@ -1109,18 +1129,26 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
                                         <color key="value" name="Ink"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-Bd-0AQ" userLabel="History Button">
+                                <rect key="frame" x="-4" y="317" width="32" height="32"/>
+                                <state key="normal" image="History"/>
+                                <connections>
+                                    <segue destination="oaS-1M-Mx7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ADL-ir-nqg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="tintColor" name="Tint"/>
                         <constraints>
                             <constraint firstItem="cRO-nN-dve" firstAttribute="centerY" secondItem="S6o-d7-bYX" secondAttribute="centerY" id="4Fo-19-g9z"/>
                             <constraint firstItem="cRO-nN-dve" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="CIv-tU-Wu3"/>
+                            <constraint firstItem="n9f-Bd-0AQ" firstAttribute="centerY" secondItem="cRO-nN-dve" secondAttribute="centerY" id="D0J-Ws-xsc"/>
                             <constraint firstItem="AgW-at-nkQ" firstAttribute="top" secondItem="NnC-3W-BUs" secondAttribute="bottom" constant="16" id="NxO-cP-pyY"/>
                             <constraint firstItem="Mmg-zf-d0i" firstAttribute="centerY" secondItem="S6o-d7-bYX" secondAttribute="centerY" id="RYK-bo-Fzb"/>
                             <constraint firstItem="Mmg-zf-d0i" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="Rcl-UD-oY7"/>
@@ -1128,6 +1156,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                             <constraint firstItem="AgW-at-nkQ" firstAttribute="top" secondItem="cRO-nN-dve" secondAttribute="bottom" priority="999" constant="48" id="YzE-Jr-j4L"/>
                             <constraint firstItem="Hgs-8b-4ub" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="ZOt-hW-oUV"/>
                             <constraint firstItem="Hgs-8b-4ub" firstAttribute="top" secondItem="Mmg-zf-d0i" secondAttribute="bottom" constant="20" id="d5E-xZ-YTz"/>
+                            <constraint firstItem="cRO-nN-dve" firstAttribute="leading" secondItem="n9f-Bd-0AQ" secondAttribute="trailing" constant="46" id="o95-vJ-0eI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1135,6 +1164,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                         <outlet property="buttonCenterY" destination="4Fo-19-g9z" id="eJJ-qB-xdL"/>
                         <outlet property="buttonHeight" destination="Qh1-Nd-NBa" id="k1t-IO-A9k"/>
                         <outlet property="buttonSmallerHeight" destination="rrK-qK-asu" id="XJr-Rj-Cp8"/>
+                        <outlet property="historyButton" destination="n9f-Bd-0AQ" id="00W-0C-Lrs"/>
                         <outlet property="loadingButton" destination="cRO-nN-dve" id="9Hd-va-K9P"/>
                         <outlet property="loadingLabel" destination="NnC-3W-BUs" id="nes-dJ-wWG"/>
                         <outlet property="subtitleLabel" destination="Hgs-8b-4ub" id="9WO-Wc-EdK"/>
@@ -1145,20 +1175,218 @@ There are two distinct homographs of the verb scour in English. One means to cle
             </objects>
             <point key="canvasLocation" x="-549.27536231884062" y="37.5"/>
         </scene>
+        <!--History Controller-->
+        <scene sceneID="Upn-6E-BYB">
+            <objects>
+                <viewController id="HER-FA-hCp" customClass="HistoryController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lo4-Vk-Ubm"/>
+                        <viewControllerLayoutGuide type="bottom" id="4yz-38-TDI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="87c-jz-fMW" customClass="AmbienceView" customModule="Ambience">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B0o-v8-KV9">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Title" rowHeight="98" id="QeS-RB-rTy">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QeS-RB-rTy" id="GoD-UR-P56">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXp-dv-FC7" customClass="AmbienceLabel" customModule="Ambience">
+                                                    <rect key="frame" x="24" y="38" width="326" height="45.5"/>
+                                                    <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="34"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                            <color key="value" name="Nil"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
+                                                            <color key="value" name="Ink"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PXp-dv-FC7" secondAttribute="trailing" constant="25" id="KOv-DI-fI8"/>
+                                                <constraint firstItem="PXp-dv-FC7" firstAttribute="leading" secondItem="GoD-UR-P56" secondAttribute="leading" constant="24" id="Mqb-zv-0bu"/>
+                                                <constraint firstItem="PXp-dv-FC7" firstAttribute="top" secondItem="GoD-UR-P56" secondAttribute="top" constant="38" id="S2q-tN-zDr"/>
+                                                <constraint firstAttribute="bottom" secondItem="PXp-dv-FC7" secondAttribute="bottom" constant="14" id="ws1-zd-zzy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="67" id="Nwm-9U-DrH" customClass="WordCell" customModule="Word_of_the_day" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="126" width="375" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nwm-9U-DrH" id="swu-oU-IvR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmP-0Z-HJF" customClass="AmbienceLabel" customModule="Ambience">
+                                                    <rect key="frame" x="24" y="12" width="328" height="24"/>
+                                                    <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                            <color key="value" name="Nil"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
+                                                            <color key="value" name="Ink"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="to move about or go through in search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-06-rtV" customClass="AmbienceLabel" customModule="Ambience">
+                                                    <rect key="frame" x="24" y="35" width="300" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="300" id="xIz-Zv-xQH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                            <color key="value" name="Nil"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
+                                                            <color key="value" name="Ink"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LVA-06-rtV" firstAttribute="top" secondItem="UmP-0Z-HJF" secondAttribute="bottom" constant="-1" id="JMu-du-nUI"/>
+                                                <constraint firstItem="UmP-0Z-HJF" firstAttribute="leading" secondItem="swu-oU-IvR" secondAttribute="leading" constant="24" id="Jp6-r6-OP9"/>
+                                                <constraint firstAttribute="trailing" secondItem="UmP-0Z-HJF" secondAttribute="trailing" constant="23" id="QqF-co-y2t"/>
+                                                <constraint firstAttribute="trailing" secondItem="LVA-06-rtV" secondAttribute="trailing" constant="51" id="a6J-m0-lnd"/>
+                                                <constraint firstItem="LVA-06-rtV" firstAttribute="leading" secondItem="swu-oU-IvR" secondAttribute="leading" constant="24" id="lsv-KM-IvT"/>
+                                                <constraint firstItem="UmP-0Z-HJF" firstAttribute="top" secondItem="swu-oU-IvR" secondAttribute="top" constant="12" id="n3T-45-J9P"/>
+                                                <constraint firstAttribute="bottom" secondItem="LVA-06-rtV" secondAttribute="bottom" constant="14.5" id="yRw-gi-kjV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="shortDefinition" destination="LVA-06-rtV" id="9aL-Pj-Kqv"/>
+                                            <outlet property="title" destination="UmP-0Z-HJF" id="5bE-cp-5Ix"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HER-FA-hCp" id="10g-YY-Q2i"/>
+                                    <outlet property="delegate" destination="HER-FA-hCp" id="JpF-Dt-FAs"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1i-Tq-FlX" userLabel="Loading Button" customClass="LoadingButton" customModule="Word_of_the_day" customModuleProvider="target">
+                                <rect key="frame" x="155" y="555" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="jCf-Ur-jIw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                <state key="normal" title=" ">
+                                    <color key="titleColor" name="Nil"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="pgN-5S-4Er"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M1i-Tq-FlX" firstAttribute="width" secondItem="M1i-Tq-FlX" secondAttribute="height" multiplier="1:1" id="Aw0-iM-QBt"/>
+                            <constraint firstAttribute="trailing" secondItem="B0o-v8-KV9" secondAttribute="trailing" id="BcH-kY-SK7"/>
+                            <constraint firstItem="4yz-38-TDI" firstAttribute="top" secondItem="B0o-v8-KV9" secondAttribute="bottom" id="Jkp-Fy-UTR"/>
+                            <constraint firstItem="B0o-v8-KV9" firstAttribute="leading" secondItem="87c-jz-fMW" secondAttribute="leading" id="NZr-kc-vIU"/>
+                            <constraint firstItem="M1i-Tq-FlX" firstAttribute="centerX" secondItem="87c-jz-fMW" secondAttribute="centerX" id="Uej-zn-olH"/>
+                            <constraint firstItem="B0o-v8-KV9" firstAttribute="top" secondItem="Lo4-Vk-Ubm" secondAttribute="bottom" id="jQf-pW-K87"/>
+                            <constraint firstItem="4yz-38-TDI" firstAttribute="top" secondItem="M1i-Tq-FlX" secondAttribute="bottom" constant="48" id="yLF-tG-4C7"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                <color key="value" name="Ink"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
+                                <color key="value" name="Nil"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" id="4Z2-Kg-THW"/>
+                    <connections>
+                        <outlet property="loadingButton" destination="M1i-Tq-FlX" id="XIN-UU-RLx"/>
+                        <outlet property="tableView" destination="B0o-v8-KV9" id="3ht-7p-mbw"/>
+                        <segue destination="kKu-Oe-QHh" kind="show" identifier="Definition" id="mrK-2t-PUl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wgo-sc-UvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="820"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w9K-ed-ErR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="oaS-1M-Mx7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ili-2q-CqJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HER-FA-hCp" kind="relationship" relationship="rootViewController" id="TEk-cb-ywu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RGm-iB-Fsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-550" y="819"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Back" width="12" height="21"/>
+        <image name="History" width="32" height="32"/>
+        <namedColor name="Ink">
+            <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ink">
+            <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Ink">
             <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Nil">
-            <color red="0.99800002574920654" green="0.99299997091293335" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Nil">
+            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Nil">
+            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Tint red">
-            <color red="0.92199999089999995" green="0.34099999069999998" blue="0.34099999069999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mrK-2t-PUl"/>
+        <segue reference="pgN-5S-4Er"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" name="Tint"/>
 </document>

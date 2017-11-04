@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias Words = Array<Word>
+
 final class WordModel : NSObject {
     
     // MARK : Singleton
@@ -18,7 +20,7 @@ final class WordModel : NSObject {
     
     // MARK : Properties
     
-    var word : Word?
+    var words : Words = []
     
     // MARK : XMLParserDelegate
     
@@ -41,6 +43,6 @@ final class WordModel : NSObject {
             shared.progressDelegate = newValue
         }
     }
-    class var word : Word? { return shared.word }
+    class var words : Words { return shared.words }
     class var audioURL : URL? { return shared.audioURL }
 }

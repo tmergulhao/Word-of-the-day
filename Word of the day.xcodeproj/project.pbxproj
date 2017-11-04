@@ -16,6 +16,8 @@
 		792C78011F6D9B9500E88F7E /* DefinitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C78001F6D9B9500E88F7E /* DefinitionController.swift */; };
 		792C78031F6DA50200E88F7E /* CrossfadeSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792C78021F6DA50200E88F7E /* CrossfadeSegue.swift */; };
 		793153931F73243500207B7A /* NSAttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793153921F73243500207B7A /* NSAttributedString+HTML.swift */; };
+		79483F291FAE110D007A6124 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79483F281FAE110D007A6124 /* HistoryController.swift */; };
+		79483F2B1FAE17C8007A6124 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79483F2A1FAE17C8007A6124 /* WordCell.swift */; };
 		7951CD081F6C8781009DF4CE /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD041F6C8781009DF4CE /* OpenSans-Bold.ttf */; };
 		7951CD091F6C8781009DF4CE /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */; };
 		7951CD0A1F6C8781009DF4CE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */; };
@@ -67,6 +69,8 @@
 		792C78001F6D9B9500E88F7E /* DefinitionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionController.swift; sourceTree = "<group>"; };
 		792C78021F6DA50200E88F7E /* CrossfadeSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrossfadeSegue.swift; sourceTree = "<group>"; };
 		793153921F73243500207B7A /* NSAttributedString+HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+HTML.swift"; sourceTree = "<group>"; };
+		79483F281FAE110D007A6124 /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		79483F2A1FAE17C8007A6124 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 		7951CD041F6C8781009DF4CE /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		7951CD051F6C8781009DF4CE /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "Fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		7951CD061F6C8781009DF4CE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				7919B77B1F69EA0400B44A19 /* IntroductionController.swift */,
+				79483F281FAE110D007A6124 /* HistoryController.swift */,
 				79705DF31F5DF4C40021606E /* GameController.swift */,
 				792C78001F6D9B9500E88F7E /* DefinitionController.swift */,
 			);
@@ -210,6 +215,7 @@
 				792148571F6C8BE6001D5C1F /* LoadingButtonLayer.swift */,
 				79EB5EAA1F76ADF600327130 /* PlayButton.swift */,
 				79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */,
+				79483F2A1FAE17C8007A6124 /* WordCell.swift */,
 			);
 			name = Views;
 			path = "Word of the day";
@@ -324,11 +330,13 @@
 				79B8DDBE1F6D6D6300210128 /* WordModel.swift in Sources */,
 				79EB5EAD1F76AE0200327130 /* PlayButtonLayer.swift in Sources */,
 				79705DF21F5DF4C40021606E /* AppDelegate.swift in Sources */,
+				79483F291FAE110D007A6124 /* HistoryController.swift in Sources */,
 				79705E041F5E0F450021606E /* Word.swift in Sources */,
 				7919B77C1F69EA0400B44A19 /* IntroductionController.swift in Sources */,
 				79B72C611F6AE4D80049AD22 /* Array<NSLayoutContraints>.swift in Sources */,
 				792C78011F6D9B9500E88F7E /* DefinitionController.swift in Sources */,
 				793153931F73243500207B7A /* NSAttributedString+HTML.swift in Sources */,
+				79483F2B1FAE17C8007A6124 /* WordCell.swift in Sources */,
 				79B8DDC01F6D704E00210128 /* ProgressDelegate.swift in Sources */,
 				792C77FF1F6D8BAB00E88F7E /* AudioPlayer.swift in Sources */,
 			);

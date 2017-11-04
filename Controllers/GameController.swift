@@ -21,11 +21,20 @@ class GameController: UIViewController {
     @IBOutlet var keyboardHideGuide: NSLayoutConstraint!
     @IBOutlet weak var keyboardShowGuide: NSLayoutConstraint!
     
+    @IBAction func backButtonPressed (_ sender : UIButton) {
+        
+        if navigationController != nil {
+            navigationController?.popViewController(animated: true)
+        } else {
+            dismiss(animated: false)
+        }
+    }
+
     var charactersUsed : Set<Character> = []
     
     func setWordDisplay () {
         
-        guard let word = WordModel.word else { return }
+        guard let word = WordModel.words.first else { return }
         
         let maskedText = String(word.title.map({
             switch $0 {
@@ -39,7 +48,15 @@ class GameController: UIViewController {
         wordLabel.setCharactersSpacing(5)
         
         if maskedText == word.title {
-            performSegue(withIdentifier: "display definition", sender: nil)
+            performSegue(withIdentifier: "Definition", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Definition" {
+            let definition = segue.destination as? DefinitionController
+            
+            definition?.word = WordModel.words.first
         }
     }
     
@@ -65,7 +82,7 @@ class GameController: UIViewController {
             button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
         }
         
-        self.hintLabel.text = WordModel.word!.shortDefinition
+        self.hintLabel.text = WordModel.words.first?.shortDefinition
         
         setWordDisplay()
     }

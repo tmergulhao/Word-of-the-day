@@ -15,6 +15,8 @@ class DefinitionController : UITableViewController {
     @IBOutlet weak var shortDefinitionLabel: UILabel!
     @IBOutlet weak var fullDefinitionLabel: UILabel!
     
+    var word : Word?
+    
     @IBAction func viewPodcast(_ sender: UIButton) {
         
         let url : URL! = URL(string: "https://itunes.apple.com/us/podcast/merriam-websters-word-of-the-day/id164829166")
@@ -23,54 +25,62 @@ class DefinitionController : UITableViewController {
     }
     @IBAction func viewOnWebsite(_ sender: UIButton) {
         
-        let url : URL! = URL(string: WordModel.word!.link)
+        let url : URL! = URL(string: WordModel.words.first!.link)
         let safari = SFSafariViewController(url: url)
         
         safari.preferredControlTintColor = StyleKit.color.tint
         present(safari, animated: true, completion: nil)
     }
     
-    var playing : Bool = false
+    @IBAction func backButtonPressed (_ sender : UIButton) {
+        
+        playing = false
+        
+        if navigationController != nil {
+            navigationController?.popViewController(animated: true)
+        } else {
+            dismiss(animated: false)
+        }
+    }
+    
+    var playing : Bool = false {
+        didSet {
+            if playing {
+                AudioPlayer.shared.play()
+            } else {
+                AudioPlayer.shared.pause()
+            }
+        }
+    }
     
     @IBAction func playPause(_ sender: UIButton) {
-        
-        if playing {
-            AudioPlayer.shared.pause()
-        } else {
-            AudioPlayer.shared.play()
-        }
-        
         playing = !playing
+        
         (sender as? PlayButton)?.switchOnOffState()
     }
     @IBAction func lookUp(_ sender: UIButton) {
         
-        guard let word = WordModel.word else { return }
+        guard let word = WordModel.words.first else { return }
         
-        present(UIReferenceLibraryViewController(term: word.title), animated: true, completion: nil)
-    }
-    @IBOutlet var cell : UITableViewCell!
-    
-    override func viewDidLoad() {
+        let reference = UIReferenceLibraryViewController(term: word.title)
         
-        guard let word = WordModel.word else { return }
-        
-        edgesForExtendedLayout = []
-        extendedLayoutIncludesOpaqueBars = false
-        
-        wordLabel.text = word.title
-        wordLabel.setCharactersSpacing(5)
-        shortDefinitionLabel.text = word.shortDefinition
-        fullDefinitionLabel.attributedText = NSAttributedString(htmlString: word.definition)
-        
-        UIApplication.shared.beginReceivingRemoteControlEvents()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(didInterrupt(_ :)), name: Notification.Name.AVAudioSessionInterruption, object: self)
+        present(reference, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
+        
+        if let someWord = word {
+            wordLabel.text = someWord.title
+            wordLabel.setCharactersSpacing(5)
+            shortDefinitionLabel.text = someWord.shortDefinition
+            fullDefinitionLabel.attributedText = NSAttributedString(htmlString: someWord.definition)
+        }
+        
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didInterrupt(_ :)), name: Notification.Name.AVAudioSessionInterruption, object: self)
         
         Ambience.add(listener: self)
     }
@@ -126,6 +136,10 @@ class DefinitionController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

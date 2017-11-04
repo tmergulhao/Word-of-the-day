@@ -24,40 +24,53 @@ class IntroductionController : UIViewController {
     @IBOutlet weak var buttonSmallerHeight: NSLayoutConstraint!
     
     @IBOutlet weak var loadingButton: LoadingButton!
+    @IBOutlet weak var historyButton : UIButton!
     
-    func performButtonMove () {
-        
-        [buttonCenterY, buttonHeight].deactivate()
-        [buttonBottonToView, buttonSmallerHeight].activate()
-        
-        UIView.animate(withDuration: 1, delay: 1, options: .curveEaseIn, animations: {
-            [weak self]() -> Void in
-            
-            self?.view.layoutIfNeeded()
-        })
-    }
-
-    func performTitleShow () {
-        
-        titleLabel.alpha = 0
-        subtitleLabel.alpha = 0
-        
-        [buttonBottonToView, buttonSmallerHeight].deactivate()
-        view.layoutIfNeeded()
-        
-        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
-            [weak self]() -> Void in
-            self?.titleLabel.alpha = 1
-            self?.subtitleLabel.alpha = 1
-        })
-    }
-    
-    override func viewDidLoad() {
+    func performAnimations () {
         
         loadingButton.isEnabled = false
         loadingButton.titleLabel?.text = nil
         
-        WordModel.progressDelegate = self
+        titleLabel.alpha = 0
+        subtitleLabel.alpha = 0
+        
+        historyButton.alpha = 0
+        historyButton.isEnabled = false
+        
+        [buttonBottonToView, buttonSmallerHeight].deactivate()
+        view.layoutIfNeeded()
+        
+        UIView.animateKeyframes(withDuration: 2, delay: 0, options: .allowUserInteraction, animations: {
+            
+            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.4, animations: {
+                self.titleLabel.alpha = 1
+                self.subtitleLabel.alpha = 1
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
+                [self.buttonCenterY, self.buttonHeight].deactivate()
+                [self.buttonBottonToView, self.buttonSmallerHeight].activate()
+
+                self.view.layoutIfNeeded()
+            })
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.9, relativeDuration: 0.1, animations: {
+                if WordModel.words.count > 1 {
+                    self.historyButton.alpha = 1
+                    self.historyButton.isEnabled = true
+                } else {
+                    self.historyButton.isEnabled = false
+                }
+            })
+
+        }, completion: {
+            completion in
+            
+            
+        })
+    }
+    
+    override func viewDidLoad() {
         
         DispatchQueue.global(qos: .background).async {
             [weak self] in
@@ -88,8 +101,7 @@ class IntroductionController : UIViewController {
             }
         }
         
-        performTitleShow()
-        performButtonMove()
+        performAnimations()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -97,6 +109,8 @@ class IntroductionController : UIViewController {
         super.viewWillAppear(animated)
         
         Ambience.add(listener: self)
+        
+        WordModel.progressDelegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {

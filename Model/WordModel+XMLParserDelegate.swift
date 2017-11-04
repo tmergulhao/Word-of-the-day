@@ -28,12 +28,21 @@ extension WordModel : XMLParserDelegate {
     
     func loadWord() throws {
             
-        guard let url : URL = URL(string: "http://webster.com/word/index.xml") else { throw XMLError.URL }
-        guard let xml = self.getDictionaryFromXML(url: url)?[0] else { throw XMLError.XMLParsing }
-        guard let data = (xml.value(forKeyPath: "rss.channel.item") as? Array<XMLDictionary>)?.first else { throw XMLError.XMLStructure }
-        guard let word = Word(data) else { throw XMLError.XMLSyntax }
+        guard let url : URL = URL(string: "https://www.merriam-webster.com/wotd/feed/rss2") else { throw XMLError.URL }
+        guard let dictionary = self.getDictionaryFromXML(url: url)?[0] else { throw XMLError.XMLParsing }
+        guard let data = (dictionary.value(forKeyPath: "rss.channel.item") as? Array<XMLDictionary>) else { throw XMLError.XMLStructure }
         
-        self.word = word
+        let words = data.map({
+            (data : XMLDictionary) -> Word? in
+            
+            let word = Word(data)
+            
+            // if word == nil { throw XMLError.XMLSyntax }
+            
+            return word
+        })
+        
+        self.words = words.filter { $0 != nil }.map { $0! }
     }
     
     func getDictionaryFromXML(url : URL) -> Array<NSMutableDictionary>? {
@@ -58,16 +67,14 @@ extension WordModel : XMLParserDelegate {
         
         if let value = stack.last?[elementName] {
             
-            var array = Array<Any>()
-            
-            if value is Array<Any> {
-                array = value as! Array<AnyObject>
+            if let array = value as? NSMutableArray {
+                array.add(dictionary)
             } else {
-                array.append(value as AnyObject)
-                stack[stack.count-1][elementName] = array
+                let array = NSMutableArray()
+                array.add(value)
+                array.add(dictionary)
+                stack.last![elementName] = array
             }
-            
-            array.append(dictionary)
         } else {
             stack[stack.count - 1][elementName] = dictionary
         }
