@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-lJ-UKL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-lJ-UKL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -27,12 +27,12 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="AmbienceView" customModule="Ambience">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="122.5" y="309.5" width="130.5" height="48"/>
+                                <rect key="frame" x="116.5" y="309.5" width="142.5" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="eGA-QF-kmi"/>
                                 </constraints>
@@ -52,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="37.5" y="377.5" width="300" height="14"/>
+                                <rect key="frame" x="37.5" y="377.5" width="300" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="kpF-s3-eG2"/>
                                 </constraints>
@@ -240,7 +240,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7Q8-YW-xNC">
-                                        <rect key="frame" x="22.5" y="47.5" width="318" height="41"/>
+                                        <rect key="frame" x="21" y="47.5" width="321" height="41"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-lf-QsN" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="41"/>
@@ -259,7 +259,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE1-YK-p4s" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="36" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="36.5" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="rE1-YK-p4s" secondAttribute="height" multiplier="30:41" id="O0k-IS-pN6"/>
@@ -275,7 +275,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78N-WX-k13" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="72" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="73" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="78N-WX-k13" secondAttribute="height" multiplier="30:41" id="fap-R9-7LH"/>
@@ -291,7 +291,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xh-6M-VtC" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="108" y="0.5" width="30" height="40"/>
+                                                <rect key="frame" x="109" y="0.0" width="30.5" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1xh-6M-VtC" secondAttribute="height" multiplier="30:41" id="IR1-ZM-CTI"/>
@@ -307,7 +307,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCZ-2Y-Yuu" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="144" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="145.5" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SCZ-2Y-Yuu" secondAttribute="height" multiplier="30:41" id="UQd-sz-tIq"/>
@@ -323,7 +323,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F61-vp-FQ2" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="180" y="0.5" width="30" height="40"/>
+                                                <rect key="frame" x="181.5" y="0.0" width="30.5" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="F61-vp-FQ2" secondAttribute="height" multiplier="30:41" id="NRM-jt-FE1"/>
@@ -339,7 +339,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-Tq-y00" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="216" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="218" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fSF-Tq-y00" secondAttribute="height" multiplier="30:41" id="ZUF-PY-ssp"/>
@@ -355,7 +355,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y18-at-fYE" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="252" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="254.5" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Y18-at-fYE" secondAttribute="height" multiplier="30:41" id="UCf-O3-zYg"/>
@@ -371,7 +371,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1m-X6-RFt" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="288" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="291" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="j1m-X6-RFt" secondAttribute="height" multiplier="30:41" id="Gmu-2D-icj"/>
@@ -518,6 +518,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" name="Nil"/>
                         <color key="tintColor" name="Tint"/>
                         <constraints>
                             <constraint firstItem="4dR-rC-icc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="9" id="4Xy-ou-Yjn"/>
@@ -584,7 +585,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="37"/>
+            <point key="canvasLocation" x="1046" y="37"/>
         </scene>
         <!--Definition Controller-->
         <scene sceneID="2XG-mI-heM">
@@ -611,7 +612,7 @@
                                                         <action selector="backButtonPressed:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="ij8-7Y-Ijv"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-6H-xm4" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-6H-xm4" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="142.5" y="33" width="90" height="48"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                                     <nil key="textColor"/>
@@ -628,7 +629,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-Aj-dwX" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-Aj-dwX" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="37.5" y="101" width="300" height="13.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="zZX-8v-aBr"/>
@@ -672,7 +673,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bn-yA-6bf" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="80" y="15" width="136.5" height="14"/>
+                                                    <rect key="frame" x="80" y="15" width="139.5" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -699,7 +700,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZc-e4-81L">
-                                                    <rect key="frame" x="80" y="41" width="99" height="13"/>
+                                                    <rect key="frame" x="80" y="43.5" width="101" height="10.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Podcasts">
                                                         <color key="titleColor" name="Tint"/>
@@ -732,7 +733,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-Hd-UDX" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="80" y="15" width="81.5" height="14"/>
+                                                    <rect key="frame" x="80" y="15" width="85" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -749,191 +750,21 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOu-O3-ztx" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="80" y="35" width="279" height="287.5"/>
+                                                    <rect key="frame" x="80" y="37.5" width="279" height="285"/>
                                                     <attributedString key="attributedText">
-                                                        <fragment content="1:">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content"> to move about quickly especially in search
-</string>
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="2:">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment>
-                                                            <string key="content"> to go through or range over in or as if in a search
+                                                            <string key="content">1: to move about quickly especially in search
+2: to go through or range over in or as if in a search
 Examples:
 The dog scoured the terrain in search of the tennis ball I had thrown.
 "The rescue team scoured the ground and a New Hampshire National Guard Black Hawk helicopter also searched the area." — Emily Sweeney, The Boston Globe, 18 July 2017
 Did you know?
-There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that </string>
+There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that scour, which goes back to at least the early 14th century, probably derives—via Middle Dutch and Old French—from a Late Latin verb, excurare, meaning "to clean off." Today's word, however, which appears in the 13th century, is believed to derive from the Old Norse skūr, meaning "shower." (Skūr is also distantly related to the Old English scūr, the ancestor of our English word </string>
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" metaFont="cellTitle"/>
                                                                 <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="scour">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=", which goes back to at least the early 14th century, probably derives—via Middle Dutch and Old French—from a Late Latin verb, ">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="excurare">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=", meaning &quot;to clean off.&quot; Today's word, however, which appears in the 13th century, is believed to derive from the Old Norse ">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="skūr">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=", meaning &quot;shower.&quot; (">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="Skūr">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=" is also distantly related to the Old English ">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="scūr">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Italic"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content=", the ancestor of our English word ">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="10"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -944,9 +775,9 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         <fragment content="shower">
                                                             <attributes>
                                                                 <color key="NSColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" metaFont="cellTitle"/>
                                                                 <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="10"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -958,9 +789,9 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                             <string key="content">.) Many disparate things can be scoured. For example, one can scour an area (as in "scoured the woods in search of the lost dog") or publications (as in "scouring magazine and newspaper articles").</string>
                                                             <attributes>
                                                                 <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" size="12" name="OpenSans-Regular"/>
+                                                                <font key="NSFont" metaFont="cellTitle"/>
                                                                 <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" size="10" name="OpenSans-Regular"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="10"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
                                                                     <tabStops/>
                                                                 </paragraphStyle>
@@ -983,7 +814,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZt-WL-8ez">
-                                                    <rect key="frame" x="80" y="334.5" width="133" height="0.0"/>
+                                                    <rect key="frame" x="80" y="334.5" width="141" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Merion Webster">
                                                         <color key="titleColor" name="Tint"/>
@@ -1017,7 +848,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dme-Bd-Hyy">
-                                                    <rect key="frame" x="80" y="12" width="117" height="17.5"/>
+                                                    <rect key="frame" x="80" y="12" width="122" height="17.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="Look up on dictionary">
                                                         <color key="titleColor" name="Tint"/>
@@ -1053,7 +884,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdV-0u-jM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="820"/>
+            <point key="canvasLocation" x="1046" y="818"/>
         </scene>
         <!--Introduction Controller-->
         <scene sceneID="y7H-XQ-zC6">
@@ -1083,7 +914,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-zf-d0i" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="60" y="312.5" width="255.5" height="42"/>
+                                <rect key="frame" x="61" y="309.5" width="253.5" height="48"/>
                                 <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                 <color key="textColor" name="Ink"/>
                                 <nil key="highlightedColor"/>
@@ -1100,7 +931,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="53" y="374" width="269" height="28"/>
+                                <rect key="frame" x="49" y="377" width="278.5" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="2gt-dP-b5X"/>
                                 </constraints>
@@ -1144,6 +975,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" name="Nil"/>
                         <color key="tintColor" name="Tint"/>
                         <constraints>
                             <constraint firstItem="cRO-nN-dve" firstAttribute="centerY" secondItem="S6o-d7-bYX" secondAttribute="centerY" id="4Fo-19-g9z"/>
@@ -1158,6 +990,14 @@ There are two distinct homographs of the verb scour in English. One means to cle
                             <constraint firstItem="Hgs-8b-4ub" firstAttribute="top" secondItem="Mmg-zf-d0i" secondAttribute="bottom" constant="20" id="d5E-xZ-YTz"/>
                             <constraint firstItem="cRO-nN-dve" firstAttribute="leading" secondItem="n9f-Bd-0AQ" secondAttribute="trailing" constant="46" id="o95-vJ-0eI"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                <color key="value" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="buttonBottonToView" destination="YzE-Jr-j4L" id="0TG-e2-tXU"/>
@@ -1233,7 +1073,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmP-0Z-HJF" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmP-0Z-HJF" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="24" y="12" width="328" height="24"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="18"/>
                                                     <nil key="textColor"/>
@@ -1250,7 +1090,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="to move about or go through in search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-06-rtV" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-06-rtV" customClass="AmbienceLabel" customModule="Ambience">
                                                     <rect key="frame" x="24" y="35" width="300" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="xIz-Zv-xQH"/>
@@ -1339,7 +1179,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wgo-sc-UvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="820"/>
+            <point key="canvasLocation" x="254" y="820"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="w9K-ed-ErR">
@@ -1365,17 +1205,8 @@ There are two distinct homographs of the verb scour in English. One means to cle
         <namedColor name="Ink">
             <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="Ink">
-            <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Ink">
-            <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Nil">
-            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="Nil">
-            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.99800002574920654" green="0.99299997091293335" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Nil">
             <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

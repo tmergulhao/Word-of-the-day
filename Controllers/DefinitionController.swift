@@ -15,7 +15,7 @@ class DefinitionController : UITableViewController {
     @IBOutlet weak var shortDefinitionLabel: UILabel!
     @IBOutlet weak var fullDefinitionLabel: UILabel!
     
-    var word : Word?
+    var word : WordStruct?
     
     @IBAction func viewPodcast(_ sender: UIButton) {
         
@@ -92,10 +92,10 @@ class DefinitionController : UITableViewController {
         Ambience.remove(listener: self)
     }
     
-    var ambienceState : AmbienceState = .Regular
+    var ambienceState : AmbienceState = .regular
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ambienceState == .Invert ? .lightContent : .default
+        return ambienceState == .invert ? .lightContent : .default
     }
     
     @objc func didInterrupt (_ notification : Notification) {
@@ -145,9 +145,9 @@ class DefinitionController : UITableViewController {
 
 // MARK: - Ambience Listener
 
-extension DefinitionController : AmbienceListener {
+extension DefinitionController {
     
-    @objc public func ambience(_ notification : Notification) {
+    @objc public override func ambience(_ notification : Notification) {
         
         guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
         

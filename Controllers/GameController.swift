@@ -101,18 +101,18 @@ class GameController: UIViewController {
         Ambience.remove(listener: self)
     }
     
-    var ambienceState : AmbienceState = .Regular
+    var ambienceState : AmbienceState = .regular
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ambienceState == .Invert ? .lightContent : .default
+        return ambienceState == .invert ? .lightContent : .default
     }
 }
 
 // MARK: - Ambience Listener
 
-extension GameController : AmbienceListener {
+extension GameController {
     
-    @objc public func ambience(_ notification : Notification) {
+    @objc public override func ambience(_ notification : Notification) {
         
         guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
         

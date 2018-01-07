@@ -8,23 +8,27 @@
 
 import UIKit
 import Ambience
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var customWindow : AmbienceWindow?
-    var window : UIWindow? {
-        get {
-            customWindow = customWindow ?? AmbienceWindow(
-                contrast : StyleKit.color.white,
-                invert : StyleKit.color.ink,
-                regular : StyleKit.color.null,
-                frame : UIScreen.main.bounds
-            )
+    var persistentContainer : NSPersistentContainer!
+    
+    var window: UIWindow?
+    
+    func createContainer(completion : @escaping(NSPersistentContainer) -> ()) {
+        let container = NSPersistentContainer(name: "Model")
+        
+        container.loadPersistentStores { (description, error) in
+            guard error == nil else {
+                fatalError("Failed to load \(description) with \(String(describing: error))")
+            }
             
-            return customWindow
+            DispatchQueue.main.async {
+                completion(container)
+            }
         }
-        set { }
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -42,6 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         print(numberOfTimes)
+        
+        createContainer { (container) in
+            self.persistentContainer = container
+        }
         
         return true
     }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Words = Array<Word>
+typealias Words = Array<WordStruct>
 
 final class WordModel : NSObject {
     

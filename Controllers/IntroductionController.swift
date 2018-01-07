@@ -120,10 +120,10 @@ class IntroductionController : UIViewController {
         Ambience.remove(listener: self)
     }
     
-    var ambienceState : AmbienceState = .Regular
+    var ambienceState : AmbienceState = .regular
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ambienceState == .Invert ? .lightContent : .default
+        return ambienceState == .invert ? .lightContent : .default
     }
 }
 
@@ -160,9 +160,9 @@ extension IntroductionController : ProgressDelegate {
 
 // MARK: - Ambience Listener
 
-extension IntroductionController : AmbienceListener {
+extension IntroductionController {
     
-    @objc public func ambience(_ notification : Notification) {
+    @objc public override func ambience(_ notification : Notification) {
         
         guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
         

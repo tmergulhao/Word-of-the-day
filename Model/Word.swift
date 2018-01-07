@@ -7,10 +7,23 @@
 //
 
 import Foundation
+import CoreData
 
 typealias XMLDictionary = Dictionary<String,Any>
 
-struct Word {
+final class Wordd : NSManagedObject {
+    @NSManaged fileprivate(set) var played : Bool
+    @NSManaged fileprivate(set) var date : Date
+    @NSManaged fileprivate(set) var dictionary : XMLDictionary
+    @NSManaged fileprivate(set) var link : URL
+    @NSManaged fileprivate(set) var audioURL : URL
+    @NSManaged fileprivate(set) var externalAudioURL : URL
+    @NSManaged fileprivate(set) var shortDefinition : String
+    @NSManaged fileprivate(set) var title : String
+    @NSManaged fileprivate(set) var definition : NSAttributedString
+}
+
+struct WordStruct {
     
     var link : String
     var externalAudioURL : URL
@@ -37,8 +50,28 @@ struct Word {
     }
 }
 
-extension Word : CustomStringConvertible {
+extension WordStruct : CustomStringConvertible {
     var description : String {
         return title + "\n" + link + "\n" + shortDefinition + "\n" + definition
     }
+}
+
+protocol Managed : class, NSFetchRequestResult {
+    static var entityName: String { get }
+    static var defaultSortDescriptors: [NSSortDescriptor] { get }
+}
+
+extension Managed {
+    static var defaultSortDescriptor : [NSSortDescriptor] {
+        return []
+    }
+    static var sortedFetchRequest : NSFetchRequest<Self> {
+        let request = NSFetchRequest<Self>(entityName: entityName)
+        request.sortDescriptors = defaultSortDescriptor
+        return request
+    }
+}
+
+extension Managed where Self : NSManagedObject {
+    static var entityName : String { return entity().name! }
 }

@@ -33,9 +33,9 @@ extension WordModel : XMLParserDelegate {
         guard let data = (dictionary.value(forKeyPath: "rss.channel.item") as? Array<XMLDictionary>) else { throw XMLError.XMLStructure }
         
         let words = data.map({
-            (data : XMLDictionary) -> Word? in
+            (data : XMLDictionary) -> WordStruct? in
             
-            let word = Word(data)
+            let word = WordStruct(data)
             
             // if word == nil { throw XMLError.XMLSyntax }
             
