@@ -20,15 +20,6 @@ class GameController: UIViewController {
     @IBOutlet var titleSpacingTop: NSLayoutConstraint!
     @IBOutlet var keyboardHideGuide: NSLayoutConstraint!
     @IBOutlet weak var keyboardShowGuide: NSLayoutConstraint!
-    
-    @IBAction func backButtonPressed (_ sender : UIButton) {
-        
-        if navigationController != nil {
-            navigationController?.popViewController(animated: true)
-        } else {
-            dismiss(animated: false)
-        }
-    }
 
     var charactersUsed : Set<Character> = []
     
@@ -53,7 +44,9 @@ class GameController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "Definition" {
+            
             let definition = segue.destination as? DefinitionController
             
             definition?.word = WordModel.words.first
@@ -87,24 +80,9 @@ class GameController: UIViewController {
         setWordDisplay()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        Ambience.add(listener: self)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        super.viewWillDisappear(animated)
-        
-        Ambience.remove(listener: self)
-    }
-    
-    var ambienceState : AmbienceState = .regular
-    
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ambienceState == .invert ? .lightContent : .default
+        
+        return Ambience.currentState == .invert ? .lightContent : .default
     }
 }
 
@@ -113,10 +91,6 @@ class GameController: UIViewController {
 extension GameController {
     
     @objc public override func ambience(_ notification : Notification) {
-        
-        guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
-        
-        ambienceState = currentState
         
         setNeedsStatusBarAppearanceUpdate()
     }

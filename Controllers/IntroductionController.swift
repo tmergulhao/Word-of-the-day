@@ -15,7 +15,6 @@ class IntroductionController : UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var loadingLabel: UILabel!
     
     @IBOutlet weak var buttonCenterY: NSLayoutConstraint!
     @IBOutlet weak var buttonHeight: NSLayoutConstraint!
@@ -26,7 +25,38 @@ class IntroductionController : UIViewController {
     @IBOutlet weak var loadingButton: LoadingButton!
     @IBOutlet weak var historyButton : UIButton!
     
-    func performAnimations () {
+    override func viewDidLoad() {
+        
+        DispatchQueue.global(qos: .background).async {
+            [weak self] in
+            
+            do {
+                
+                try WordModel.shared.loadWord()
+                
+                if WordModel.words.count > 1 {
+                    
+                    DispatchQueue.main.sync {
+                        
+                        self?.showHistoryButton()
+                    }
+                }
+                
+            } catch {
+                
+                DispatchQueue.main.sync {
+                    
+                    let alert = UIAlertController(
+                        title:"Shoot!",
+                        message:"We could not find your word for today, what a bummer…",
+                        preferredStyle: .alert)
+                    
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    
+                    self?.present(alert, animated: true, completion: nil)
+                }
+            }
+        }
         
         loadingButton.isEnabled = false
         loadingButton.titleLabel?.text = nil
@@ -50,111 +80,35 @@ class IntroductionController : UIViewController {
             UIView.addKeyframe(withRelativeStartTime: 0.5, relativeDuration: 0.5, animations: {
                 [self.buttonCenterY, self.buttonHeight].deactivate()
                 [self.buttonBottonToView, self.buttonSmallerHeight].activate()
-
+                
+                self.loadingButton.layer.cornerRadius = 32
+                
                 self.view.layoutIfNeeded()
             })
-            
-            UIView.addKeyframe(withRelativeStartTime: 0.9, relativeDuration: 0.1, animations: {
-                if WordModel.words.count > 1 {
-                    self.historyButton.alpha = 1
-                    self.historyButton.isEnabled = true
-                } else {
-                    self.historyButton.isEnabled = false
-                }
-            })
-
         }, completion: {
             completion in
             
-            
+            self.loadingButton.isEnabled = true
         })
-    }
-    
-    override func viewDidLoad() {
-        
-        DispatchQueue.global(qos: .background).async {
-            [weak self] in
-            
-            do {
-                let model = WordModel.shared
-                
-                try model.loadWord()
-                
-                DispatchQueue.main.sync {
-                    self?.didProgress(0)
-                }
-                
-                model.loadAudio()
-            } catch {
-                
-                DispatchQueue.main.sync {
-                
-                    let alert = UIAlertController(
-                        title:"Shoot!",
-                        message:"We could not find your word for today, what a bummer…",
-                        preferredStyle: .alert)
-                    
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    
-                    self?.present(alert, animated: true, completion: nil)
-                }
-            }
-        }
-        
-        performAnimations()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
-        super.viewWillAppear(animated)
-        
-        Ambience.add(listener: self)
-        
-        WordModel.progressDelegate = self
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    func showHistoryButton () {
         
-        super.viewWillDisappear(animated)
-        
-        Ambience.remove(listener: self)
+        UIView.animate(withDuration: 1) {
+            
+            self.historyButton.alpha = 1
+            self.historyButton.isEnabled = true
+        }
     }
-    
-    var ambienceState : AmbienceState = .regular
     
     open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ambienceState == .invert ? .lightContent : .default
-    }
-}
-
-// MARK: - Progress Delegate
-
-extension IntroductionController : ProgressDelegate {
-    
-    func didComplete() {
         
-        loadingLabel?.removeFromSuperview()
-        loadingButton.didComplete()
-    }
-    
-    func didProgress(_ progress: Float) {
-        
-        loadingButton.didProgress(progress)
-    }
-    
-    func reachedError() {
-        
-        let alert = UIAlertController(
-            title:"Shoot!",
-            message:"There was something wrong with the audio episode… Would you like to play the game anyway?",
-            preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
-        present(alert, animated: true, completion: nil)
-        
-        loadingButton.alpha = 0.4
-        loadingButton.reachedError()
+        return Ambience.currentState == .invert ? .lightContent : .default
     }
 }
 
@@ -162,11 +116,9 @@ extension IntroductionController : ProgressDelegate {
 
 extension IntroductionController {
     
-    @objc public override func ambience(_ notification : Notification) {
+    override func ambience(_ notification: Notification) {
         
-        guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
-        
-        ambienceState = currentState
+        super.ambience(notification)
         
         setNeedsStatusBarAppearanceUpdate()
     }

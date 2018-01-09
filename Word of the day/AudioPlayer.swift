@@ -36,11 +36,9 @@ final class AudioPlayer : NSObject {
     
     // MARK : Methods
     
-    func prepareToPlay () {
+    func prepareToPlay (_ audioURL : URL) {
         
-        guard let word = WordModel.words.first, let url = word.audioURL else { return }
-        
-        player = try? AVAudioPlayer(contentsOf: url)
+        player = try? AVAudioPlayer(contentsOf: audioURL)
         player?.prepareToPlay()
     }
     

@@ -8,14 +8,13 @@
 
 import UIKit
 import SafariServices
-import Ambience
 
 class DefinitionController : UITableViewController {
+    
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var shortDefinitionLabel: UILabel!
-    @IBOutlet weak var fullDefinitionLabel: UILabel!
-    
-    var word : WordStruct?
+    @IBOutlet weak var fullDefinitionLabel: UITextView!
+    @IBOutlet weak var playButton: UIButton!
     
     @IBAction func viewPodcast(_ sender: UIButton) {
         
@@ -23,6 +22,7 @@ class DefinitionController : UITableViewController {
         
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
+    
     @IBAction func viewOnWebsite(_ sender: UIButton) {
         
         let url : URL! = URL(string: WordModel.words.first!.link)
@@ -32,16 +32,23 @@ class DefinitionController : UITableViewController {
         present(safari, animated: true, completion: nil)
     }
     
-    @IBAction func backButtonPressed (_ sender : UIButton) {
+    @IBAction func playPause(_ sender: UIButton) {
         
-        playing = false
+        playing = !playing
         
-        if navigationController != nil {
-            navigationController?.popViewController(animated: true)
-        } else {
-            dismiss(animated: false)
-        }
+        (sender as? PlayButton)?.switchOnOffState()
     }
+    
+    @IBAction func lookUp(_ sender: UIButton) {
+        
+        guard let word = WordModel.words.first else { return }
+        
+        let reference = UIReferenceLibraryViewController(term: word.title)
+        
+        present(reference, animated: true, completion: nil)
+    }
+    
+    var word : WordStruct!
     
     var playing : Bool = false {
         didSet {
@@ -53,61 +60,66 @@ class DefinitionController : UITableViewController {
         }
     }
     
-    @IBAction func playPause(_ sender: UIButton) {
-        playing = !playing
+    var progressView : UIProgressView?
+    
+    override func viewDidLoad() {
         
-        (sender as? PlayButton)?.switchOnOffState()
-    }
-    @IBAction func lookUp(_ sender: UIButton) {
+        super.viewDidLoad()
         
-        guard let word = WordModel.words.first else { return }
+        playButton.isEnabled = false
+        playButton.alpha = 0.3
         
-        let reference = UIReferenceLibraryViewController(term: word.title)
+        loadAudio()
         
-        present(reference, animated: true, completion: nil)
+        tableView.rowHeight = 140
+        tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        
+        if let word = word {
+            
+            wordLabel.text = word.title
+            wordLabel.setCharactersSpacing(5)
+            
+            shortDefinitionLabel.text = word.shortDefinition
+            shortDefinitionLabel.sizeToFit()
+            
+            fullDefinitionLabel.attributedText = NSAttributedString(htmlString: word.definition.styleWrapped)
+            
+            UIView.setAnimationsEnabled(false)
+            tableView.reloadData()
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            UIView.setAnimationsEnabled(true)
+        }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    @objc func didInterrupt (_ notification : Notification) {
+        
+        print("interruption received: \(notification)")
+    }
+    
+    override func viewWillAppear (_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
-        if let someWord = word {
-            wordLabel.text = someWord.title
-            wordLabel.setCharactersSpacing(5)
-            shortDefinitionLabel.text = someWord.shortDefinition
-            fullDefinitionLabel.attributedText = NSAttributedString(htmlString: someWord.definition)
-        }
+        self.tableView.setNeedsLayout()
+        self.tableView.layoutIfNeeded()
         
         UIApplication.shared.beginReceivingRemoteControlEvents()
         
         NotificationCenter.default.addObserver(self, selector: #selector(didInterrupt(_ :)), name: Notification.Name.AVAudioSessionInterruption, object: self)
-        
-        Ambience.add(listener: self)
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        super.viewWillDisappear(animated)
-        
-        Ambience.remove(listener: self)
-    }
-    
-    var ambienceState : AmbienceState = .regular
-    
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ambienceState == .invert ? .lightContent : .default
-    }
-    
-    @objc func didInterrupt (_ notification : Notification) {
-        print("interruption received: \(notification)")
-    }
+    var downloadTask : URLSessionDownloadTask?
     
     override func viewDidDisappear(_ animated: Bool) {
+        
         super.viewDidDisappear(animated)
         
         UIApplication.shared.endReceivingRemoteControlEvents()
         
         NotificationCenter.default.removeObserver(self)
+        
+        downloadTask?.cancel()
     }
     
     override func remoteControlReceived(with event: UIEvent?) {
@@ -134,25 +146,18 @@ class DefinitionController : UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 240
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
         return UITableViewAutomaticDimension
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-// MARK: - Ambience Listener
-
-extension DefinitionController {
-    
-    @objc public override func ambience(_ notification : Notification) {
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         
-        guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
-        
-        ambienceState = currentState
-        
-        setNeedsStatusBarAppearanceUpdate()
+        return nil
     }
 }

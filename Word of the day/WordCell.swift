@@ -11,4 +11,10 @@ import UIKit
 class WordCell : UITableViewCell {
     @IBOutlet var title : UILabel!
     @IBOutlet var shortDefinition : UILabel!
+    
+    func configure (for word : WordStruct) {
+        
+        title.text = word.title
+        shortDefinition.text = word.shortDefinition
+    }
 }

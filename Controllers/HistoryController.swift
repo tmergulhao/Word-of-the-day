@@ -7,20 +7,16 @@
 //
 
 import UIKit
-import Ambience
 
-class HistoryController : UIViewController {
-    
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet var loadingButton: LoadingButton!
-    
-    var selected : IndexPath!
+class HistoryController : UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "Definition" {
+        
+        if segue.identifier == "Definition", let sender = sender as? IndexPath {
+            
             let definition = segue.destination as? DefinitionController
             
-            definition?.word = WordModel.words[selected.row]
+            definition?.word = WordModel.words[sender.row]
         }
     }
     
@@ -28,114 +24,45 @@ class HistoryController : UIViewController {
         
         super.viewWillAppear(animated)
         
-        Ambience.add(listener: self)
+        navigationController?.setNavigationBarHidden(false, animated: true)
         
-        WordModel.progressDelegate = self
+        navigationController?.navigationBar.largeTitleTextAttributes = [
+            NSAttributedStringKey.font : UIFont(name: "PlayfairDisplay-Regular", size: 34)!
+        ]
         
-        tableView.contentInset = UIEdgeInsetsMake(0, 0, 136, 0)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedStringKey.font : UIFont(name: "PlayfairDisplay-Regular", size: 20)!
+        ]
         
-        super.viewWillDisappear(animated)
-        
-        Ambience.remove(listener: self)
-    }
-    
-    var ambienceState : AmbienceState = .regular
-    
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return ambienceState == .invert ? .lightContent : .default
-    }
-}
-
-extension HistoryController : ProgressDelegate {
-    
-    func didComplete() {
-        loadingButton.didComplete()
-    }
-    
-    func didProgress(_ progress: Float) {
-        
-        loadingButton.didProgress(progress)
-    }
-    
-    func reachedError() {
-        
-        let alert = UIAlertController(
-            title:"Shoot!",
-            message:"There was something wrong with the audio episode… Would you like to play the game anyway?",
-            preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
-        present(alert, animated: true, completion: nil)
-        
-        loadingButton.alpha = 0.4
-        loadingButton.reachedError()
+        navigationController?.navigationBar.backItem?.title = ""
     }
 }
 
 extension HistoryController {
     
-    @objc public override func ambience(_ notification : Notification) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        guard let currentState = notification.userInfo?["currentState"] as? AmbienceState else { return }
+        performSegue(withIdentifier: "Definition", sender: indexPath)
         
-        ambienceState = currentState
-        
-        setNeedsStatusBarAppearanceUpdate()
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
-extension HistoryController : UITableViewDelegate {
+extension HistoryController {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if indexPath.section == 1 {
-            selected = indexPath
-            performSegue(withIdentifier: "Definition", sender: self)
-        }
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-}
-
-extension HistoryController : UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return WordModel.words.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return WordModel.words.count
-        default:
-            return 0
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath)
-            
-            return cell
-        case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "Word", for: indexPath) as? WordCell else {
-                return UITableViewCell()
-            }
-            
-            cell.title.text = WordModel.words[indexPath.row].title
-            cell.shortDefinition.text = WordModel.words[indexPath.row].shortDefinition
-            
-            return cell
-        default:
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Word", for: indexPath) as? WordCell else {
             return UITableViewCell()
         }
+        
+        cell.configure(for: WordModel.words[indexPath.row])
+        
+        return cell
     }
 }

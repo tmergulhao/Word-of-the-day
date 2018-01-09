@@ -38,7 +38,7 @@
 		79B8DDBE1F6D6D6300210128 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBD1F6D6D6300210128 /* WordModel.swift */; };
 		79B8DDC01F6D704E00210128 /* ProgressDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B8DDBF1F6D704E00210128 /* ProgressDelegate.swift */; };
 		79C819981F6C2C37005110CE /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819971F6C2C37005110CE /* LoadingButton.swift */; };
-		79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */; };
+		79C8199A1F6C3C91005110CE /* DefinitionController+URLSessionDownloadDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C819991F6C3C91005110CE /* DefinitionController+URLSessionDownloadDelegate.swift */; };
 		79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CE67381F6DD9C700D17BD9 /* GameToDefinitionSegue.swift */; };
 		79EB5EAB1F76ADF600327130 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAA1F76ADF600327130 /* PlayButton.swift */; };
 		79EB5EAD1F76AE0200327130 /* PlayButtonLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */; };
@@ -80,7 +80,7 @@
 		79B8DDBD1F6D6D6300210128 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		79B8DDBF1F6D704E00210128 /* ProgressDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDelegate.swift; sourceTree = "<group>"; };
 		79C819971F6C2C37005110CE /* LoadingButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
-		79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WordModel+URLSessionDownloadDelegate.swift"; sourceTree = "<group>"; };
+		79C819991F6C3C91005110CE /* DefinitionController+URLSessionDownloadDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefinitionController+URLSessionDownloadDelegate.swift"; sourceTree = "<group>"; };
 		79CE67381F6DD9C700D17BD9 /* GameToDefinitionSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameToDefinitionSegue.swift; sourceTree = "<group>"; };
 		79EB5EAA1F76ADF600327130 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		79EB5EAC1F76AE0200327130 /* PlayButtonLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButtonLayer.swift; sourceTree = "<group>"; };
@@ -171,7 +171,6 @@
 				79705E031F5E0F450021606E /* Word.swift */,
 				79B8DDBD1F6D6D6300210128 /* WordModel.swift */,
 				79705E051F5E16760021606E /* WordModel+XMLParserDelegate.swift */,
-				79C819991F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift */,
 				798D8DC91FD44742005A55EC /* Model.xcdatamodeld */,
 			);
 			path = Model;
@@ -195,6 +194,7 @@
 				79483F281FAE110D007A6124 /* HistoryController.swift */,
 				79705DF31F5DF4C40021606E /* GameController.swift */,
 				792C78001F6D9B9500E88F7E /* DefinitionController.swift */,
+				79C819991F6C3C91005110CE /* DefinitionController+URLSessionDownloadDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				79CE67391F6DD9C700D17BD9 /* GameToDefinitionSegue.swift in Sources */,
 				797B14EC1F673CFF00720E29 /* UILabel+CharacterSpacing.swift in Sources */,
 				79705E061F5E16760021606E /* WordModel+XMLParserDelegate.swift in Sources */,
-				79C8199A1F6C3C91005110CE /* WordModel+URLSessionDownloadDelegate.swift in Sources */,
+				79C8199A1F6C3C91005110CE /* DefinitionController+URLSessionDownloadDelegate.swift in Sources */,
 				79EB5EAB1F76ADF600327130 /* PlayButton.swift in Sources */,
 				798D8DCB1FD44742005A55EC /* Model.xcdatamodeld in Sources */,
 				79705DF41F5DF4C40021606E /* GameController.swift in Sources */,

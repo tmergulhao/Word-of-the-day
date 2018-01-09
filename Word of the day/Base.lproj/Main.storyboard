@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-lJ-UKL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="os3-3o-wtl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,11 +28,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="116.5" y="309.5" width="142.5" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
+                                <rect key="frame" x="116.5" y="277.5" width="142.5" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="eGA-QF-kmi"/>
                                 </constraints>
@@ -46,13 +46,10 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
                                         <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                        <color key="value" name="Ink"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="37.5" y="377.5" width="300" height="16.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-2j-4Ju">
+                                <rect key="frame" x="37.5" y="345.5" width="300" height="16.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="kpF-s3-eG2"/>
                                 </constraints>
@@ -66,13 +63,10 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
                                         <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                        <color key="value" name="Ink"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="PPI-n0-DoH">
-                                <rect key="frame" x="6" y="523" width="363" height="136"/>
+                                <rect key="frame" x="6" y="459" width="363" height="136"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Sol-Ec-5rr">
                                         <rect key="frame" x="4.5" y="0.0" width="354" height="41.5"/>
@@ -240,7 +234,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7Q8-YW-xNC">
-                                        <rect key="frame" x="21" y="47.5" width="321" height="41"/>
+                                        <rect key="frame" x="21.5" y="47.5" width="320" height="41"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwO-lf-QsN" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="41"/>
@@ -275,7 +269,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78N-WX-k13" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="73" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="72.5" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="78N-WX-k13" secondAttribute="height" multiplier="30:41" id="fap-R9-7LH"/>
@@ -291,7 +285,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xh-6M-VtC" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="109" y="0.0" width="30.5" height="41"/>
+                                                <rect key="frame" x="108.5" y="0.0" width="30.5" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1xh-6M-VtC" secondAttribute="height" multiplier="30:41" id="IR1-ZM-CTI"/>
@@ -307,7 +301,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCZ-2Y-Yuu" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="145.5" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="145" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="SCZ-2Y-Yuu" secondAttribute="height" multiplier="30:41" id="UQd-sz-tIq"/>
@@ -323,7 +317,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F61-vp-FQ2" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="181.5" y="0.0" width="30.5" height="41"/>
+                                                <rect key="frame" x="181" y="0.0" width="30.5" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="F61-vp-FQ2" secondAttribute="height" multiplier="30:41" id="NRM-jt-FE1"/>
@@ -339,7 +333,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSF-Tq-y00" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="218" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="217.5" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="fSF-Tq-y00" secondAttribute="height" multiplier="30:41" id="ZUF-PY-ssp"/>
@@ -355,7 +349,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y18-at-fYE" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="254.5" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="254" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Y18-at-fYE" secondAttribute="height" multiplier="30:41" id="UCf-O3-zYg"/>
@@ -371,7 +365,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1m-X6-RFt" customClass="CornerRadiusButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                                <rect key="frame" x="291" y="0.0" width="30" height="41"/>
+                                                <rect key="frame" x="290" y="0.0" width="30" height="41"/>
                                                 <color key="backgroundColor" name="Tint"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="j1m-X6-RFt" secondAttribute="height" multiplier="30:41" id="Gmu-2D-icj"/>
@@ -510,18 +504,10 @@
                                     <constraint firstAttribute="width" secondItem="PPI-n0-DoH" secondAttribute="height" multiplier="40:15" id="70O-39-HSH"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-rC-icc" userLabel="Back">
-                                <rect key="frame" x="9" y="31" width="12" height="22"/>
-                                <state key="normal" image="Back"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="29i-wa-6rB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" name="Nil"/>
                         <color key="tintColor" name="Tint"/>
                         <constraints>
-                            <constraint firstItem="4dR-rC-icc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="9" id="4Xy-ou-Yjn"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="999" constant="30" id="AG7-xl-B84"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" priority="999" constant="8" id="CZV-Q3-qK2"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTn-G4-rbs"/>
@@ -531,7 +517,6 @@
                             <constraint firstItem="lt3-2j-4Ju" firstAttribute="top" secondItem="vl2-eg-nXU" secondAttribute="bottom" constant="20" id="OXa-xG-w68"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="alQ-Aq-06N"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="bo1-wf-Deh"/>
-                            <constraint firstItem="4dR-rC-icc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="eYh-kX-bgq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PPI-n0-DoH" secondAttribute="trailing" constant="-10" id="u3f-I0-S0f"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -544,8 +529,13 @@
                             <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="hintLabel" destination="lt3-2j-4Ju" id="6is-Fp-Tu8"/>
                         <outlet property="keyboardHideGuide" destination="CZV-Q3-qK2" id="uvQ-VG-xJS"/>
@@ -585,16 +575,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="37"/>
+            <point key="canvasLocation" x="542" y="36"/>
         </scene>
         <!--Definition Controller-->
         <scene sceneID="2XG-mI-heM">
             <objects>
                 <tableViewController id="kKu-Oe-QHh" customClass="DefinitionController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KSw-nv-24P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" name="Nil"/>
                         <sections>
                             <tableViewSection id="4aT-Zo-xe2">
                                 <cells>
@@ -605,31 +596,22 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfZ-6B-6YZ" userLabel="Back">
-                                                    <rect key="frame" x="9" y="11" width="12" height="22"/>
-                                                    <state key="normal" image="Back"/>
-                                                    <connections>
-                                                        <action selector="backButtonPressed:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="ij8-7Y-Ijv"/>
-                                                    </connections>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="scour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-6H-xm4" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="scour" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-6H-xm4">
                                                     <rect key="frame" x="142.5" y="33" width="90" height="48"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                                             <color key="value" name="Nil"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-Aj-dwX" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekP-Aj-dwX">
                                                     <rect key="frame" x="37.5" y="101" width="300" height="13.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="zZX-8v-aBr"/>
@@ -638,15 +620,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                                             <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
@@ -655,14 +635,12 @@
                                                 <constraint firstAttribute="bottom" secondItem="ekP-Aj-dwX" secondAttribute="bottom" constant="37" id="KcW-tR-8dl"/>
                                                 <constraint firstItem="ekP-Aj-dwX" firstAttribute="top" secondItem="DJv-6H-xm4" secondAttribute="bottom" constant="20" id="Ocu-lO-jno"/>
                                                 <constraint firstItem="ekP-Aj-dwX" firstAttribute="centerX" secondItem="EH5-UO-JEV" secondAttribute="centerX" id="XKX-dq-lq1"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DJv-6H-xm4" secondAttribute="trailing" constant="16" id="Zgg-kW-e8F"/>
                                                 <constraint firstItem="DJv-6H-xm4" firstAttribute="centerX" secondItem="EH5-UO-JEV" secondAttribute="centerX" id="nW3-sc-3D1"/>
+                                                <constraint firstItem="DJv-6H-xm4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EH5-UO-JEV" secondAttribute="leading" constant="16" id="pIC-sP-Csr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="SfZ-6B-6YZ" firstAttribute="leading" secondItem="ArB-M6-Prj" secondAttribute="leading" constant="9" id="FEz-d4-6xT"/>
-                                            <constraint firstItem="SfZ-6B-6YZ" firstAttribute="top" secondItem="ArB-M6-Prj" secondAttribute="top" constant="11" id="efR-A6-EBe"/>
-                                        </constraints>
                                         <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Audio player" rowHeight="66" id="flh-DP-hCE">
@@ -672,21 +650,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bn-yA-6bf" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play the podcast episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bn-yA-6bf">
                                                     <rect key="frame" x="80" y="15" width="139.5" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                                             <color key="value" name="Nil"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3u-JR-n5K" customClass="PlayButton" customModule="Word_of_the_day" customModuleProvider="target">
@@ -732,25 +708,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="346.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-Hd-UDX" customClass="AmbienceLabel" customModule="Ambience">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="M.W. Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-Hd-UDX">
                                                     <rect key="frame" x="80" y="15" width="85" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                                             <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOu-O3-ztx" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="80" y="37.5" width="279" height="285"/>
+                                                <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBe-hH-EGA">
+                                                    <rect key="frame" x="72" y="37" width="287" height="285"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
                                                             <string key="content">1: to move about quickly especially in search
@@ -759,62 +733,33 @@ Examples:
 The dog scoured the terrain in search of the tennis ball I had thrown.
 "The rescue team scoured the ground and a New Hampshire National Guard Black Hawk helicopter also searched the area." — Emily Sweeney, The Boston Globe, 18 July 2017
 Did you know?
-There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that scour, which goes back to at least the early 14th century, probably derives—via Middle Dutch and Old French—from a Late Latin verb, excurare, meaning "to clean off." Today's word, however, which appears in the 13th century, is believed to derive from the Old Norse skūr, meaning "shower." (Skūr is also distantly related to the Old English scūr, the ancestor of our English word </string>
+</string>
                                                             <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" metaFont="cellTitle"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" metaFont="system" size="10"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="shower">
-                                                            <attributes>
-                                                                <color key="NSColor" red="0.92156862750000001" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <font key="NSFont" metaFont="cellTitle"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" metaFont="system" size="10"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
                                                             </attributes>
                                                         </fragment>
                                                         <fragment>
-                                                            <string key="content">.) Many disparate things can be scoured. For example, one can scour an area (as in "scoured the woods in search of the lost dog") or publications (as in "scouring magazine and newspaper articles").</string>
+                                                            <string key="content">There are two distinct homographs of the verb scour in English. One means to clean something by rubbing it hard with a rough object; that scour, which goes back to at least the early 14th century, probably derives—via Middle Dutch and Old French—from a Late Latin verb, excurare, meaning "to clean off." Today's word, however, which appears in the 13th century, is believed to derive from the Old Norse skūr, meaning "shower." (Skūr is also distantly related to the Old English scūr, the ancestor of our English word shower.) Many disparate things can be scoured. For example, one can scour an area (as in "scoured the woods in search of the lost dog") or publications (as in "scouring magazine and newspaper articles").</string>
                                                             <attributes>
-                                                                <color key="NSColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="deviceRGB"/>
-                                                                <font key="NSFont" metaFont="cellTitle"/>
-                                                                <real key="NSKern" value="0.0"/>
-                                                                <font key="NSOriginalFont" metaFont="system" size="10"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" minimumLineHeight="14" defaultTabInterval="36" tighteningFactorForTruncation="0.0">
-                                                                    <tabStops/>
-                                                                </paragraphStyle>
-                                                                <color key="NSStrokeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                                <real key="NSStrokeWidth" value="0.0"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
-                                                    <nil key="highlightedColor"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                                            <color key="value" name="Nil"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
-                                                </label>
+                                                </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZt-WL-8ez">
-                                                    <rect key="frame" x="80" y="334.5" width="141" height="0.0"/>
+                                                    <rect key="frame" x="80" y="305.5" width="141" height="29"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                     <state key="normal" title="More on Merion Webster">
                                                         <color key="titleColor" name="Tint"/>
@@ -825,14 +770,14 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZBe-hH-EGA" secondAttribute="trailing" id="Gqe-Rh-mss"/>
                                                 <constraint firstItem="LZt-WL-8ez" firstAttribute="leading" secondItem="4v2-iU-9m4" secondAttribute="leadingMargin" constant="64" id="KWc-lm-JoV"/>
-                                                <constraint firstItem="rOu-O3-ztx" firstAttribute="top" secondItem="T1m-Hd-UDX" secondAttribute="bottom" constant="6" id="Qib-VF-ME2"/>
+                                                <constraint firstItem="ZBe-hH-EGA" firstAttribute="leadingMargin" secondItem="4v2-iU-9m4" secondAttribute="leading" constant="80" id="P5I-Si-JNX"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZBe-hH-EGA" secondAttribute="bottom" constant="14" id="Xug-g4-bYO"/>
                                                 <constraint firstItem="T1m-Hd-UDX" firstAttribute="leading" secondItem="4v2-iU-9m4" secondAttribute="leadingMargin" constant="64" id="Zpg-6K-KAj"/>
-                                                <constraint firstItem="LZt-WL-8ez" firstAttribute="top" secondItem="rOu-O3-ztx" secondAttribute="bottom" constant="12" id="bHf-JR-ahk"/>
-                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="rOu-O3-ztx" secondAttribute="trailing" id="dq4-tn-VQ1"/>
                                                 <constraint firstItem="T1m-Hd-UDX" firstAttribute="top" secondItem="4v2-iU-9m4" secondAttribute="topMargin" constant="4" id="eLD-qi-d4p"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="T1m-Hd-UDX" secondAttribute="trailing" id="go3-1b-4nh"/>
-                                                <constraint firstItem="rOu-O3-ztx" firstAttribute="leading" secondItem="4v2-iU-9m4" secondAttribute="leadingMargin" constant="64" id="hME-Oo-nVA"/>
+                                                <constraint firstItem="ZBe-hH-EGA" firstAttribute="topMargin" secondItem="4v2-iU-9m4" secondAttribute="top" constant="45" id="ioM-Y2-qkY"/>
                                                 <constraint firstAttribute="bottom" secondItem="LZt-WL-8ez" secondAttribute="bottom" constant="12" id="lYe-zI-DAh"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LZt-WL-8ez" secondAttribute="trailing" id="rWF-Gb-LLP"/>
                                             </constraints>
@@ -871,20 +816,31 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 </cells>
                             </tableViewSection>
                         </sections>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                <color key="value" name="Ink"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="kKu-Oe-QHh" id="rby-gL-Kiq"/>
                             <outlet property="delegate" destination="kKu-Oe-QHh" id="rFQ-wx-2Aj"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="KQZ-1V-L9h"/>
                     <connections>
-                        <outlet property="fullDefinitionLabel" destination="rOu-O3-ztx" id="DDp-p4-GVX"/>
+                        <outlet property="fullDefinitionLabel" destination="ZBe-hH-EGA" id="0i6-h9-PzC"/>
+                        <outlet property="playButton" destination="H3u-JR-n5K" id="jfQ-LL-Ck8"/>
                         <outlet property="shortDefinitionLabel" destination="ekP-Aj-dwX" id="cYa-hl-wWi"/>
                         <outlet property="wordLabel" destination="DJv-6H-xm4" id="Ciu-WD-H9j"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdV-0u-jM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="818"/>
+            <point key="canvasLocation" x="541.60000000000002" y="785.75712143928047"/>
         </scene>
         <!--Introduction Controller-->
         <scene sceneID="y7H-XQ-zC6">
@@ -898,8 +854,9 @@ There are two distinct homographs of the verb scour in English. One means to cle
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-nN-dve" customClass="LoadingButton" customModule="Word_of_the_day" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRO-nN-dve">
                                 <rect key="frame" x="103.5" y="249.5" width="168" height="168"/>
+                                <color key="backgroundColor" name="Tint"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cRO-nN-dve" secondAttribute="height" multiplier="1:1" id="QIY-Dk-ldl"/>
                                     <constraint firstAttribute="height" constant="168" id="Qh1-Nd-NBa"/>
@@ -907,30 +864,33 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 </constraints>
                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                 <state key="normal" title=" ">
-                                    <color key="titleColor" name="Nil"/>
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="84"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="custom" identifier="Show game" customClass="CrossfadeSegue" customModule="Word_of_the_day" customModuleProvider="target" id="FeJ-Ck-sBg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" customClass="CrossfadeSegue" customModule="Word_of_the_day" customModuleProvider="target" id="jWa-Dw-DHK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-zf-d0i" customClass="AmbienceLabel" customModule="Ambience">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word of the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmg-zf-d0i">
                                 <rect key="frame" x="61" y="309.5" width="253.5" height="48"/>
                                 <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                 <color key="textColor" name="Ink"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                         <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                        <color key="value" name="Ink"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub" customClass="AmbienceLabel" customModule="Ambience">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A simple guessing game about learning American English lexicon. Daily." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-8b-4ub">
                                 <rect key="frame" x="49" y="377" width="278.5" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="2gt-dP-b5X"/>
@@ -939,39 +899,20 @@ There are two distinct homographs of the verb scour in English. One means to cle
                                 <color key="textColor" name="Ink"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                         <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                        <color key="value" name="Ink"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading…" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnC-3W-BUs" customClass="AmbienceLabel" customModule="Ambience">
-                                <rect key="frame" x="160.5" y="636.5" width="54.5" height="14.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" name="Ink"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                        <color key="value" name="Nil"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                        <color key="value" name="Ink"/>
-                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-Bd-0AQ" userLabel="History Button">
-                                <rect key="frame" x="-4" y="317" width="32" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-Bd-0AQ" userLabel="History Button">
+                                <rect key="frame" x="25.5" y="317" width="32" height="32"/>
                                 <state key="normal" image="History"/>
                                 <connections>
-                                    <segue destination="oaS-1M-Mx7" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ADL-ir-nqg"/>
+                                    <segue destination="Daw-Im-XEf" kind="show" id="71k-rX-eGl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -981,10 +922,8 @@ There are two distinct homographs of the verb scour in English. One means to cle
                             <constraint firstItem="cRO-nN-dve" firstAttribute="centerY" secondItem="S6o-d7-bYX" secondAttribute="centerY" id="4Fo-19-g9z"/>
                             <constraint firstItem="cRO-nN-dve" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="CIv-tU-Wu3"/>
                             <constraint firstItem="n9f-Bd-0AQ" firstAttribute="centerY" secondItem="cRO-nN-dve" secondAttribute="centerY" id="D0J-Ws-xsc"/>
-                            <constraint firstItem="AgW-at-nkQ" firstAttribute="top" secondItem="NnC-3W-BUs" secondAttribute="bottom" constant="16" id="NxO-cP-pyY"/>
                             <constraint firstItem="Mmg-zf-d0i" firstAttribute="centerY" secondItem="S6o-d7-bYX" secondAttribute="centerY" id="RYK-bo-Fzb"/>
                             <constraint firstItem="Mmg-zf-d0i" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="Rcl-UD-oY7"/>
-                            <constraint firstItem="NnC-3W-BUs" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="Sse-Mo-akI"/>
                             <constraint firstItem="AgW-at-nkQ" firstAttribute="top" secondItem="cRO-nN-dve" secondAttribute="bottom" priority="999" constant="48" id="YzE-Jr-j4L"/>
                             <constraint firstItem="Hgs-8b-4ub" firstAttribute="centerX" secondItem="S6o-d7-bYX" secondAttribute="centerX" id="ZOt-hW-oUV"/>
                             <constraint firstItem="Hgs-8b-4ub" firstAttribute="top" secondItem="Mmg-zf-d0i" secondAttribute="bottom" constant="20" id="d5E-xZ-YTz"/>
@@ -997,8 +936,14 @@ There are two distinct homographs of the verb scour in English. One means to cle
                             <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="kmc-Pc-beF"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="buttonBottonToView" destination="YzE-Jr-j4L" id="0TG-e2-tXU"/>
                         <outlet property="buttonCenterY" destination="4Fo-19-g9z" id="eJJ-qB-xdL"/>
@@ -1006,201 +951,132 @@ There are two distinct homographs of the verb scour in English. One means to cle
                         <outlet property="buttonSmallerHeight" destination="rrK-qK-asu" id="XJr-Rj-Cp8"/>
                         <outlet property="historyButton" destination="n9f-Bd-0AQ" id="00W-0C-Lrs"/>
                         <outlet property="loadingButton" destination="cRO-nN-dve" id="9Hd-va-K9P"/>
-                        <outlet property="loadingLabel" destination="NnC-3W-BUs" id="nes-dJ-wWG"/>
                         <outlet property="subtitleLabel" destination="Hgs-8b-4ub" id="9WO-Wc-EdK"/>
                         <outlet property="titleLabel" destination="Mmg-zf-d0i" id="LdF-Yo-4Qn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e09-5g-1I7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-549.27536231884062" y="37.5"/>
+            <point key="canvasLocation" x="-417" y="36"/>
         </scene>
-        <!--History Controller-->
-        <scene sceneID="Upn-6E-BYB">
+        <!--History-->
+        <scene sceneID="9h2-6T-G0T">
             <objects>
-                <viewController id="HER-FA-hCp" customClass="HistoryController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lo4-Vk-Ubm"/>
-                        <viewControllerLayoutGuide type="bottom" id="4yz-38-TDI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="87c-jz-fMW" customClass="AmbienceView" customModule="Ambience">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="Daw-Im-XEf" customClass="HistoryController" customModule="Word_of_the_day" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AlR-oQ-Wcp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B0o-v8-KV9">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                        <color key="backgroundColor" name="Nil"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="67" id="euE-OD-rjB" customClass="WordCell" customModule="Word_of_the_day" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="67"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="euE-OD-rjB" id="GUz-bj-DLu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq0-Ei-cK7">
+                                            <rect key="frame" x="24" y="12" width="328" height="24"/>
+                                            <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                    <color key="value" name="Nil"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIB-p5-RVm">
+                                            <rect key="frame" x="24" y="35" width="300" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="300" id="eqp-vf-dYL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
+                                                    <color key="value" name="Nil"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hq0-Ei-cK7" firstAttribute="top" secondItem="GUz-bj-DLu" secondAttribute="top" constant="12" id="5PD-pg-BS5"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PIB-p5-RVm" secondAttribute="trailing" id="7QH-R7-xkl"/>
+                                        <constraint firstItem="PIB-p5-RVm" firstAttribute="leading" secondItem="GUz-bj-DLu" secondAttribute="leading" constant="24" id="K3p-iV-ghT"/>
+                                        <constraint firstItem="PIB-p5-RVm" firstAttribute="top" secondItem="Hq0-Ei-cK7" secondAttribute="bottom" constant="-1" id="MTd-gG-Zqj"/>
+                                        <constraint firstAttribute="bottom" secondItem="PIB-p5-RVm" secondAttribute="bottom" constant="14.5" id="Mob-nO-KDJ"/>
+                                        <constraint firstItem="Hq0-Ei-cK7" firstAttribute="leading" secondItem="GUz-bj-DLu" secondAttribute="leading" constant="24" id="YqQ-aF-cxZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hq0-Ei-cK7" secondAttribute="trailing" constant="23" id="yDd-MQ-CYO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Title" rowHeight="98" id="QeS-RB-rTy">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="98"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QeS-RB-rTy" id="GoD-UR-P56">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="97.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXp-dv-FC7" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="24" y="38" width="326" height="45.5"/>
-                                                    <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="34"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
-                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                                            <color key="value" name="Nil"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="PXp-dv-FC7" secondAttribute="trailing" constant="25" id="KOv-DI-fI8"/>
-                                                <constraint firstItem="PXp-dv-FC7" firstAttribute="leading" secondItem="GoD-UR-P56" secondAttribute="leading" constant="24" id="Mqb-zv-0bu"/>
-                                                <constraint firstItem="PXp-dv-FC7" firstAttribute="top" secondItem="GoD-UR-P56" secondAttribute="top" constant="38" id="S2q-tN-zDr"/>
-                                                <constraint firstAttribute="bottom" secondItem="PXp-dv-FC7" secondAttribute="bottom" constant="14" id="ws1-zd-zzy"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="67" id="Nwm-9U-DrH" customClass="WordCell" customModule="Word_of_the_day" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="126" width="375" height="67"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nwm-9U-DrH" id="swu-oU-IvR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmP-0Z-HJF" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="24" y="12" width="328" height="24"/>
-                                                    <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
-                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                                            <color key="value" name="Nil"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVA-06-rtV" customClass="AmbienceLabel" customModule="Ambience">
-                                                    <rect key="frame" x="24" y="35" width="300" height="17"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="300" id="xIz-Zv-xQH"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
-                                                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                                            <color key="value" name="Nil"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                                            <color key="value" name="Ink"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="LVA-06-rtV" firstAttribute="top" secondItem="UmP-0Z-HJF" secondAttribute="bottom" constant="-1" id="JMu-du-nUI"/>
-                                                <constraint firstItem="UmP-0Z-HJF" firstAttribute="leading" secondItem="swu-oU-IvR" secondAttribute="leading" constant="24" id="Jp6-r6-OP9"/>
-                                                <constraint firstAttribute="trailing" secondItem="UmP-0Z-HJF" secondAttribute="trailing" constant="23" id="QqF-co-y2t"/>
-                                                <constraint firstAttribute="trailing" secondItem="LVA-06-rtV" secondAttribute="trailing" constant="51" id="a6J-m0-lnd"/>
-                                                <constraint firstItem="LVA-06-rtV" firstAttribute="leading" secondItem="swu-oU-IvR" secondAttribute="leading" constant="24" id="lsv-KM-IvT"/>
-                                                <constraint firstItem="UmP-0Z-HJF" firstAttribute="top" secondItem="swu-oU-IvR" secondAttribute="top" constant="12" id="n3T-45-J9P"/>
-                                                <constraint firstAttribute="bottom" secondItem="LVA-06-rtV" secondAttribute="bottom" constant="14.5" id="yRw-gi-kjV"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
-                                        <connections>
-                                            <outlet property="shortDefinition" destination="LVA-06-rtV" id="9aL-Pj-Kqv"/>
-                                            <outlet property="title" destination="UmP-0Z-HJF" id="5bE-cp-5Ix"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
+                                <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="HER-FA-hCp" id="10g-YY-Q2i"/>
-                                    <outlet property="delegate" destination="HER-FA-hCp" id="JpF-Dt-FAs"/>
+                                    <outlet property="shortDefinition" destination="PIB-p5-RVm" id="ZI2-SA-pnA"/>
+                                    <outlet property="title" destination="Hq0-Ei-cK7" id="uVI-UY-u4S"/>
                                 </connections>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1i-Tq-FlX" userLabel="Loading Button" customClass="LoadingButton" customModule="Word_of_the_day" customModuleProvider="target">
-                                <rect key="frame" x="155" y="555" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="jCf-Ur-jIw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
-                                <state key="normal" title=" ">
-                                    <color key="titleColor" name="Nil"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="pgN-5S-4Er"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="M1i-Tq-FlX" firstAttribute="width" secondItem="M1i-Tq-FlX" secondAttribute="height" multiplier="1:1" id="Aw0-iM-QBt"/>
-                            <constraint firstAttribute="trailing" secondItem="B0o-v8-KV9" secondAttribute="trailing" id="BcH-kY-SK7"/>
-                            <constraint firstItem="4yz-38-TDI" firstAttribute="top" secondItem="B0o-v8-KV9" secondAttribute="bottom" id="Jkp-Fy-UTR"/>
-                            <constraint firstItem="B0o-v8-KV9" firstAttribute="leading" secondItem="87c-jz-fMW" secondAttribute="leading" id="NZr-kc-vIU"/>
-                            <constraint firstItem="M1i-Tq-FlX" firstAttribute="centerX" secondItem="87c-jz-fMW" secondAttribute="centerX" id="Uej-zn-olH"/>
-                            <constraint firstItem="B0o-v8-KV9" firstAttribute="top" secondItem="Lo4-Vk-Ubm" secondAttribute="bottom" id="jQf-pW-K87"/>
-                            <constraint firstItem="4yz-38-TDI" firstAttribute="top" secondItem="M1i-Tq-FlX" secondAttribute="bottom" constant="48" id="yLF-tG-4C7"/>
-                        </constraints>
+                            </tableViewCell>
+                        </prototypes>
                         <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                <color key="value" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
-                                <color key="value" name="Ink"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
-                                <color key="value" name="Nil"/>
-                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </view>
-                    <navigationItem key="navigationItem" id="4Z2-Kg-THW"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Daw-Im-XEf" id="PJK-p5-odN"/>
+                            <outlet property="delegate" destination="Daw-Im-XEf" id="cv7-8v-tne"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="History" id="jQq-rU-7zi"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="loadingButton" destination="M1i-Tq-FlX" id="XIN-UU-RLx"/>
-                        <outlet property="tableView" destination="B0o-v8-KV9" id="3ht-7p-mbw"/>
-                        <segue destination="kKu-Oe-QHh" kind="show" identifier="Definition" id="mrK-2t-PUl"/>
+                        <segue destination="kKu-Oe-QHh" kind="show" identifier="Definition" id="Xh4-1G-17l"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wgo-sc-UvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfV-9a-4OB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="254" y="820"/>
+            <point key="canvasLocation" x="-418" y="815"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="w9K-ed-ErR">
+        <scene sceneID="va3-SO-jTr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="oaS-1M-Mx7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="os3-3o-wtl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ili-2q-CqJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="B07-qI-3nO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HER-FA-hCp" kind="relationship" relationship="rootViewController" id="TEk-cb-ywu"/>
+                        <segue destination="LO9-lJ-UKL" kind="relationship" relationship="rootViewController" id="G4u-it-Zng"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RGm-iB-Fsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOS-Rz-35J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-550" y="819"/>
+            <point key="canvasLocation" x="-1330" y="36"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Back" width="12" height="21"/>
         <image name="History" width="32" height="32"/>
         <namedColor name="Ink">
             <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1216,8 +1092,7 @@ There are two distinct homographs of the verb scour in English. One means to cle
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mrK-2t-PUl"/>
-        <segue reference="pgN-5S-4Er"/>
+        <segue reference="Xh4-1G-17l"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="Tint"/>
 </document>
