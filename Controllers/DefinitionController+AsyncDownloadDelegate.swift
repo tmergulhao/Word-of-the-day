@@ -14,9 +14,7 @@ extension DefinitionController : AsyncDownloadDelegate {
 
     func loadAudio () {
 
-        guard word.audioURL == nil else {
-
-            print("There is audio!")
+        if let audioURL = word.audioURL, AudioPlayer.shared.prepareToPlay(audioURL) {
 
             playButton.isEnabled = true
             playButton.alpha = 1.0
@@ -56,11 +54,9 @@ extension DefinitionController : AsyncDownloadDelegate {
     func download(_ manager : AsyncDownload, didFinishDownloadTo location : URL) {
 
         progressView?.removeFromSuperview()
-
         progressView = nil
 
         word.audioURL = location
-
         WordModel.update()
 
         AudioPlayer.shared.prepareToPlay(location)

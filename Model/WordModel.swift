@@ -36,9 +36,6 @@ final class WordModel : NSObject {
     // MARK: Singleton binding
 
     class func update () {
-
-        print("I tried")
-
         let dictionary = shared.words.value
         shared.words « nil
         shared.words « dictionary

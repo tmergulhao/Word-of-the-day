@@ -36,15 +36,18 @@ final class AudioPlayer : NSObject {
     
     // MARK : Methods
     
-    func prepareToPlay (_ audioURL : URL) {
+    func prepareToPlay (_ audioURL : URL) -> Bool {
         
         player = try? AVAudioPlayer(contentsOf: audioURL)
-        player?.prepareToPlay()
+
+        return player != nil
     }
     
     func pause () { player?.pause() }
     
     func play () {
+
+        player?.prepareToPlay()
         
         player?.volume = 1.0
         player?.play()
