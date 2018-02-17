@@ -32,17 +32,25 @@ extension WordModel : XMLParserDelegate {
         guard let dictionary = self.getDictionaryFromXML(url: url)?[0] else { throw XMLError.XMLParsing }
         guard let data = (dictionary.value(forKeyPath: "rss.channel.item") as? Array<XMLDictionary>) else { throw XMLError.XMLStructure }
         
-        let words = data.map({
-            (data : XMLDictionary) -> WordStruct? in
+        let newWords = data.map({
+            (data : XMLDictionary) -> Word? in
             
-            let word = WordStruct(data)
+            let word = Word(data)
             
             // if word == nil { throw XMLError.XMLSyntax }
             
             return word
+        }).filter { $0 != nil }.map { $0! }.reduce(into: Dictionary<String,Word>()) { ( result : inout Dictionary<String,Word>, value : Word) in
+            result[value.title] = value
+        }
+
+        if words.value == nil { words.value = [:] }
+
+        words.value = words.value!.merging(newWords, uniquingKeysWith: { (previous, newValue) -> Word in
+            return previous
         })
-        
-        self.words = words.filter { $0 != nil }.map { $0! }
+
+        WordModel.update()
     }
     
     func getDictionaryFromXML(url : URL) -> Array<NSMutableDictionary>? {

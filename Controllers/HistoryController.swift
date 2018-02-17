@@ -16,7 +16,7 @@ class HistoryController : UITableViewController {
             
             let definition = segue.destination as? DefinitionController
             
-            definition?.word = WordModel.words[sender.row]
+            definition?.word = Array(WordModel.words!.values)[sender.row]
         }
     }
     
@@ -52,16 +52,20 @@ extension HistoryController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return WordModel.words.count
+        return WordModel.words!.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Word", for: indexPath) as? WordCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Word", for: indexPath) as? WordCell,
+            let words = WordModel.words?.values else {
             return UITableViewCell()
         }
+
+        let word = Array(words)[indexPath.row]
         
-        cell.configure(for: WordModel.words[indexPath.row])
+        cell.title.text = word.title
+        cell.shortDefinition.text = word.shortDefinition
         
         return cell
     }

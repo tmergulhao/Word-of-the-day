@@ -25,7 +25,7 @@ class DefinitionController : UITableViewController {
     
     @IBAction func viewOnWebsite(_ sender: UIButton) {
         
-        let url : URL! = URL(string: WordModel.words.first!.link)
+        let url : URL! = URL(string: WordModel.words!.first!.value.link)
         let safari = SFSafariViewController(url: url)
         
         safari.preferredControlTintColor = StyleKit.color.tint
@@ -41,14 +41,14 @@ class DefinitionController : UITableViewController {
     
     @IBAction func lookUp(_ sender: UIButton) {
         
-        guard let word = WordModel.words.first else { return }
+        guard let word = WordModel.first else { return }
         
         let reference = UIReferenceLibraryViewController(term: word.title)
         
         present(reference, animated: true, completion: nil)
     }
     
-    var word : WordStruct!
+    var word : Word!
     
     var playing : Bool = false {
         didSet {
@@ -61,6 +61,8 @@ class DefinitionController : UITableViewController {
     }
     
     var progressView : UIProgressView?
+
+    var audioDownload : AsyncDownload?
     
     override func viewDidLoad() {
         
@@ -109,8 +111,6 @@ class DefinitionController : UITableViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(didInterrupt(_ :)), name: Notification.Name.AVAudioSessionInterruption, object: self)
     }
     
-    var downloadTask : URLSessionDownloadTask?
-    
     override func viewDidDisappear(_ animated: Bool) {
         
         super.viewDidDisappear(animated)
@@ -119,7 +119,7 @@ class DefinitionController : UITableViewController {
         
         NotificationCenter.default.removeObserver(self)
         
-        downloadTask?.cancel()
+        audioDownload?.cancel()
     }
     
     override func remoteControlReceived(with event: UIEvent?) {
@@ -140,6 +140,7 @@ class DefinitionController : UITableViewController {
                 audio.play()
             case .remoteControlPause:
                 audio.pause()
+            // case .remoteControlBeginSeekingForward:
             default:
                 print("received sub type \(e.subtype) Ignoring")
             }

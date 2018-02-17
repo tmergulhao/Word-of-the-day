@@ -49,9 +49,7 @@ final class AudioPlayer : NSObject {
         player?.volume = 1.0
         player?.play()
         
-        guard let word = WordModel.words.first else {
-            return
-        }
+        guard let word = WordModel.first else { return }
         
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyTitle: "\(word.title): \(word.shortDefinition)",

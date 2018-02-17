@@ -34,7 +34,7 @@ class IntroductionController : UIViewController {
                 
                 try WordModel.shared.loadWord()
                 
-                if WordModel.words.count > 1 {
+                if WordModel.words!.count > 1 {
                     
                     DispatchQueue.main.sync {
                         

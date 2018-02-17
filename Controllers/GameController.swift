@@ -25,9 +25,13 @@ class GameController: UIViewController {
     
     func setWordDisplay () {
         
-        guard let word = WordModel.words.first else { return }
+        guard let word = WordModel.first else { return }
+
+        var sanitized = word.title
+
+        sanitized.applyingTransform(.stripCombiningMarks, reverse: false)
         
-        let maskedText = String(word.title.map({
+        let maskedText = String(sanitized.map({
             switch $0 {
             case let x where x == " " || x == "-": return x
             case let x where charactersUsed.contains(x) : return x
@@ -49,7 +53,7 @@ class GameController: UIViewController {
             
             let definition = segue.destination as? DefinitionController
             
-            definition?.word = WordModel.words.first
+            definition?.word = WordModel.first
         }
     }
     
@@ -75,7 +79,7 @@ class GameController: UIViewController {
             button.addTarget(self, action: #selector(keyboardPressed(_:)), for: .touchUpInside)
         }
         
-        self.hintLabel.text = WordModel.words.first?.shortDefinition
+        self.hintLabel.text = WordModel.first?.shortDefinition
         
         setWordDisplay()
     }

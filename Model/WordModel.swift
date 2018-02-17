@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Words = Array<WordStruct>
+typealias Words = Dictionary<String, Word>
 
 final class WordModel : NSObject {
     
@@ -19,8 +19,8 @@ final class WordModel : NSObject {
     private override init() {}
     
     // MARK : Properties
-    
-    var words : Words = []
+
+    var words = Default<Words>(key: "words")
     
     // MARK : XMLParserDelegate
     
@@ -34,6 +34,15 @@ final class WordModel : NSObject {
     var progressDelegate : ProgressDelegate?
     
     // MARK: Singleton binding
+
+    class func update () {
+
+        print("I tried")
+
+        let dictionary = shared.words.value
+        shared.words « nil
+        shared.words « dictionary
+    }
     
     class var progressDelegate : ProgressDelegate? {
         get {
@@ -43,6 +52,10 @@ final class WordModel : NSObject {
             shared.progressDelegate = newValue
         }
     }
-    class var words : Words { return shared.words }
+    class var words : Words? { return shared.words.value }
     class var audioURL : URL? { return shared.audioURL }
+    class var first : Word? {
+        guard let word = words?.first?.value else { return nil }
+        return word
+    }
 }
