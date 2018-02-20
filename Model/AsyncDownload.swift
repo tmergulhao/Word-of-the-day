@@ -22,21 +22,25 @@ class AsyncDownload : NSObject {
 
     weak var progressable : Progressable?
 
-    static let config = URLSessionConfiguration.background(withIdentifier: "com.tmergulhao.WordOfTheDay.download")
     var downloadTask : URLSessionDownloadTask?
     weak var delegate : AsyncDownloadDelegate?
+
+    var session : URLSession?
 }
 
 extension AsyncDownload : URLSessionTaskDelegate, URLSessionDownloadDelegate {
 
     func load(_ url : URL) {
-        let session = URLSession(configuration: AsyncDownload.config, delegate: self, delegateQueue: nil)
-        downloadTask = session.downloadTask(with: url)
+        let configuration = URLSessionConfiguration.background(withIdentifier: "com.tmergulhao.WordOfTheDay.download")
+
+        session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+        downloadTask = session!.downloadTask(with: url)
         downloadTask!.resume()
     }
 
     func cancel () {
         downloadTask?.cancel()
+        session?.finishTasksAndInvalidate()
     }
 
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {

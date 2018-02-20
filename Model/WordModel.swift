@@ -49,10 +49,14 @@ final class WordModel : NSObject {
             shared.progressDelegate = newValue
         }
     }
-    class var words : Words? { return shared.words.value }
+    class var words : Array<Word> {
+        let wordsArray = Array(shared.words.value!.values)
+        return wordsArray.sorted { $0.date > $1.date }
+
+    }
     class var audioURL : URL? { return shared.audioURL }
     class var first : Word? {
-        guard let word = words?.first?.value else { return nil }
+        guard let word = words.first else { return nil }
         return word
     }
 }

@@ -25,7 +25,7 @@ class DefinitionController : UITableViewController {
     
     @IBAction func viewOnWebsite(_ sender: UIButton) {
         
-        let url : URL! = URL(string: WordModel.words!.first!.value.link)
+        let url : URL! = URL(string: WordModel.words.first!.link)
         let safari = SFSafariViewController(url: url)
         
         safari.preferredControlTintColor = StyleKit.color.tint

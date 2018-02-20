@@ -19,8 +19,12 @@ class Word : Codable {
     var shortDefinition : String
     var definition : String
     var audioURL : URL?
+    var date : Date
     
     init?(_ dictionary : XMLDictionary) {
+
+        let dateFormater = DateFormatter()
+        dateFormater.dateFormat = "eee, d MMM yyyy hh:mm:ss ZZZ"
         
         guard   let dict = dictionary as? Dictionary<String, Dictionary<String, String>>,
                 let link = dict["link"]?["text"],
@@ -28,13 +32,16 @@ class Word : Codable {
                 let externalAudioURL = URL(string: audioPath),
                 let shortDefinition = dict["merriam:shortdef"]?["text"],
                 let title = dict["title"]?["text"],
-                let definition = dict["description"]?["text"] else { return nil }
+                let definition = dict["description"]?["text"],
+                let dateString = dict["pubDate"]?["text"],
+                let date = dateFormater.date(from: dateString) else { return nil }
 
         self.link = link
         self.externalAudioURL = externalAudioURL
         self.shortDefinition = shortDefinition
         self.title = title
         self.definition = definition
+        self.date = date
     }
 }
 
