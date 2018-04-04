@@ -70,7 +70,8 @@ class PlayButtonLayer : CALayer {
             ]
         
         let ratio = self.ratio
-        let points = zip(stopPathPoints, playPathPoints).map {
+        let tuples = zip(stopPathPoints, playPathPoints)
+        let points = tuples.map {
             return CGPoint(
                 x: $0.x * ratio + $1.x * (1 - ratio),
                 y: $0.y * ratio + $1.y * (1 - ratio))

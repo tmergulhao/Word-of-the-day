@@ -36,7 +36,7 @@ final class AudioPlayer : NSObject {
     
     // MARK : Methods
     
-    func prepareToPlay (_ audioURL : URL) -> Bool {
+    @discardableResult func prepareToPlay (_ audioURL : URL) -> Bool {
         
         player = try? AVAudioPlayer(contentsOf: audioURL)
 
