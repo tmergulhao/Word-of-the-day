@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="os3-3o-wtl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="os3-3o-wtl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -31,8 +31,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
-                                <rect key="frame" x="116.5" y="277.5" width="142.5" height="48"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="vl2-eg-nXU">
+                                <rect key="frame" x="16" y="277.5" width="343" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="eGA-QF-kmi"/>
                                 </constraints>
@@ -40,11 +40,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                         <color key="value" name="Nil"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
@@ -57,12 +58,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="contrastColor">
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorContrast">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="invertColor">
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
                                         <color key="value" name="Nil"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="PPI-n0-DoH">
@@ -512,12 +514,14 @@
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="top" secondItem="wfy-db-euE" secondAttribute="top" priority="999" constant="8" id="CZV-Q3-qK2"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTn-G4-rbs"/>
                             <constraint firstItem="lt3-2j-4Ju" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JRl-97-Gl1"/>
+                            <constraint firstItem="vl2-eg-nXU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Mch-i0-7tm"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mex-W2-Z43"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PPI-n0-DoH" secondAttribute="bottom" constant="8" id="NeB-nZ-meQ"/>
                             <constraint firstItem="lt3-2j-4Ju" firstAttribute="top" secondItem="vl2-eg-nXU" secondAttribute="bottom" constant="20" id="OXa-xG-w68"/>
                             <constraint firstItem="vl2-eg-nXU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="alQ-Aq-06N"/>
                             <constraint firstItem="PPI-n0-DoH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="bo1-wf-Deh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PPI-n0-DoH" secondAttribute="trailing" constant="-10" id="u3f-I0-S0f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vl2-eg-nXU" secondAttribute="trailing" id="wUc-1Q-zuy"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="regularColor">
@@ -575,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="36"/>
+            <point key="canvasLocation" x="118" y="36"/>
         </scene>
         <!--Definition Controller-->
         <scene sceneID="2XG-mI-heM">
@@ -584,7 +588,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KSw-nv-24P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Nil"/>
                         <color key="sectionIndexBackgroundColor" name="Nil"/>
                         <sections>
                             <tableViewSection id="4aT-Zo-xe2">
@@ -596,8 +600,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="scour" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-6H-xm4">
-                                                    <rect key="frame" x="142.5" y="33" width="90" height="48"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="scour" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-6H-xm4">
+                                                    <rect key="frame" x="16" y="33" width="343" height="48"/>
                                                     <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="36"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -624,7 +628,7 @@
                                                             <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="textColorInvert">
-                                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="value" name="Nil"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="ambience" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
@@ -635,9 +639,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="ekP-Aj-dwX" secondAttribute="bottom" constant="37" id="KcW-tR-8dl"/>
                                                 <constraint firstItem="ekP-Aj-dwX" firstAttribute="top" secondItem="DJv-6H-xm4" secondAttribute="bottom" constant="20" id="Ocu-lO-jno"/>
                                                 <constraint firstItem="ekP-Aj-dwX" firstAttribute="centerX" secondItem="EH5-UO-JEV" secondAttribute="centerX" id="XKX-dq-lq1"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DJv-6H-xm4" secondAttribute="trailing" constant="16" id="Zgg-kW-e8F"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="DJv-6H-xm4" secondAttribute="trailing" id="Zgg-kW-e8F"/>
                                                 <constraint firstItem="DJv-6H-xm4" firstAttribute="centerX" secondItem="EH5-UO-JEV" secondAttribute="centerX" id="nW3-sc-3D1"/>
-                                                <constraint firstItem="DJv-6H-xm4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EH5-UO-JEV" secondAttribute="leading" constant="16" id="pIC-sP-Csr"/>
+                                                <constraint firstItem="DJv-6H-xm4" firstAttribute="leading" secondItem="EH5-UO-JEV" secondAttribute="leadingMargin" id="pIC-sP-Csr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -678,9 +682,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZc-e4-81L">
                                                     <rect key="frame" x="80" y="43.5" width="101" height="10.5"/>
                                                     <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
-                                                    <state key="normal" title="More on Podcasts">
-                                                        <color key="titleColor" name="Tint"/>
-                                                    </state>
+                                                    <state key="normal" title="More on Podcasts"/>
                                                     <connections>
                                                         <action selector="viewPodcast:" destination="kKu-Oe-QHh" eventType="touchUpInside" id="bL4-5S-S2X"/>
                                                     </connections>
@@ -840,7 +842,7 @@ Did you know?
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GdV-0u-jM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541.60000000000002" y="785.75712143928047"/>
+            <point key="canvasLocation" x="118" y="884"/>
         </scene>
         <!--Introduction Controller-->
         <scene sceneID="y7H-XQ-zC6">
@@ -968,11 +970,11 @@ Did you know?
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Nil"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="67" id="euE-OD-rjB" customClass="WordCell" customModule="Word_of_the_day" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="67"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Word" rowHeight="64" id="euE-OD-rjB" customClass="WordCell" customModule="Word_of_the_day" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="euE-OD-rjB" id="GUz-bj-DLu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq0-Ei-cK7">
@@ -991,7 +993,7 @@ Did you know?
                                             </userDefinedRuntimeAttributes>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to move about or go through in search" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIB-p5-RVm">
-                                            <rect key="frame" x="24" y="35" width="300" height="17"/>
+                                            <rect key="frame" x="24" y="36" width="300" height="16.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="300" id="eqp-vf-dYL"/>
                                             </constraints>
@@ -1013,9 +1015,9 @@ Did you know?
                                         <constraint firstItem="Hq0-Ei-cK7" firstAttribute="top" secondItem="GUz-bj-DLu" secondAttribute="top" constant="12" id="5PD-pg-BS5"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PIB-p5-RVm" secondAttribute="trailing" id="7QH-R7-xkl"/>
                                         <constraint firstItem="PIB-p5-RVm" firstAttribute="leading" secondItem="GUz-bj-DLu" secondAttribute="leading" constant="24" id="K3p-iV-ghT"/>
-                                        <constraint firstItem="PIB-p5-RVm" firstAttribute="top" secondItem="Hq0-Ei-cK7" secondAttribute="bottom" constant="-1" id="MTd-gG-Zqj"/>
-                                        <constraint firstAttribute="bottom" secondItem="PIB-p5-RVm" secondAttribute="bottom" constant="14.5" id="Mob-nO-KDJ"/>
+                                        <constraint firstItem="PIB-p5-RVm" firstAttribute="top" secondItem="Hq0-Ei-cK7" secondAttribute="bottom" id="MTd-gG-Zqj"/>
                                         <constraint firstItem="Hq0-Ei-cK7" firstAttribute="leading" secondItem="GUz-bj-DLu" secondAttribute="leading" constant="24" id="YqQ-aF-cxZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="PIB-p5-RVm" secondAttribute="bottom" constant="0.5" id="xUQ-Jf-V4N"/>
                                         <constraint firstAttribute="trailing" secondItem="Hq0-Ei-cK7" secondAttribute="trailing" constant="23" id="yDd-MQ-CYO"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -1052,7 +1054,7 @@ Did you know?
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfV-9a-4OB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-418" y="815"/>
+            <point key="canvasLocation" x="-418" y="884"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="va3-SO-jTr">
@@ -1073,7 +1075,7 @@ Did you know?
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOS-Rz-35J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1330" y="36"/>
+            <point key="canvasLocation" x="-968" y="36"/>
         </scene>
     </scenes>
     <resources>
@@ -1082,7 +1084,19 @@ Did you know?
             <color red="0.1330000013" green="0.1330000013" blue="0.1330000013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Nil">
+            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Nil">
+            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Nil">
             <color red="0.99800002574920654" green="0.99299997091293335" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Nil">
+            <color red="0.99800002574920654" green="0.99299997091293335" blue="0.97699999809265137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Nil">
+            <color red="0.99800002570000002" green="0.99299997090000003" blue="0.97699999810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Tint">
             <color red="0.92199999094009399" green="0.34099999070167542" blue="0.34099999070167542" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
