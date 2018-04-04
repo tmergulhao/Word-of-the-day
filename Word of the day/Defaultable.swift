@@ -11,6 +11,7 @@ import Foundation
 protocol BridgedType {}
 
 // Swift codable types
+extension Date : BridgedType {}
 extension String : BridgedType {}
 extension Bool : BridgedType {}
 extension Int : BridgedType {}
@@ -20,19 +21,21 @@ extension Double : BridgedType {}
 // Foundation codable types
 extension Data : BridgedType {}
 
+let defaults = UserDefaults.standard
+
 extension Default {
 
     init(key : String) {
 
         self.key = key
 
-        if Element.Type.self is BridgedType {
+        if Element.self is BridgedType.Type {
 
-            self.value = UserDefaults.standard.value(forKey: key) as? Element
+            self.value = defaults.value(forKey: key) as? Element
             return
         }
 
-        guard let data = UserDefaults.standard.data(forKey: key) else { return }
+        guard let data = defaults.data(forKey: key) else { return }
 
         do {
             let decoder = JSONDecoder()
@@ -41,6 +44,7 @@ extension Default {
         } catch {
             #if DEBUG
                 print(error)
+            self.value = nil
             #endif
         }
     }
@@ -48,19 +52,19 @@ extension Default {
     func set(_ value : Element?) {
 
         guard let value = value else {
-            UserDefaults.standard.set(nil, forKey: key)
+            defaults.set(nil, forKey: key)
             return
         }
 
-        if Element.Type.self is BridgedType {
-            UserDefaults.standard.set(value, forKey: key)
+        if Element.self is BridgedType.Type {
+            defaults.set(value, forKey: key)
             return
         }
 
         do {
             let encoder = JSONEncoder()
             let encoded = try encoder.encode(value)
-            UserDefaults.standard.set(encoded, forKey: key)
+            defaults.set(encoded, forKey: key)
         } catch {
             #if DEBUG
                 print(error)
@@ -70,7 +74,7 @@ extension Default {
 }
 
 public struct Default<Element : Codable> {
-    
+
     var key : String
     var value : Element? {
         didSet { set(value) }
@@ -81,14 +85,4 @@ extension Default : CustomStringConvertible {
     public var description : String {
         return "Default<\(String(describing: Element.self))>(\"\(key)\", \(value != nil ? String(describing: value!) : "nil"))"
     }
-}
-
-infix operator « : AssignmentPrecedence
-
-public func «<T>(left : inout Default<T>, right : T?) {
-    left.value = right
-}
-
-public func «<T>(left : inout T?, right : Default<T>) {
-    left = right.value
 }

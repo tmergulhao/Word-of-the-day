@@ -37,8 +37,8 @@ final class WordModel : NSObject {
 
     class func update () {
         let dictionary = shared.words.value
-        shared.words « nil
-        shared.words « dictionary
+        shared.words.value = nil
+        shared.words.value = dictionary
     }
     
     class var progressDelegate : ProgressDelegate? {
